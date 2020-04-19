@@ -1,0 +1,59 @@
+.outerHeader {
+  color: white;
+  fill: white;
+  z-index: 1000;
+  top: 0;
+  position: fixed;
+  display: flex;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  color: inherit;
+  width: 100%;
+  margin: 20px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: solid 2px;
+  border-color: white;
+  align-items: center;
+}
+
+.header-logo svg {
+  fill: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+li {
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+li a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+li a:hover {
+  opacity: 1;
+}
+
+.link-active {
+  opacity: 1;
+}
+
+.link-donate {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--orange-main);
+}

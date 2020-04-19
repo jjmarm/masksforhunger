@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  font-family: "Inter";
+}
+
+:root {
+  --fuschia-main: #FF49A1;
+  --fuschia-bg: #FFE3F1;
+  --orange-text: #FF5F00;
+  --orange-main: #FF8136;
+}
+
+html {
+  background-color: var(--fuschia-bg);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: var(--fuschia-main);
+  color: white;
+  padding: 5px 20px;
+  font-weight: 600;
+}

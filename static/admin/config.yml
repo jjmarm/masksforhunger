@@ -1,0 +1,15 @@
+backend:
+  name: test-repo
+media_folder: static/assets
+public_folder: /assets
+collections:
+  - name: catalog
+    label: Mask
+    folder: catalog
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+      - { name: image, label: Image, widget: image }
