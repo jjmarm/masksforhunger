@@ -1,7 +1,7 @@
 import React from 'react'
 import Recaptcha from 'react-google-recaptcha'
 
-const RECAPTCHA_KEY = "6LdFfesUAAAAAGrnP7T54ni1Q4a2HTZFHoaT-Uqr"
+const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY
 if (typeof RECAPTCHA_KEY === 'undefined') {
   throw new Error(`
   Env var GATSBY_APP_SITE_RECAPTCHA_KEY is undefined!
