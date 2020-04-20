@@ -3,6 +3,10 @@
 *
 * See: https://www.gatsbyjs.org/docs/gatsby-config/
 */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 
 module.exports = {
   siteMetadata: {
@@ -31,8 +35,29 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/`
+        path: `${__dirname}/static/assets/`
       }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/catalog/`
+      }
+    },
+    {
+        resolve: `gatsby-transformer-remark`,
+        options: {
+          plugins: [
+            `gatsby-remark-relative-images`,
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 600,
+              }
+            }
+          ]
+        }
     }
   ],
 

@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: jjmarm/masksforhunger
 media_folder: static/assets
 public_folder: /assets
 collections:
@@ -9,7 +10,6 @@ collections:
     slug: "{{slug}}"
     create: true
     fields:
-      - { name: path, label: Path }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
       - { name: image, label: Image, widget: image }
+      - { name: quantity, label: Quantity Remaining, widget: number }

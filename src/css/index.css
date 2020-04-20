@@ -1,5 +1,6 @@
 .hero-image {
   height: 100vh;
+  background-attachment: fixed;
 }
 
 .hero-image h1 {
@@ -32,10 +33,10 @@ p {
 
 .grid {
   display: grid;
-  padding: 0 20px;
+  padding: 60px 20px;
   grid-template:  [about] auto [catalog] auto [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
   column-gap: 10px;
-  row-gap: 20px;
+  row-gap: 40px;
 }
 
 .title {
@@ -93,13 +94,140 @@ p {
 .right {
   grid-column: middle / end;
 }
+.full {
+  grid-column: header-end / end;
+}
+
+.item {
+  width: 200px;
+  border: solid var(--orange-main) 3px;
+  margin-right: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.out {
+  color: #bbb;
+  border-color: #bbb;
+}
+
+.item-image {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+}
+
+.item-container {
+  padding: 10px;
+}
+
+.item-container * {
+  margin: 0;
+}
 
 .about {
   grid-row: about / catalog;
+  color: var(--orange-text);
 }
 .catalog {
   grid-row: catalog / contact;
+  display: flex;
+  flex-direction: row wrap;
+  color: var(--orange-text);
 }
 .contact {
   grid-row-start: contact;
+  color: var(--fuschia-main);
+}
+
+.donate-section {
+  background-color: var(--orange-main);
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.donate-section h1 {
+  margin: 0 20px 0 0;
+}
+
+.donate-btn svg {
+  width: 15px;
+  margin-right: 10px;
+  fill: var(--orange-main);
+}
+
+.donate-btn {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px;
+  background-color: white;
+  border: solid white 1px;
+  color: var(--orange-main);
+  fill: var(--orange-main);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.donate-btn:hover {
+  color: white;
+  fill: white;
+  background-color: var(--orange-main);
+}
+
+input, textarea {
+  border-radius: 5px;
+  border: none;
+  width: calc(100% - 10px);
+  color: var(--fuschia-main);
+  border: solid 1px white;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: inherit;
+}
+
+textarea {
+  height: 200px;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0px 0px 20px -8px var(--fuschia-main));
+  border: solid 1px var(--fuschia-main);
+  outline: none;
+}
+
+.contactform {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 16px;
+}
+
+.submit {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.submit button {
+  height: 50px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--fuschia-main);
+  outline: none;
+  border: none;
+}
+
+.grid a {
+  text-decoration: none;
+  border-bottom: solid 0.5px;
+  color: inherit;
 }
