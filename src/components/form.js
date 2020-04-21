@@ -14,12 +14,13 @@ if (typeof RECAPTCHA_KEY === 'undefined') {
 export default function Form() {
     return (
         <form
-          name="Contact Form"
+          name="contact-form"
           className="contactform"
-          method="POST"
+          method="post"
           data-netlify="true"
           data-netlify-recaptcha="true"
         >
+          <input type="hidden" name="form-name" value="contact-form"/>
           <input placeholder="Name" type="text" name="name" />
           <input placeholder="Email Address" type="email" name="email" />
           <textarea placeholder="Message" name="message" />
