@@ -48,14 +48,15 @@ const IndexPage = ({props}) => {
   return (
     <Layout>
       <Img className="hero-image" fluid={BackgroundImageStack} alt="Masks for Hunger">
-        <h1 className="hero-main">Help people get the food they need during the COVID-19 crisis</h1>
+        <h1 className="hero-main" id="top">Help people get the food they need during the COVID-19 crisis</h1>
       <Link className="arrow-down" to="/#about">
         <DownArrow />
       </Link>
       </Img>
       <div className="grid">
+        <span className="anchor" id="about"></span>
         <div className="title about"><h4>About</h4></div>
-        <div className="left profile about" id="about">
+        <div className="left profile about">
           <DivImg className="profile-pic" style={{backgroundAttachment: 'fixed'}} fluid={data.second.childImageSharp.fluid}/>
           <div className="profile-card"><h3>Lyla Chereau</h3><p>Grade 11 • Boston, MA</p></div>
         </div>
@@ -65,8 +66,9 @@ const IndexPage = ({props}) => {
             <p>Due to COVID-19, The Walk for Hunger on May 3, 2020 is cancelled but the fundraising must continue; with the being focus primarily on rapid response to food insecurity being caused by the COVID-19 crisis. </p>
             <p>I decided to be a virtual walker partnering with my mother's efforts to help the community navigate through this new environment.  I am encouraging you to donate to my fundraiser to help families that are not as fortunate as us in these times. With your generous donations we give you the opportunity to pick a mask from a selection of our beautifully homemade fabric masks. </p>
         </div>
+        <span className="anchor" id="catalog"></span>
         <div className="title catalog"><h4>Catalog</h4></div>
-      <div className="catalog full" id="catalog">{data.catalog.nodes.map((node) => {
+      <div className="catalog full">{data.catalog.nodes.map((node) => {
           return (
             <div className={`item${(node.frontmatter.quantity === 0) ? " out" : ""}`} key={node.frontmatter.title}>
               <Img className="item-image" fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.title}></Img>
@@ -78,7 +80,8 @@ const IndexPage = ({props}) => {
           )
         })}</div>
         <div className="title contact"><h4>Contact</h4></div>
-      <div className="left contact" id="contact"><p>If you wish to get a mask or have any other questions, please fill out this form or email me at <a href="mailto:lylagvideos@gmail.com">lylagvideos@gmail.com</a></p></div>
+      <span className="anchor" id="contact"></span>
+      <div className="left contact section"><p>If you wish to get a mask or have any other questions, please fill out this form or email me at <a href="mailto:lylagvideos@gmail.com">lylagvideos@gmail.com</a></p></div>
     <div className="right contact"><Form /></div>
       </div>
       <div className="donate-section"><h1>Support the movement!</h1><a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239" className="donate-btn">Donate now on the Walk for Hunger website →</a></div>

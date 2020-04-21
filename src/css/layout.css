@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 * {
-  font-family: "Inter";
+  font-family: "Inter", BlinkMacSystemFont, helvetica;
 }
 
 :root {
@@ -26,4 +26,11 @@ footer {
   color: white;
   padding: 5px 20px;
   font-weight: 600;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
 }

@@ -1,6 +1,7 @@
 .outerHeader {
   color: white;
   fill: white;
+  border-color: white;
   z-index: 1000;
   top: 0;
   position: fixed;
@@ -16,7 +17,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   border-bottom: solid 2px;
-  border-color: white;
+  border-color: inherit;
   align-items: center;
 }
 
@@ -48,12 +49,29 @@ li a:hover {
   opacity: 1;
 }
 
-.link-active {
+.link-active, .link-active a {
   opacity: 1;
+  border-bottom: solid 3px;
+  border-color: inherit;
 }
 
 .link-donate {
   padding: 5px 10px;
   border-radius: 5px;
   background-color: var(--orange-main);
+  color: white;
+}
+
+.active-about, .active-catalog {
+  background-color: var(--fuschia-bg);
+  color: var(--orange-main);
+  fill: var(--orange-main);
+  border-color: var(--orange-main);
+}
+
+.active-contact {
+  background-color: var(--fuschia-bg);
+  color: var(--fuschia-main);
+  fill: var(--fuschia-main);
+  border-color: var(--fuschia-main);
 }

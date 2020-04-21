@@ -11,61 +11,19 @@ if (typeof RECAPTCHA_KEY === 'undefined') {
   `)
 }
 
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
-
-function Complete (props) {
-  if (props.formSuccess) {
-    return (<p class="form-success">Thanks for sending a message!</p>)
-  } else {
-    return null;
-  }
-}
-
 export default function Form() {
-    const [state, setState] = React.useState({})
-    const recaptchaRef = React.createRef()
-
-    const handleChange = (e) => {
-      setState({ ...state, [e.target.name]: e.target.value })
-    }
-
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      const form = e.target
-      const recaptchaValue = recaptchaRef.current.getValue()
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': form.getAttribute('name'),
-          'g-recaptcha-response': recaptchaValue,
-          ...state,
-        }),
-      }).then(() => setState({ ...state, formSuccess: true}))
-      .catch((error) => alert(error))
-    }
-
     return (
         <form
-          name="contact-recaptcha"
+          name="Contact Form"
           className="contactform"
-          method="post"
+          method="POST"
           data-netlify="true"
           data-netlify-recaptcha="true"
-          onSubmit={handleSubmit}
         >
-          <noscript>
-            <p>This form won’t work with Javascript disabled</p>
-          </noscript>
-          <input placeholder="Name" type="text" name="name" onChange={handleChange} />
-          <input placeholder="Email Address" type="email" name="email" onChange={handleChange} />
-          <textarea placeholder="Message" name="message" onChange={handleChange} />
-          <div className="submit"><Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} /><button type="submit">Send</button></div>
-          <Complete formSuccess={state.formSuccess}/>
+          <input placeholder="Name" type="text" name="name" />
+          <input placeholder="Email Address" type="email" name="email" />
+          <textarea placeholder="Message" name="message" />
+          <div className="submit"><Recaptcha sitekey={RECAPTCHA_KEY} /><button type="submit">Send</button></div>
         </form>
   )
 }

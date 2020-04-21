@@ -34,7 +34,7 @@ p {
 .grid {
   display: grid;
   padding: 60px 20px;
-  grid-template:  [about] auto [catalog] auto [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
+  grid-template:  [anchor1] 0px [about] auto [anchor2] 0px [catalog] auto [anchor3] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
   column-gap: 10px;
   row-gap: 40px;
 }
@@ -126,18 +126,44 @@ p {
 }
 
 .about {
-  grid-row: about / catalog;
+  grid-row: about / anchor2;
   color: var(--orange-text);
 }
+
+.anchor {
+  margin-top: -80px;        /* Size of fixed header */
+  padding-bottom: 80px;
+  display: block;
+}
+
+#about.anchor {
+    grid-row: anchor1 / about;
+}
+
 .catalog {
-  grid-row: catalog / contact;
+  grid-row: catalog / anchor3;
   display: flex;
   flex-direction: row wrap;
   color: var(--orange-text);
 }
+#catalog.anchor {
+    grid-row: anchor2 / catalog;
+}
 .contact {
   grid-row-start: contact;
   color: var(--fuschia-main);
+}
+#contact.anchor {
+    grid-row: anchor3 / contact;
+}
+.contact a {
+  border-bottom-color: #ffb0d6;
+  background-color: rgba(255, 73, 161, 0.1);
+  transition: 0.3s;
+}
+.contact a:hover {
+  border-bottom-color: var(--fuschia-main);
+  background-color: #FF49A144;
 }
 
 .donate-section {
