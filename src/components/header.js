@@ -15,7 +15,9 @@ export default class Header extends React.Component {
   }
 
   updateAnchor(newState) {
-    this.setState({currentAnchor: newState.id})
+    if (typeof(newState) !== 'undefined') {
+        this.setState({currentAnchor: newState.id})
+    }
   }
 
   render () {
@@ -25,7 +27,7 @@ export default class Header extends React.Component {
           <div className="header-logo">
             <Link to="/"><Logo /></Link>
           </div>
-          <Scrollspy className="header-nav" offset={150} items={ ['top', 'about', 'catalog', 'contact'] } onUpdate={(e) => {this.updateAnchor(e)}} currentClassName="link-active">
+          <Scrollspy className="header-nav" offset={30} items={ ['top', 'about', 'catalog', 'contact'] } onUpdate={(e) => {this.updateAnchor(e)}} currentClassName="link-active">
             <li></li>
             <li><Link to="/#about">About</Link></li>
             <li><Link to="/#catalog">Catalog</Link></li>
