@@ -1,6 +1,7 @@
 .hero-image {
   height: 100vh;
   background-attachment: fixed;
+  object-fit: cover;
 }
 
 .hero-image h1 {
