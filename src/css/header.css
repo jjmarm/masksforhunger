@@ -60,7 +60,15 @@ li a:hover {
   padding: 5px 10px;
   border-radius: 5px;
   background-color: var(--orange-main);
+  border: solid var(--orange-main);
   color: white;
+  opacity: 1;
+  transition: background-color 0.2s;
+}
+
+.link-donate:hover {
+  color: var(--orange-main);
+  background-color: #00000000;
 }
 
 .active-about, .active-catalog {
@@ -75,4 +83,53 @@ li a:hover {
   color: var(--fuschia-main);
   fill: var(--fuschia-main);
   border-color: var(--fuschia-main);
+}
+
+.header-menubtn {
+  display: none;
+  width: 30px;
+  fill: inherit;
+}
+.header-menubtn svg {
+  fill: inherit;
+}
+.header-menubtn:hover, .header-menubtn * {
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .header-nav {
+      position: fixed;
+      visibility: hidden;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0,0,0, 0.5);
+      flex-flow: column nowrap;
+      font-size: 30px;
+    }
+    .link {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .donate-wrapper {
+      margin-top: 10px;
+    }
+    .header-nav.open {
+      visibility: visible;
+    }
+    .header-menubtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 1000;
+    }
+    .header-menubtn span {
+      width: 100%;
+      font-size: 30px;
+      padding-bottom: 5px;
+    }
 }

@@ -82,7 +82,7 @@ const IndexPage = ({props}) => {
         <div className="title contact"><h4>Contact</h4></div>
       <span className="anchor" id="contact"></span>
       <div className="left contact section"><p>If you wish to get a mask or have any other questions, please fill out this form or email me at <a href="mailto:lylagvideos@gmail.com">lylagvideos@gmail.com</a></p></div>
-    <div className="right contact"><Form /></div>
+    <div className="right contact"><Form maskList={data.catalog.nodes.map((node) => (node.frontmatter.quantity === 0 ? null : node.frontmatter.title))} /></div>
       </div>
       <div className="donate-section"><h1>Support the movement!</h1><a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239" className="donate-btn">Donate now on the Walk for Hunger website →</a></div>
     </Layout>

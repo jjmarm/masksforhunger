@@ -1,19 +1,37 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Logo from '../assets/logo.svg'
+import MenuBtn from '../assets/MenuBtn.svg'
 import Scrollspy from 'react-scrollspy'
 
 import '../css/header.css'
+
+const OpenCloseBtn = (props) => {
+  if (props.navOpen) {
+    return (<span>×</span>)
+  } else {
+    return (<MenuBtn />)
+  }
+}
 
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentAnchor: "top"
+      currentAnchor: "top",
+      navOpen: false
     }
     this.updateAnchor.bind(this);
+    this.toggleNav.bind(this);
   }
 
+  toggleNav(navOpen) {
+    if (navOpen) {
+      this.setState({navOpen: false})
+    } else {
+      this.setState({navOpen: true})
+    }
+  }
   updateAnchor(newState) {
     if (typeof(newState) !== 'undefined') {
         this.setState({currentAnchor: newState.id})
@@ -27,12 +45,15 @@ export default class Header extends React.Component {
           <div className="header-logo">
             <Link to="/"><Logo /></Link>
           </div>
-          <Scrollspy className="header-nav" offset={30} items={ ['top', 'about', 'catalog', 'contact'] } onUpdate={(e) => {this.updateAnchor(e)}} currentClassName="link-active">
+          <div className="header-menubtn" onClick={() => {this.toggleNav(this.state.navOpen)}}>
+            <OpenCloseBtn navOpen={this.state.navOpen}/>
+          </div>
+          <Scrollspy className={`header-nav${this.state.navOpen ? " open" : ""}`} onClick={() => {this.toggleNav(this.state.navOpen)}} items={ ['top', 'about', 'catalog', 'contact'] } onUpdate={(e) => {this.updateAnchor(e)}} currentClassName="link-active">
             <li></li>
-            <li><Link to="/#about">About</Link></li>
-            <li><Link to="/#catalog">Catalog</Link></li>
-            <li><Link to="/#contact">Contact</Link></li>
-            <li><a className="link-donate" href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239">Donate</a></li>
+            <li className="link"><Link to="/#about">About</Link></li>
+            <li className="link"><Link to="/#catalog">Catalog</Link></li>
+            <li className="link"><Link to="/#contact">Contact</Link></li>
+            <li className="link donate-wrapper"><a className="link-donate" href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239">Donate</a></li>
           </Scrollspy>
         </div>
       </div>
