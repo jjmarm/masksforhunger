@@ -18,4 +18,7 @@ collections:
       - { name: title, label: Title }
       - { name: image, label: Image, widget: image }
       - { name: quantity, label: Quantity Remaining, widget: number }
-      - { name: color, label: Color, widget: select, options: ["gray", "blue", "brown", "beige", "black", "red", "orange"] }
+      - name: "color"
+        label: "Color"
+        widget: "select"
+        options: ["gray", "blue", "brown", "beige", "black", "red", "orange"]

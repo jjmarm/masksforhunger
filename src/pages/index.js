@@ -27,7 +27,7 @@ const IndexPage = ({props}) => {
           }
         }
       }
-      catalog: allMarkdownRemark (sort: {fields: frontmatter___color}) {
+      catalog: allMarkdownRemark {
         nodes {
           frontmatter {
             quantity

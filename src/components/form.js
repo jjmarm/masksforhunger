@@ -106,7 +106,7 @@ export default function Form(props) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact-form", maskCount: state.maskCount, ...state.values })
+        body: encode({ "form-name": "contact-form", "mask-quantity": state.maskCount, ...state.values })
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
@@ -141,28 +141,28 @@ export default function Form(props) {
           <input placeholder="Email Address" type="email" name="email" />
           <input type="number" name="mask-quantity"/>
           <textarea placeholder="Message" name="message" />
-          <select name="select-1">
+          <select name="select1">
               <option value="default">Select a mask…</option>
           </select>
-          <select name="select-2">
+          <select name="select2">
               <option value="none"></option>
           </select>
-          <select name="select-3">
+          <select name="select3">
               <option value="none"></option>
           </select>
-          <select name="select-4">
+          <select name="select4">
               <option value="none"></option>
           </select>
-          <select name="select-5">
+          <select name="select5">
               <option value="none"></option>
           </select>
-          <select name="select-6">
+          <select name="select6">
               <option value="none"></option>
           </select>
-          <select name="select-7">
+          <select name="select7">
               <option value="none"></option>
           </select>
-          <select name="select-8">
+          <select name="select8">
               <option value="none"></option>
           </select>
         </form>
