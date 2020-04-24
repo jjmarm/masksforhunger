@@ -1,5 +1,5 @@
 ---
 title: Mini Ivy Slate
-image: /assets/p1120869.jpeg
+image: /assets/p1130105.jpeg
 quantity: 5
 ---
