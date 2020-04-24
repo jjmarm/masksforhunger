@@ -50,6 +50,13 @@ select option {
   border-top: solid 3px var(--fuschia-main);
   padding-top: 5px;
 }
+.mask-control div {
+  display: flex;
+  flex-flow: row wrap;
+}
+.mask-control div p {
+  margin-right: 10px;
+}
 .mask-control p {
   margin: 0;
   align-self: flex-end;

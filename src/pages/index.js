@@ -60,15 +60,29 @@ const IndexPage = ({props}) => {
           <DivImg className="profile-pic" style={{backgroundAttachment: 'fixed'}} fluid={data.second.childImageSharp.fluid}/>
           <div className="profile-card"><h3>Lyla Chereau</h3><p>Grade 11 • Boston, MA</p></div>
         </div>
-          <div className="right about">
-            <p>In recent years I have participated in the Walk For Hunger with Project Bread, an organization that works towards ensuring that families and children have food for the weekend, and are helping to combat the global hunger crisis in our local communities.</p>
-            <p>During this difficult time of crisis and isolation I have been watching my mother and her friends sew masks to donate to local hospitals to help protect people who are risking their lives for the community. </p>
-            <p>Due to COVID-19, The Walk for Hunger on May 3, 2020 is cancelled but the fundraising must continue; with the being focus primarily on rapid response to food insecurity being caused by the COVID-19 crisis. </p>
-            <p>I decided to be a virtual walker partnering with my mother's efforts to help the community navigate through this new environment.  I am encouraging you to donate to my fundraiser to help families that are not as fortunate as us in these times. With your generous donations we give you the opportunity to pick a mask from a selection of our beautifully homemade fabric masks. </p>
+        <div className="right about">
+          <p>In recent years I have participated in the Walk For Hunger with Project Bread, an organization that works towards ensuring that families and children have food for the weekend, and are helping to combat the global hunger crisis in our local communities.</p>
+          <p>During this difficult time of crisis and isolation I have been watching my mother and her friends sew masks to donate to local hospitals to help protect people who are risking their lives for the community. </p>
+          <p>Due to COVID-19, The Walk for Hunger on May 3, 2020 is cancelled but the fundraising must continue; with the being focus primarily on rapid response to food insecurity being caused by the COVID-19 crisis. </p>
+          <p>I decided to be a virtual walker partnering with my mother's efforts to help the community navigate through this new environment.  I am encouraging you to donate to my fundraiser to help families that are not as fortunate as us in these times. With your generous donations we give you the opportunity to pick a mask from a selection of our beautifully homemade fabric masks. </p>
+        <a href="http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1400">Check out my progress here!</a>
         </div>
+        <span className="anchor" id="instructions"></span>
+      <div className="title instructions"><h4>Getting a Mask</h4></div>
+      <div className="instructions full">
+        <p>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask. Just <a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239">click here</a> to donate!</p>
+        <p>However, if you do wish to get a mask, just follow these simple steps:</p>
+        <ol>
+          <li><a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239">Make a donation on the Walk for Hunger website</a>. A pledge of at least $25 is recommended to get a mask.</li>
+          <li>Browse the selection of masks <Link to="/#catalog">on the catalog</Link></li>
+          <li>Tell me which masks you would like by submitting the <Link to="/#contact">contact form</Link> below, or send me an email with your name, address, and the masks you would like. Submit two separate forms if you would like more than 8.</li>
+          <li>You should receieve a response by mail from me shortly.</li>
+        </ol>
+        <p>Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.</p>
+      </div>
         <span className="anchor" id="catalog"></span>
         <div className="title catalog"><h4>Catalog</h4></div>
-      <div className="catalog full">{data.catalog.nodes.map((node) => {
+        <div className="catalog full">{data.catalog.nodes.map((node) => {
           return (
             <div className={`item${(node.frontmatter.quantity === 0) ? " out" : ""}`} key={node.frontmatter.title}>
               <Img className="item-image" fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.title}></Img>

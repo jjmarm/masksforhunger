@@ -12,18 +12,33 @@ import '../css/radio.css'
 //   `)
 // }
 
+
+// components
+
+function MaxBtn (props) {
+  if (props.maskCount >= 8) {
+      return (<p>Mask limit reached</p>)
+    } else {
+      return (
+        <button type="button" onClick={props.addMask}>Add mask</button>
+      )
+    }
+}
+
 function Dropdowns(props) {
   var selectElements = [];
   for (var i = 1; i <= props.maskCount; i++) {
     selectElements.push(
       <div key={`select-${i}`} className="dropdown-select">
-        <select>
+        <select name={`select${i}`} onBlur={props.updateFormValues}>
             <option value="default">Select a mask…</option>
             {props.maskList.map((value) => {
               if (value !== null) {
                 return (
                   <option key={value} value={value}>{value}</option>
                 )
+              } else {
+                return null;
               }
             })}
           </select>
@@ -39,32 +54,34 @@ function FormItems(props) {
   }
   const removeMask = function() {
     if (props.formState.maskCount !== 1) {
-      props.setFormState(state => ({...state, maskCount: state.maskCount - 1}))
+      let currentCount = props.formState.maskCount;
+      props.setFormState(state => ({...state, maskCount: state.maskCount - 1, values: {...state.values, [`select${currentCount}`]: "none"}}))
     }
   }
   if (props.formState.status === "mask") {
     return (
       <>
-        <input placeholder="Name" type="text" name="name" />
-        <input placeholder="Email Address" type="email" name="email" />
+        <input placeholder="Name" type="text" name="name" onChange={props.updateFormValues} />
+        <input placeholder="Email Address" type="email" name="email" onChange={props.updateFormValues} />
         <div className="mask-control">
           <div>
-            <button type="button" onClick={addMask}>Add mask</button>
+            <MaxBtn addMask={addMask} maskCount={props.formState.maskCount}/>
             <button type="button" onClick={removeMask}>Remove last mask</button>
           </div>
           <p>{props.formState.maskCount} {props.formState.maskCount === 1 ? "mask" : "masks"} total</p>
         </div>
-        <Dropdowns maskCount={props.formState.maskCount} maskList={props.maskList}/>
-        <textarea placeholder="Additional Questions or Message" name="additional-message" />
+        <Dropdowns maskCount={props.formState.maskCount} updateFormValues={props.updateFormValues} maskList={props.maskList}/>
+        <textarea placeholder="Additional Questions or Message" name="message" onChange={props.updateFormValues} />
         <div className="submit"><button type="submit">Send</button></div>
       </>
     )
   } else if (props.formState.status === "question") {
     return (
       <>
-        <input placeholder="Name" type="text" name="name" />
-        <input placeholder="Email Address" type="email" name="email" />
-        <textarea placeholder="Message" name="message" />
+        <input placeholder="Name" type="text" name="name" onChange={props.updateFormValues} />
+        <input placeholder="Email Address" type="email" name="email" onChange={props.updateFormValues} />
+        <textarea placeholder="Message" name="message" onChange={props.updateFormValues} />
+
         <div className="submit"><button type="submit">Send</button></div>
       </>
     )
@@ -74,24 +91,81 @@ function FormItems(props) {
 }
 
 export default function Form(props) {
-    const [state, setState] = React.useState({status: "not-decided", maskCount: 1});
+    const encode = (data) => {
+      return Object.keys(data)
+          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+          .join("&");
+    }
+
+    function updateFormValues(event) {
+      let target = event.target;
+      setState(state => ({...state, values: {...state.values, [target.name]: target.value}}))
+    }
+
+    function handleSubmit (e, state) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact-form", maskCount: state.maskCount, ...state.values })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+
+      e.preventDefault();
+    };
+
+    const [state, setState] = React.useState({status: "not-decided", maskCount: 1, values: {}});
     // React.useEffect(() => {console.log(`Mask count: ${state.maskCount}`)})
     return (
+      <>
         <form
-          name="contact-form"
           className="contactform"
-          method="post"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
+          id="contactform"
+          onSubmit={(e) => {handleSubmit(e, state)}}
         >
-          <input type="hidden" name="form-name" value="contact-form"/>
           <div className="question-choice">
-            <input type="radio" name="question-choice" value="wants-mask" id="yesMask" onChange={() => {setState(state => ({...state, status: "mask"}))}}/>
+            <input type="radio" name="question-choice" value="wants-mask" id="yesMask" onChange={() => {setState(state => ({...state, status: "mask", values: {...state.values, "question-choice" : "wants-mask"}}) )}}/>
             <label htmlFor="yesMask">I want a mask</label>
-            <input type="radio" name="question-choice" value="has-question" id="noMask" onChange={() => {setState(state => ({...state, status: "question"}))}}/>
+            <input type="radio" name="question-choice" value="has-question" id="noMask" onChange={() => {setState(state => ({...state, status: "question", values: {...state.values, "question-choice" : "wants-mask"}}) )}}/>
             <label htmlFor="noMask">I have a question</label>
           </div>
-          <FormItems formState={state} setFormState={setState} maskList={props.maskList}/>
+          <FormItems formState={state} setFormState={setState} maskList={props.maskList} updateFormValues={updateFormValues}/>
         </form>
+
+        <form name="contact-form" data-netlify="true" netlify-honeypot="bot-field" style={{display: "none"}}>
+          <input type="hidden" name="form-name" value="contact-form"/>
+          <input name="bot-field"/>
+          <input type="radio" name="question-choice" value="wants-mask" id="yesMask"/>
+          <input type="radio" name="question-choice" value="has-question" id="noMask"/>
+          <input placeholder="Name" type="text" name="name" />
+          <input placeholder="Email Address" type="email" name="email" />
+          <input type="number" name="mask-quantity"/>
+          <textarea placeholder="Message" name="message" />
+          <select name="select-1">
+              <option value="default">Select a mask…</option>
+          </select>
+          <select name="select-2">
+              <option value="none"></option>
+          </select>
+          <select name="select-3">
+              <option value="none"></option>
+          </select>
+          <select name="select-4">
+              <option value="none"></option>
+          </select>
+          <select name="select-5">
+              <option value="none"></option>
+          </select>
+          <select name="select-6">
+              <option value="none"></option>
+          </select>
+          <select name="select-7">
+              <option value="none"></option>
+          </select>
+          <select name="select-8">
+              <option value="none"></option>
+          </select>
+        </form>
+      </>
   )
 }

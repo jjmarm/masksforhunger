@@ -48,7 +48,7 @@ export default class Header extends React.Component {
           <div className="header-menubtn" onClick={() => {this.toggleNav(this.state.navOpen)}}>
             <OpenCloseBtn navOpen={this.state.navOpen}/>
           </div>
-          <Scrollspy className={`header-nav${this.state.navOpen ? " open" : ""}`} onClick={() => {this.toggleNav(this.state.navOpen)}} items={ ['top', 'about', 'catalog', 'contact'] } onUpdate={(e) => {this.updateAnchor(e)}} currentClassName="link-active">
+          <Scrollspy className={`header-nav${this.state.navOpen ? " open" : ""}`} items={ ['top', 'about', 'catalog', 'contact'] } onUpdate={(e) => {this.updateAnchor(e)}} currentClassName="link-active">
             <li></li>
             <li className="link"><Link to="/#about">About</Link></li>
             <li className="link"><Link to="/#catalog">Catalog</Link></li>
