@@ -63,6 +63,7 @@ function FormItems(props) {
       <>
         <input placeholder="Name" type="text" name="name" onChange={props.updateFormValues} />
         <input placeholder="Email Address" type="email" name="email" onChange={props.updateFormValues} />
+        <input type="text" placeholder="Your Address (leave this blank for pick-up)" name="address" />
         <div className="mask-control">
           <div>
             <MaxBtn addMask={addMask} maskCount={props.formState.maskCount}/>
@@ -135,6 +136,7 @@ export default function Form(props) {
         <form name="contact-form" data-netlify="true" netlify-honeypot="bot-field" style={{display: "none"}}>
           <input type="hidden" name="form-name" value="contact-form"/>
           <input name="bot-field"/>
+          <input type="text" placeholder="Address" name="address" />
           <input type="radio" name="question-choice" value="wants-mask" id="yesMask"/>
           <input type="radio" name="question-choice" value="has-question" id="noMask"/>
           <input placeholder="Name" type="text" name="name" />

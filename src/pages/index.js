@@ -27,7 +27,7 @@ const IndexPage = ({props}) => {
           }
         }
       }
-      catalog: allMarkdownRemark {
+      catalog: allMarkdownRemark (sort: {fields: frontmatter___color}) {
         nodes {
           frontmatter {
             quantity
@@ -74,8 +74,8 @@ const IndexPage = ({props}) => {
         <p>However, if you do wish to get a mask, just follow these simple steps:</p>
         <ol>
           <li><a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239">Make a donation on the Walk for Hunger website</a>. A pledge of at least $25 is recommended to get a mask.</li>
-          <li>Browse the selection of masks <Link to="/#catalog">on the catalog</Link></li>
-          <li>Tell me which masks you would like by submitting the <Link to="/#contact">contact form</Link> below, or send me an email with your name, address, and the masks you would like. Submit two separate forms if you would like more than 8.</li>
+          <li>Browse the selection of masks <Link to="/#catalog">on the catalog</Link>.</li>
+          <li>Tell me which masks you would like by submitting the <Link to="/#contact">contact form</Link> below, or send me an email with your name, address (if you would like me to deliver to you), and the masks you would like. Submit two separate forms if you would like more than 8.</li>
           <li>You should receieve a response by mail from me shortly.</li>
         </ol>
         <p>Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.</p>

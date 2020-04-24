@@ -24,7 +24,7 @@ export default ({ children }) => {
       <Header />
       <main>{children}</main>
       <footer>
-        {new Date().getFullYear()}, Masks for Hunger.
+        {new Date().getFullYear()}, Masks for Hunger. Website by <a href="http://julianm.tk">Julian Marmier.</a>
       </footer>
     </>
   )

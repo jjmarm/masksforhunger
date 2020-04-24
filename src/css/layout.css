@@ -33,4 +33,13 @@ a.anchor {
     position: relative;
     top: -250px;
     visibility: hidden;
+    z-index: -100;
+}
+
+footer a {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: solid white 1px;
+}
+footer a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
