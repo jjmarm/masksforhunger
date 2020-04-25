@@ -21,4 +21,4 @@ collections:
       - name: "color"
         label: "Color"
         widget: "select"
-        options: ["gray", "blue", "brown", "beige", "black", "red", "orange"]
+        options: ["gray", "blue", "brown", "beige", "black", "red", "orange", "green"]
