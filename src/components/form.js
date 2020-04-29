@@ -63,7 +63,7 @@ function FormItems(props) {
       <>
         <input placeholder="Name" type="text" name="name" onChange={props.updateFormValues} />
         <input placeholder="Email Address" type="email" name="email" onChange={props.updateFormValues} />
-        <input type="text" placeholder="Your Address (leave this blank for pick-up)" name="address" />
+        <input type="text" placeholder="Your Address (leave this blank for pick-up)" name="address" onChange={props.updateFormValues} />
         <div className="mask-control">
           <div>
             <MaxBtn addMask={addMask} maskCount={props.formState.maskCount}/>
