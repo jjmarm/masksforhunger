@@ -1,6 +1,6 @@
 ---
 title: Pink Orange Terrace
 image: /assets/p1120865.jpeg
-quantity: 3
+quantity: 9
 color: red
 ---
