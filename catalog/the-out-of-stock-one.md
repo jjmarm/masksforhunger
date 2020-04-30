@@ -1,6 +1,6 @@
 ---
 title: Blue Road Blocks
 image: /assets/p1120871.jpeg
-quantity: 8
+quantity: 6
 color: blue
 ---
