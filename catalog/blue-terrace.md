@@ -1,6 +1,6 @@
 ---
 title: Blue Terrace
 image: /assets/p1130194.jpeg
-quantity: 8
+quantity: 6
 color: blue
 ---
