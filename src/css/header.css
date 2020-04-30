@@ -71,7 +71,7 @@ li a:hover {
   background-color: #00000000;
 }
 
-.active-about, .active-catalog {
+.active-about, .active-instructions, .active-catalog {
   background-color: var(--fuschia-bg);
   color: var(--orange-main);
   fill: var(--orange-main);
@@ -97,7 +97,7 @@ li a:hover {
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .header-nav {
       position: fixed;
       visibility: hidden;

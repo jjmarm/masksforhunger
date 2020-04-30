@@ -55,7 +55,7 @@ const IndexPage = ({props}) => {
       </Img>
       <div className="grid">
         <span className="anchor" id="about"></span>
-        <div className="title about"><h4>About</h4></div>
+        <div className="title about" id="about-container"><h4>About</h4></div>
         <div className="left profile about">
           <DivImg className="profile-pic" style={{backgroundAttachment: 'fixed'}} fluid={data.second.childImageSharp.fluid}/>
           <div className="profile-card"><h3>Lyla Chereau</h3><p>Grade 11 • Boston, MA</p></div>
@@ -68,8 +68,13 @@ const IndexPage = ({props}) => {
         <a href="http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1400">Check out my progress here!</a>
         </div>
         <span className="anchor" id="instructions"></span>
-      <div className="title instructions"><h4>Getting a Mask</h4></div>
+      <div className="title instructions" id="instructions-container"><h4>Getting a Mask</h4></div>
       <div className="instructions full">
+        <ul className="mask-header">
+          <li>Made from 100% cotton</li>
+          <li>Elastic loop around the ears</li>
+          <li>Small pocket to insert a filter if desired</li>
+        </ul>
         <p>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask. Just <a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239">click here</a> to donate!</p>
         <p>However, if you do wish to get a mask, just follow these simple steps:</p>
         <ol>
@@ -81,19 +86,19 @@ const IndexPage = ({props}) => {
         <p>Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.</p>
       </div>
         <span className="anchor" id="catalog"></span>
-        <div className="title catalog"><h4>Catalog</h4></div>
+        <div className="title catalog" id="catalog-container"><h4>Catalog</h4></div>
         <div className="catalog full">{data.catalog.nodes.map((node) => {
           return (
             <div className={`item${(node.frontmatter.quantity === 0) ? " out" : ""}`} key={node.frontmatter.title}>
               <Img className="item-image" fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.title}></Img>
             <div className="item-container">
                 <h3>{node.frontmatter.title}</h3>
-              <p>{(node.frontmatter.quantity === 0) ? `Out of stock` : `${node.frontmatter.quantity} Masks Left`}</p>
+              <p>{(node.frontmatter.quantity === 0) ? `Out of stock` : ((node.frontmatter.quantity === 1) ? "1 mask left" : `${node.frontmatter.quantity} masks left`)}</p>
               </div>
             </div>
           )
         })}</div>
-        <div className="title contact"><h4>Contact</h4></div>
+        <div className="title contact" id="contact-container"><h4>Contact</h4></div>
       <span className="anchor" id="contact"></span>
       <div className="left contact section"><p>If you wish to get a mask or have any other questions, please fill out this form or email me at <a href="mailto:lylagvideos@gmail.com">lylagvideos@gmail.com</a></p></div>
     <div className="right contact"><Form maskList={data.catalog.nodes.map((node) => (node.frontmatter.quantity === 0 ? null : node.frontmatter.title))} /></div>

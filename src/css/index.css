@@ -243,7 +243,26 @@ p {
   color: inherit;
 }
 
-@media (max-width: 700px) {
+ul.mask-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+ul.mask-header li {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    border: solid var(--orange-text) 1px;
+    padding: 10px;
+}
+
+@media (max-width: 900px) {
     h1.hero-main {
       width: calc(100% - 40px);
       margin: 0;
@@ -264,6 +283,9 @@ p {
     .title h4{
       writing-mode: initial;
     }
+    .right {
+      margin-bottom: 30px;
+    }
     .profile {
       flex-flow: row nowrap;
       align-items: center;
@@ -280,4 +302,13 @@ p {
         margin-top: -100px;
         padding-bottom: 100px;
     }
+}
+
+@media (max-width: 640px) {
+  ul.mask-header {
+    flex-flow: column nowrap;
+  }
+  ul.mask-header li {
+    margin: 10px 0 0 0;
+  }
 }
