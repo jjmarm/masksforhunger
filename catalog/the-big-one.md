@@ -1,6 +1,6 @@
 ---
 title: Blue Sparkles
 image: /assets/p1120858.jpeg
-quantity: 4
+quantity: 6
 color: gray
 ---
