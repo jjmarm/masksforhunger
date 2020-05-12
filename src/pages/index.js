@@ -62,9 +62,9 @@ const IndexPage = ({props}) => {
         </div>
         <div className="right about">
           <p>In recent years I have participated in the Walk For Hunger with Project Bread, an organization that works towards ensuring that families and children have food for the weekend, and are helping to combat the global hunger crisis in our local communities.</p>
-          <p>During this difficult time of crisis and isolation I have been watching my mother and her friends sew masks to donate to local hospitals to help protect people who are risking their lives for the community. </p>
-          <p>Due to COVID-19, The Walk for Hunger on May 3, 2020 is cancelled but the fundraising must continue; with the being focus primarily on rapid response to food insecurity being caused by the COVID-19 crisis. </p>
-          <p>I decided to be a virtual walker partnering with my mother's efforts to help the community navigate through this new environment.  I am encouraging you to donate to my fundraiser to help families that are not as fortunate as us in these times. With your generous donations we give you the opportunity to pick a mask from a selection of our beautifully homemade fabric masks. </p>
+          <p>Due to COVID-19, The Walk for Hunger on May 3, 2020 was cancelled but the fundraising must continue; with the being focus primarily on rapid response to food insecurity being caused by the COVID-19 crisis.</p>
+          <p>However, the driving force of this organization is that <b>HUNGER NEVER STOPS</b>! </p>
+          <p>I decided to be a virtual walker partnering with my mother's efforts to help the community navigate through this new environment. I am encouraging you to donate to my fundraiser to help families that are not as fortunate as us in these times. With your generous donations we give you the opportunity to pick a mask from a selection of our beautifully homemade fabric masks.</p>
         <a href="http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1400">Check out my progress here!</a>
         </div>
         <span className="anchor" id="instructions"></span>
