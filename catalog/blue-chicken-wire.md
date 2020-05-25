@@ -1,6 +1,6 @@
 ---
 title: Blue Chicken Wire
 image: /assets/p1120868.jpeg
-quantity: 4
+quantity: 3
 color: blue
 ---
