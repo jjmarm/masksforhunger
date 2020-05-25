@@ -1,6 +1,6 @@
 ---
 title: Orange Tie-dye
 image: /assets/p1120863.jpeg
-quantity: 5
+quantity: 4
 color: orange
 ---
