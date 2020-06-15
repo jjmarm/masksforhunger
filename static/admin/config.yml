@@ -15,10 +15,11 @@ collections:
     label: "Chapters"
     label_singular: "Chapter"
     folder: "chapters"
-    slug: “{{slug}}”
+    slug: "{{slug}}"
     create: true
     fields:
       - { name: "title", label: "Chapter Name", hint: "The name of the city where the chapter is led."}
+      - { name: "thumbnail", label: "Thumbnail", hint: "The image used in the list of chapters on the Masks For Hunger main page. A good idea for this is an image of the city of your chapter. Pixabay might have some good ones.", widget: image}
       - { name: "header", label: "Header Text", hint: "The big message you see when you first load the page."}
       - { name: "mainImage", label: "Header Image", widget: "image", hint: "The first image you see when the page is loaded" }
       - { name: "profileImage", label: "Profile Picture", widget: "image", hint: "Picture of the chapter leaders." }
