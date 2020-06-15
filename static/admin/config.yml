@@ -1,5 +1,7 @@
 backend:
-  name: test-repo
+  name: github
+  repo: julianmarmier/masksforhunger
+  branch: Multi-City
   # branch: master
 
 site_url: https://masksforhunger.com
