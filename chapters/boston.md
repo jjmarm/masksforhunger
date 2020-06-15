@@ -1,5 +1,6 @@
 ---
 title: Boston
+thumbnail: /assets/boston-1099418_1920.jpg
 header: Help people get the food they need during the COVID-19 Crisis
 mainImage: /assets/hero.jpeg
 profileImage: /assets/lyla.jpeg
