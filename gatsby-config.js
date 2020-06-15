@@ -3,6 +3,7 @@
 *
 * See: https://www.gatsbyjs.org/docs/gatsby-config/
 */
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -19,7 +20,12 @@ module.exports = {
     siteurl: `https://masksforhunger.com`
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-react-svg",

@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@pake/react-color": "^3.0.0",
     "gatsby": "^2.20.12",
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.4",
@@ -28,7 +29,9 @@
     "gatsby-transformer-remark": "^2.7.3",
     "gatsby-transformer-sharp": "^2.4.6",
     "install": "^0.13.0",
+    "netlify-cms": "^2.10.50",
     "netlify-cms-app": "^2.12.9",
+    "netlify-cms-widget-color": "^3.0.1",
     "npm": "^6.14.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
