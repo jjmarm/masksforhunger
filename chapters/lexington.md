@@ -2,7 +2,7 @@
 title: Lexington
 thumbnail: /assets/boston-1099418_1920.jpg
 header: The people you love, the things you love.
-mainImage: /assets/kalm.png
+mainImage: /assets/kalm.jpg
 profileImage: /assets/kalm.png
 about: I was inspired by the lord of nothing. Silence simply is beauty. I'm
   serious. Donate to this cause, now.
