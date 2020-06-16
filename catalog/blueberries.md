@@ -1,6 +1,6 @@
 ---
 title: Blueberries
 image: /assets/p1130104.jpeg
-quantity: 4
+quantity: 3
 color: blue
 ---
