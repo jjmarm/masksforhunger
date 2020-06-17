@@ -1,6 +1,6 @@
 ---
-title: Starry Black on White
+title: Starry Black on White (Out of Stock)
 image: /assets/img_0559.jpeg
-quantity: 1
+quantity: 0
 color: black
 ---
