@@ -1,6 +1,6 @@
 ---
-title: Moshi Spring Dots
+title: Moshi Spring Dots (Out of Stock)
 image: /assets/p1120859.jpeg
-quantity: 1
+quantity: 0
 color: beige
 ---
