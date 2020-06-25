@@ -1,6 +1,6 @@
 ---
 title: Solid Royal Blue
-image: /assets/p1120870.jpeg
+image: /assets/p1130283.jpeg
 quantity: 8
 color: blue
 ---
