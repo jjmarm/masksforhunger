@@ -5,8 +5,8 @@ import Header from './header'
 
 import '../css/layout.css'
 
-export default ({ children }) => {
-  const data = useStaticQuery(graphql`
+export default ({ children, colors, data }) => {
+  const pageMetadata = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -15,13 +15,21 @@ export default ({ children }) => {
       }
     }
   `)
+
+  let root = document.documentElement;
+  if (colors) {
+    root.style.setProperty('--color-one', colors.one);
+    root.style.setProperty('--color-two', colors.two);
+    root.style.setProperty('--color-background', colors.background)
+  }
+
   return (
     <>
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>{data.site.siteMetadata.title}</title>
+        <title>{pageMetadata.site.siteMetadata.title}</title>
       </Helmet>
-      <Header />
+      <Header data={data} />
       <main>{children}</main>
       <footer>
         {new Date().getFullYear()}, Masks for Hunger. Website by <a href="http://julianm.tk">Julian Marmier.</a>

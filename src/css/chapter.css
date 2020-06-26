@@ -35,7 +35,7 @@ p {
 .grid {
   display: grid;
   padding: 60px 20px;
-  grid-template:  [ab-anchor] 0px [about] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [chapters] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
+  grid-template:  [ab-anchor] 0px [about] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
   column-gap: 10px;
   row-gap: 40px;
 }
@@ -109,24 +109,6 @@ p {
   transition: 0.2s;
 }
 
-.item a {
-  border-bottom: none;
-  background: linear-gradient(to bottom, #FF5F0044 0%, #FF5F0044 100%);
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 4px 0.5px;
-  transition: background-size 0.2s;
-}
-
-.item:hover {
-  border-width: 6px;
-}
-
-.item:hover a {
-  background-size: 4px 10px;
-}
-
-
 .out {
   color: #bbb;
   border-color: #bbb;
@@ -169,14 +151,14 @@ p {
     grid-row: ab-anchor / about;
 }
 
-.chapters {
-  grid-row: chapters / co-anchor;
+.catalog {
+  grid-row: catalog / co-anchor;
   display: flex;
   flex-flow: row wrap;
   color: var(--color-one);
 }
-#chapters.anchor {
-    grid-row: ca-anchor / chapters;
+#catalog.anchor {
+    grid-row: ca-anchor / catalog;
 }
 
 .contact {

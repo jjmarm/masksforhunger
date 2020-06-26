@@ -59,30 +59,30 @@ li a:hover {
 .link-donate {
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: var(--orange-main);
-  border: solid var(--orange-main);
+  background-color: var(--color-one);
+  border: solid var(--color-one);
   color: white;
   opacity: 1;
   transition: background-color 0.2s;
 }
 
 .link-donate:hover {
-  color: var(--orange-main);
+  color: var(--color-one);
   background-color: #00000000;
 }
 
-.active-about, .active-instructions, .active-catalog {
-  background-color: var(--fuschia-bg);
-  color: var(--orange-main);
-  fill: var(--orange-main);
-  border-color: var(--orange-main);
+.active-about, .active-instructions, .active-catalog, .active-chapters {
+  background-color: var(--color-background);
+  color: var(--color-one);
+  fill: var(--color-one);
+  border-color: var(--color-one);
 }
 
 .active-contact {
-  background-color: var(--fuschia-bg);
-  color: var(--fuschia-main);
-  fill: var(--fuschia-main);
-  border-color: var(--fuschia-main);
+  background-color: var(--color-background);
+  color: var(--color-two);
+  fill: var(--color-two);
+  border-color: var(--color-two);
 }
 
 .header-menubtn {

@@ -54,7 +54,7 @@ exports.createPages = ({graphql, actions}) => {
           path: `${edge.node.fields.slug}`,
           component: chapterTemplate,
           context: {
-            title: edge.node.title
+            title: edge.node.frontmatter.title
           }
         })
     });

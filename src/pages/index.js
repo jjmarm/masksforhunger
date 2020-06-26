@@ -4,23 +4,43 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-background-image"
 import DivImg from "gatsby-image"
 
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
+
 import DownArrow from '../assets/Arrow-Down.svg'
 //import ExtLink from '../assets/ext-website.svg'
 
-import Form from "../components/form"
 import "../css/index.css"
 
 const IndexPage = ({props}) => {
   const data = useStaticQuery(graphql`
     query {
-      Chapters: allMarkdownRemark (sort: {order: ASC, fields: frontmatter___title}) {
-        nodes {
-          frontmatter {
-            title
-            thumbnail {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
+      first: file (relativePath: {eq: "hero.jpeg"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      second: file (relativePath: {eq: "lyla.jpeg"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      chapters: allMarkdownRemark (sort: {order: ASC, fields: frontmatter___title}) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              thumbnail {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
@@ -33,7 +53,7 @@ const IndexPage = ({props}) => {
   return (
     <Layout>
       <Img className="hero-image" fluid={BackgroundImageStack} alt="Masks for Hunger">
-        <h1 className="hero-main" id="top">Help people get the food they need during the COVID-19 crisis</h1>
+        <h1 className="hero-main" id="top">A student-driven organization helping people during the COVID-19 crisis</h1>
       <Link className="arrow-down" to="/#about">
         <DownArrow />
       </Link>
@@ -60,25 +80,19 @@ const IndexPage = ({props}) => {
           <li>Elastic loop around the ears</li>
           <li>Small pocket to insert a filter if desired</li>
         </ul>
-        <p>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask. Just <a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239">click here</a> to donate!</p>
-        <p>However, if you do wish to get a mask, just follow these simple steps:</p>
-        <ol>
-          <li><a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239">Make a donation on the Walk for Hunger website</a>. A pledge of at least $25 is recommended to get a mask.</li>
-          <li>Browse the selection of masks <Link to="/#catalog">on the catalog</Link>.</li>
-          <li>Tell me which masks you would like by submitting the <Link to="/#contact">contact form</Link> below, or send me an email with your name, address (if you would like me to deliver to you), and the masks you would like. Submit two separate forms if you would like more than 8.</li>
-          <li>You should receieve a response by mail from me shortly.</li>
-        </ol>
+        <p>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask.</p>
+        <p>To donate or get a mask, choose the closest chapter near you from the <AnchorLink to="/#chapters" title="available list below" />.</p>
         <p>Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.</p>
       </div>
-        <span className="anchor" id="catalog"></span>
-        <div className="title catalog" id="catalog-container"><h4>Catalog</h4></div>
-        <div className="catalog full">{data.catalog.nodes.map((node) => {
+        <span className="anchor" id="chapters"></span>
+        <div className="title catalog" id="chapters-container"><h4>Chapters</h4></div>
+        <div className="catalog full">{data.chapters.edges.map((edge) => {
           return (
-            <div className={`item${(node.frontmatter.quantity === 0) ? " out" : ""}`} key={node.frontmatter.title}>
-              <Img className="item-image" fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.title}></Img>
+            <div className="item" key={edge.node.frontmatter.title}>
+              <Img className="item-image" fluid={edge.node.frontmatter.thumbnail.childImageSharp.fluid} alt={edge.node.frontmatter.title}></Img>
             <div className="item-container">
-                <h3>{node.frontmatter.title}</h3>
-              <p>{(node.frontmatter.quantity === 0) ? `Out of stock` : ((node.frontmatter.quantity === 1) ? "1 mask left" : `${node.frontmatter.quantity} masks left`)}</p>
+                <h3>{edge.node.frontmatter.title}</h3>
+                <p><Link to={edge.node.fields.slug}>Visit the chapter page →</Link></p>
               </div>
             </div>
           )
@@ -86,7 +100,7 @@ const IndexPage = ({props}) => {
         <div className="title contact" id="contact-container"><h4>Contact</h4></div>
       <span className="anchor" id="contact"></span>
       <div className="left contact section"><p>If you wish to get a mask or have any other questions, please fill out this form or email me at <a href="mailto:lylagvideos@gmail.com">lylagvideos@gmail.com</a></p></div>
-    <div className="right contact"><Form maskList={data.catalog.nodes.map((node) => (node.frontmatter.quantity === 0 ? null : node.frontmatter.title))} /></div>
+    <div className="right contact"></div>
       </div>
       <div className="donate-section"><h1>Support the movement!</h1><a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239" className="donate-btn">Donate now on the Walk for Hunger website →</a></div>
     </Layout>
