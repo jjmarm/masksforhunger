@@ -3,10 +3,13 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Img from "gatsby-background-image"
 import DivImg from "gatsby-image"
-
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import DownArrow from '../assets/Arrow-Down.svg'
+
+import unified from 'unified'
+import parse from 'remark-parse'
+import remark2react from 'remark-react'
 
 import Form from "../components/form"
 import "../css/chapter.css"
@@ -19,9 +22,9 @@ const ChapterPage = (props) => {
     <Layout colors={{one: chapter.colorOne, two: chapter.colorTwo, background: chapter.backgroundColor}} data={props.data}>
       <Img className="hero-image" fluid={BackgroundImageStack} alt="Masks for Hunger">
         <h1 className="hero-main" id="top">{`${chapter.header}`}</h1>
-        <a className="arrow-down" href={`${props.data.markdownRemark.fields.slug}#about`}>
+        <AnchorLink stripHash className="arrow-down" to={`${props.data.markdownRemark.fields.slug}#about`}>
           <DownArrow />
-        </a>
+        </AnchorLink>
       </Img>
       <div className="grid">
         <span className="anchor" id="about"></span>
@@ -31,7 +34,12 @@ const ChapterPage = (props) => {
           <div className="profile-card"><h3>{chapter.leader}</h3><p>{chapter.subtitle}</p></div>
         </div>
         <div className="right about">
-          {chapter.about}
+          {
+            unified()
+              .use(parse)
+              .use(remark2react)
+              .processSync(chapter.about).result
+          }
         </div>
         <span className="anchor" id="instructions"></span>
       <div className="title instructions" id="instructions-container"><h4>Getting a Mask</h4></div>

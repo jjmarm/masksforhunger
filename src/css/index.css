@@ -109,6 +109,14 @@ p {
   transition: 0.2s;
 }
 
+#item-link {
+  border: solid var(--color-one) 3px;
+}
+
+#item-link:hover {
+  border-width: 6px;
+}
+
 .item a {
   border-bottom: none;
   background: linear-gradient(to bottom, #FF5F0044 0%, #FF5F0044 100%);

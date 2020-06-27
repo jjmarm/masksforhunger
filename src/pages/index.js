@@ -88,13 +88,13 @@ const IndexPage = ({props}) => {
         <div className="title catalog" id="chapters-container"><h4>Chapters</h4></div>
         <div className="catalog full">{data.chapters.edges.map((edge) => {
           return (
-            <div className="item" key={edge.node.frontmatter.title}>
+            <Link to={edge.node.fields.slug} id="item-link" className="item" key={edge.node.frontmatter.title}>
               <Img className="item-image" fluid={edge.node.frontmatter.thumbnail.childImageSharp.fluid} alt={edge.node.frontmatter.title}></Img>
             <div className="item-container">
                 <h3>{edge.node.frontmatter.title}</h3>
                 <p><Link to={edge.node.fields.slug}>Visit the chapter page →</Link></p>
-              </div>
             </div>
+          </Link>
           )
         })}</div>
         <div className="title contact" id="contact-container"><h4>Contact</h4></div>
