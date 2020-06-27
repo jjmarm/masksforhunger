@@ -17,11 +17,16 @@ about: >-
 
 
   By making a donation, you will be helping those in need of food due to COVID-19. We are immensely grateful for anything you can do!
-leader: Sophia Gleason
+leader: Sophia Gleeson
 subtitle: 9th grade • San Diego, CA
 donateURL: https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239
 colorOne: "#30a292"
 colorTwo: "#4775d3"
 backgroundColor: "#f0fdec"
 contactEmail: sophia.masks@gmail.com
+masks:
+  - title: Test Mask
+    image: /assets/p1120862.jpeg
+    quantity: 2
+    color: green
 ---
