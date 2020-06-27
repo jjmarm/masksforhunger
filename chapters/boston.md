@@ -27,7 +27,7 @@ donateURL: https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6
 colorOne: "#ff8136"
 colorTwo: "#ff49a1"
 backgroundColor: "#ffe3f1"
-contactEmail: lyla@masksforhunger.com
+contactEmail: lchereau@isbos.org
 masks:
   - title: Anise
     image: /assets/p1120869-2.jpeg
