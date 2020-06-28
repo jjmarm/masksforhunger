@@ -107,7 +107,7 @@ export default function Form(props) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact-form", "mask-quantity": state.maskCount, ...state.values })
+        body: encode({ "form-name": `Contact Form - ${props.chapterName}`, "mask-quantity": state.maskCount, ...state.values })
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
@@ -125,9 +125,9 @@ export default function Form(props) {
           onSubmit={(e) => {handleSubmit(e, state)}}
         >
           <div className="question-choice">
-            <input type="radio" name="question-choice" value="wants-mask" id="yesMask" onChange={() => {setState(state => ({...state, status: "mask", values: {...state.values, "question-choice" : "wants-mask"}}) )}}/>
+            <input type="radio" name="question-choice" value="Wants a Mask" id="yesMask" onChange={() => {setState(state => ({...state, status: "mask", values: {...state.values, "question-choice" : "wants-mask"}}) )}}/>
             <label htmlFor="yesMask">I want a mask</label>
-            <input type="radio" name="question-choice" value="has-question" id="noMask" onChange={() => {setState(state => ({...state, status: "question", values: {...state.values, "question-choice" : "wants-mask"}}) )}}/>
+            <input type="radio" name="question-choice" value="Has a question" id="noMask" onChange={() => {setState(state => ({...state, status: "question", values: {...state.values, "question-choice" : "wants-mask"}}) )}}/>
             <label htmlFor="noMask">I have a question</label>
           </div>
           <FormItems formState={state} setFormState={setState} maskList={props.maskList} updateFormValues={updateFormValues}/>

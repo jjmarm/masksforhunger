@@ -117,8 +117,10 @@ p {
   border-width: 6px;
 }
 
-.item a {
-  border-bottom: none;
+.item p.link {
+  font-size: 16px;
+  max-width: auto;
+  border-bottom: solid 1px;
   background: linear-gradient(to bottom, #FF5F0044 0%, #FF5F0044 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;
@@ -130,7 +132,7 @@ p {
   border-width: 6px;
 }
 
-.item:hover a {
+.item:hover p.link {
   background-size: 4px 10px;
 }
 
@@ -290,7 +292,7 @@ ul.mask-header li {
     padding: 10px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     h1.hero-main {
       width: calc(100% - 40px);
       margin: 0;

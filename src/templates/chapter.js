@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-background-image"
 import DivImg from "gatsby-image"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import {Link} from 'gatsby'
 
 import DownArrow from '../assets/Arrow-Down.svg'
 
@@ -34,12 +35,21 @@ const ChapterPage = (props) => {
           <div className="profile-card"><h3>{chapter.leader}</h3><p>{chapter.subtitle}</p></div>
         </div>
         <div className="right about">
-          {
-            unified()
-              .use(parse)
-              .use(remark2react)
-              .processSync(chapter.about).result
-          }
+          <div>
+            {
+              unified()
+                .use(parse)
+                .use(remark2react)
+                .processSync(chapter.about).result
+            }
+          </div>
+        </div>
+        <div className="full about2">
+          <h4>THE PROGRAM</h4>
+          <div className="two-col">
+            <h2><b>Masks for Hunger</b> is a student-led organization that helps people get the food they need during the COVID-19 crisis.</h2>
+            <Link to="/" id="action">Learn More →</Link>
+          </div>
         </div>
         <span className="anchor" id="instructions"></span>
       <div className="title instructions" id="instructions-container"><h4>Getting a Mask</h4></div>
@@ -75,7 +85,7 @@ const ChapterPage = (props) => {
         <div className="title contact" id="contact-container"><h4>Contact</h4></div>
       <span className="anchor" id="contact"></span>
       <div className="left contact section"><p>If you wish to get a mask or have any other questions, please fill out this form or email me at <a href={`mailto:${chapter.contactEmail}`}>{chapter.contactEmail}</a></p></div>
-    <div className="right contact"><Form maskList={chapter.masks.map((mask) => (mask.quantity === 0 ? null : mask.title))} /></div>
+    <div className="right contact"><Form chapterName={chapter.title} maskList={chapter.masks.map((mask) => (mask.quantity === 0 ? null : mask.title))} /></div>
       </div>
       <div className="donate-section"><h1>Support the movement!</h1><a href={chapter.donateURL} className="donate-btn">Donate now on the Walk for Hunger website →</a></div>
     </Layout>

@@ -20,10 +20,86 @@
   border-bottom: solid 2px;
   border-color: inherit;
   align-items: center;
+  min-height: 60px;
 }
 
 .header-logo svg {
   fill: inherit;
+}
+
+.header-logo {
+  display: flex;
+  flex-flow: row nowrap;
+  color: inherit;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chapter-links {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.chapter-links li {
+  margin: 3px 0 0 0;
+  padding: 0 0 0 55px;
+  pointer-events: auto;
+}
+
+.chapter-links a {
+  opacity: 1;
+  transition: 0.2s;
+}
+.chapter-links a:hover {
+  color: var(--color-two);
+}
+
+.main-page-link {
+  border-top: solid 1px;
+  padding-top: 3px;
+  border-color: inherit;
+}
+
+.logo-select.show {
+  display: block;
+}
+
+.logo-select {
+  box-shadow: 0 0 15px -5px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--color-one);
+  fill: var(--color-one);
+  background-color: var(--color-background);
+  border-radius: 10px;
+}
+
+.logo-select .header-logo {
+  padding: 5px;
+}
+
+.logo-title {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.header-logo h3, .header-logo p {
+  font-weight: 600;
+  margin: 0;
+  line-height: 0.9;
+  letter-spacing: -0.9px;
+}
+
+.header-logo h3 {
+  font-size: 30px;
+}
+
+.icon {
+  max-height: 60px;
+  width: 55px;
 }
 
 ul {

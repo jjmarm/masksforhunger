@@ -21,6 +21,10 @@ export default ({ children, colors, data }) => {
     root.style.setProperty('--color-one', colors.one);
     root.style.setProperty('--color-two', colors.two);
     root.style.setProperty('--color-background', colors.background)
+  } else {
+    root.style.setProperty('--color-one', "#ff8136");
+    root.style.setProperty('--color-two', "#ff49a1");
+    root.style.setProperty('--color-background', "#ffe3f1");
   }
 
   return (
@@ -32,7 +36,7 @@ export default ({ children, colors, data }) => {
       <Header data={data} />
       <main>{children}</main>
       <footer>
-        {new Date().getFullYear()}, Masks for Hunger. Website by <a href="http://julianm.tk">Julian Marmier.</a>
+        © {new Date().getFullYear()}, Masks for Hunger. Website by <a href="http://julianm.tk">Julian Marmier.</a>
       </footer>
     </>
   )

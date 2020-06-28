@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import Logo from '../assets/logo.svg'
+import Icon from '../assets/icon.svg'
 import MenuBtn from '../assets/MenuBtn.svg'
 import Scrollspy from 'react-scrollspy'
 
@@ -21,10 +22,12 @@ export default class Header extends React.Component {
     this.state = {
       currentAnchor: "top",
       navOpen: false,
-      isMoving: false
+      chaptersOpen: false
     }
+
     this.updateAnchor.bind(this);
     this.toggleNav.bind(this);
+    this.toggleChapters.bind(this);
   }
 
   toggleNav(navOpen) {
@@ -34,6 +37,11 @@ export default class Header extends React.Component {
       this.setState({navOpen: true})
     }
   }
+
+  toggleChapters(chaptersOpen) {
+    chaptersOpen ? this.setState({chaptersOpen: false}) : this.setState({chaptersOpen: true});
+  }
+
   updateAnchor(newState) {
     if (typeof(newState) !== 'undefined') {
         const anchorName = newState.id.slice(0, newState.id.indexOf('-container'));
@@ -50,8 +58,27 @@ export default class Header extends React.Component {
       return (
         <div className={`outerHeader active-${this.state.currentAnchor}`}>
           <div className="header">
-            <div className="header-logo">
-              <Link to="/"><Logo /></Link>
+            <div className={`logo-select ${this.state.chaptersOpen ? ' show' : ''}`} onMouseOut={() => {console.log("mouseout"); this.toggleChapters(this.state.chaptersOpen)}}>
+              <div className="header-logo">
+                <Icon className="icon"/>
+                <div className="logo-title">
+                  <h3>Masks For Hunger</h3>
+                  <p>{chapter.title}</p>
+                </div>
+              </div>
+                <ul className="chapter-links">{this.props.data.allMarkdownRemark.edges.map((edge) => (
+                    <li key={edge.node.frontmatter.title}><AnchorLink to={edge.node.fields.slug} title={edge.node.frontmatter.title} /></li>
+                  ))}
+                  <li className="main-page-link"><Link to="/">Masks For Hunger</Link></li>
+                </ul>
+            </div>
+
+            <div className="header-logo" onMouseOver={() => {this.toggleChapters(this.state.chaptersOpen)}}>
+              <Icon className="icon"/>
+              <div className="logo-title">
+                <h3>Masks For Hunger</h3>
+                <p>{chapter.title}</p>
+              </div>
             </div>
             <div className="header-menubtn" onClick={() => {this.toggleNav(this.state.navOpen)}}>
               <OpenCloseBtn navOpen={this.state.navOpen}/>
@@ -92,3 +119,20 @@ export default class Header extends React.Component {
     }
   }
 }
+
+export const query = graphql`
+  query pageQuery {
+    allMarkdownRemark (sort: {order: ASC, fields: frontmatter___title}) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+  `
