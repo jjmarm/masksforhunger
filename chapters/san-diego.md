@@ -19,6 +19,8 @@ about: >-
   By making a donation, you will be helping those in need of food due to COVID-19. We are immensely grateful for anything you can do!
 leader: Sophia Gleeson
 subtitle: 9th grade • San Diego, CA
+features:
+  - feature: Made with cotton
 donateURL: https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239
 colorOne: "#30a292"
 colorTwo: "#4775d3"
