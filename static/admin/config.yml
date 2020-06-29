@@ -26,6 +26,13 @@ collections:
       - { name: "about", label: "About", hint: "About the chapter, e.g. why did you start it? If you add links and styles (bold, underline, etc.) the text will look weird in the window to the right, but don't worry, when you publish this page it will be normal on the website.", widget: "markdown"}
       - { name: "leader",  label: "Chapter Leader(s)" }
       - { name: "subtitle", label: "Leader Subtitle", hint: "The text below the name, usually grade and city. E.g. 11th Grade • Boston, MA" }
+      - name: features
+        label: Mask features
+        label_singular: Feature
+        hint: Add a few big features to describe your masks. E.g. "100% cotton", or "elastic included"
+        widget: list
+        fields:
+          - {name: "feature", label: "Feature"}
       - { name: "donateURL", label: "Donate URL", hint: "The link to your donation portal. Make sure it begins with http:// or https://",  widget: "string"}
       - { name: "colorOne", label: "Main Color 1", hint: "The first main color of your page, used for the about, getting a mask, and catalog sections.", widget: "color"}
       - { name: "colorTwo", label: "Main Color 2", hint: "The second main color of your page, used for the contact section and form.", widget: "color" }

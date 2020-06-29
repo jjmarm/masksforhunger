@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from './header'
@@ -16,17 +16,18 @@ export default ({ children, colors, data }) => {
     }
   `)
 
-  let root = document.documentElement;
-  if (colors) {
-    root.style.setProperty('--color-one', colors.one);
-    root.style.setProperty('--color-two', colors.two);
-    root.style.setProperty('--color-background', colors.background)
-  } else {
-    root.style.setProperty('--color-one', "#ff8136");
-    root.style.setProperty('--color-two', "#ff49a1");
-    root.style.setProperty('--color-background', "#ffe3f1");
-  }
-
+  useEffect(() => {
+    let root = document.documentElement;
+    if (colors) {
+      root.style.setProperty('--color-one', colors.one);
+      root.style.setProperty('--color-two', colors.two);
+      root.style.setProperty('--color-background', colors.background)
+    } else {
+      root.style.setProperty('--color-one', "#ff8136");
+      root.style.setProperty('--color-two', "#ff49a1");
+      root.style.setProperty('--color-background', "#ffe3f1");
+    }
+  })
   return (
     <>
       <Helmet>

@@ -36,7 +36,7 @@ p {
   display: grid;
   padding: 60px 20px;
   grid-template:  [ab-anchor] 0px [about] auto [about-2] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
-  column-gap: 10px;
+  column-gap: 20px;
   row-gap: 40px;
 }
 

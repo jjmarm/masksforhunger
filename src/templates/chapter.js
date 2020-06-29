@@ -55,9 +55,11 @@ const ChapterPage = (props) => {
       <div className="title instructions" id="instructions-container"><h4>Getting a Mask</h4></div>
       <div className="instructions full">
         <ul className="mask-header">
-          <li>Made from 100% cotton</li>
-          <li>Elastic loop around the ears</li>
-          <li>Small pocket to insert a filter if desired</li>
+          {
+            chapter.features.map((feature) => (
+              <li>{feature}</li>
+            ))
+          }
         </ul>
         <p>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask. Just <a href={chapter.donateURL}>click here</a> to donate!</p>
         <p>However, if you do wish to get a mask, just follow these simple steps:</p>
@@ -119,6 +121,9 @@ export const pageQuery = graphql`
         colorOne
         colorTwo
         contactEmail
+        features {
+          feature
+        }
         donateURL
         header
         leader
