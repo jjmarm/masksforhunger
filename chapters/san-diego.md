@@ -27,6 +27,10 @@ contactEmail: sophia.masks@gmail.com
 masks:
   - title: Test Mask
     image: /assets/p1120862.jpeg
-    quantity: 2
+    quantity: 0
     color: green
+  - title: Blue Fever
+    image: /assets/p1120867-2.jpeg
+    quantity: 7
+    color: blue
 ---

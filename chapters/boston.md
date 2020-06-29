@@ -22,7 +22,11 @@ about: >-
 
   [Check out my progress here!](http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1400)
 leader: Lyla Chereau
-subtitle: Grade 11 • Boston, MA
+subtitle: Grade 12 • Boston, MA
+features:
+  - feature: Made from 100% cotton
+  - feature: Elastic loop around the years
+  - feature: Small pocket to insert a filter if desired
 donateURL: https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239
 colorOne: "#ff8136"
 colorTwo: "#ff49a1"
