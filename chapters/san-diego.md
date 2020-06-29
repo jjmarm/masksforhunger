@@ -29,4 +29,8 @@ masks:
     image: /assets/p1120862.jpeg
     quantity: 2
     color: green
+  - title: Blue Fever
+    image: /assets/p1120867-2.jpeg
+    quantity: 9
+    color: blue
 ---
