@@ -56,8 +56,8 @@ const ChapterPage = (props) => {
       <div className="instructions full">
         <ul className="mask-header">
           {
-            chapter.features.map((feature) => (
-              <li>{feature}</li>
+            chapter.features.map((entry, i) => (
+              <li key={`feature-${i}`}>{entry.feature}</li>
             ))
           }
         </ul>

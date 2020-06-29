@@ -20,10 +20,14 @@ class PreviewComponent extends React.Component {
     var mainColorA = entry.getIn(['data', 'colorOne']);
     var mainColorB = entry.getIn(['data', 'colorTwo']);
     var backgroundColor = entry.getIn(['data', 'backgroundColor']);
-    var email = entry.getIn(['data', 'contactEmail'])
+    var email = entry.getIn(['data', 'contactEmail']);
     // var maskList = entry.getIn(['data', 'masks']);
 
     // not sure if this will work, needs testing…
+
+    const listItems = this.props.widgetsFor('features').map((feature, index) => (
+      createElement('li', {key: index}, feature.getIn(['data','feature']);
+    ))
 
     if (mainColorA === "#ffffff" && backgroundColor === "#ffffff") {
       mainColorA = "#000"
@@ -39,6 +43,8 @@ class PreviewComponent extends React.Component {
           createElement('div', {className: "profile-title"}, createElement('h2', {}, leader), createElement('h3', {}, subtitle)) ),
         createElement('p', {}, aboutText)
       ),
+      createElement('h2', {}, "Getting a mask"),
+      createElement('ul', {className: "mask-list"},  listItems ),
       createElement('a', {href: donateURL, style: {backgroundColor: mainColorA}}, "Donate"),
       createElement('h2', {style: {color: mainColorB}}, "Contact (Second main color)"),
       createElement('a', {style: {color: mainColorB, borderBottomColor: mainColorB, backgroundColor: mainColorB + "33"}, className: "email-link", href: `mailto: ${email}`}, "Reach me at " + email)
