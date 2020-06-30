@@ -1,6 +1,6 @@
 ---
 title: Green Kaleidoscope
 image: /assets/p1120862.jpeg
-quantity: 5
+quantity: 4
 color: green
 ---
