@@ -17,7 +17,7 @@ module.exports = {
       summary: `Boston, MA`
     },
     description: `Supporting food pantries through masks`,
-    siteurl: `https://masksforhunger.com`
+    siteUrl: `https://masksforhunger.com`
   },
   plugins: [
     {
@@ -72,6 +72,13 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-164187797-1",
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/admin/*`],
+        createLinkInHead: true
       }
     }
   ],

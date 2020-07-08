@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import Logo from '../assets/logo.svg'
 import Icon from '../assets/icon.svg'
@@ -119,20 +119,3 @@ export default class Header extends React.Component {
     }
   }
 }
-
-export const query = graphql`
-  query pageQuery {
-    allMarkdownRemark (sort: {order: ASC, fields: frontmatter___title}) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
-  }
-  `

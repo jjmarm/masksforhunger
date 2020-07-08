@@ -7,15 +7,14 @@
 .hero-image h1 {
   position: relative;
   width: 600px;
-  font-size: 4.5em;
-  font-weight: 600;
   color: white;
   top: 120px;
   margin: 0 0 0 20px;
 }
 
-p {
-  margin: 0 0 20px 0;
+.hero-main {
+  font-size: 4em;
+  font-weight: 600;
 }
 
 .arrow-down {
@@ -35,10 +34,27 @@ p {
 .grid {
   display: grid;
   padding: 60px 20px;
-  grid-template:  [ab-anchor] 0px [about] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [chapters] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
+  grid-template:  [ab-anchor] 0px [about] auto [about-2] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
   column-gap: 20px;
   row-gap: 40px;
 }
+
+.catalog {
+  grid-row: catalog / co-anchor;
+  display: flex;
+  flex-flow: row wrap;
+  color: var(--color-one);
+}
+
+.catalog.full {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#catalog.anchor {
+    grid-row: ca-anchor / catalog;
+}
+
 
 .title {
   display: flex;
@@ -57,8 +73,17 @@ p {
 
 .profile {
   display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-group {
+  display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
+  margin: 15px;
 }
 
 .profile-card {
@@ -84,8 +109,8 @@ p {
 
 .profile-pic {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
 }
 
@@ -99,7 +124,7 @@ p {
   grid-column: header-end / end;
 }
 
-.item {
+.grid .item {
   flex: 1 1 200px;
   border: solid var(--color-one) 3px;
   margin: 0 15px 15px 0;
@@ -107,14 +132,6 @@ p {
   overflow: hidden;
   box-sizing: border-box;
   transition: 0.2s;
-}
-
-#item-link {
-  border: solid var(--color-one) 3px;
-}
-
-#item-link:hover {
-  border-width: 6px;
 }
 
 .item p.link {
@@ -132,7 +149,7 @@ p {
   border-width: 6px;
 }
 
-.item:hover p.link {
+a.item:hover p.link {
   background-size: 4px 10px;
 }
 
@@ -296,7 +313,7 @@ ul.mask-header li {
     h1.hero-main {
       width: calc(100% - 40px);
       margin: 0;
-      font-size: 4em;
+      font-size: 3em;
       padding-left: 20px;
     }
     .grid {
@@ -321,9 +338,6 @@ ul.mask-header li {
       align-items: center;
       justify-content: center;
       margin: 20px 0;
-    }
-    .profile-card {
-      margin: 0 0 0 -20px;
     }
     .item {
       flex: 1 1 150px;

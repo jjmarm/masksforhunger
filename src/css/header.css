@@ -173,7 +173,7 @@ li a:hover {
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .header-nav {
       position: fixed;
       visibility: hidden;

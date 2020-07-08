@@ -26,7 +26,7 @@ class PreviewComponent extends React.Component {
     // not sure if this will work, needs testing…
 
     const listItems = this.props.widgetsFor('features').map((feature, index) => (
-      createElement('li', {key: index}, feature.getIn(['data','feature']);
+      createElement('li', {key: index}, feature.getIn(['data','feature']))
     ))
 
     if (mainColorA === "#ffffff" && backgroundColor === "#ffffff") {

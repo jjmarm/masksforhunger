@@ -4,7 +4,7 @@
   object-fit: cover;
 }
 
-.hero-image h1 {
+.hero-main {
   position: relative;
   width: 600px;
   font-size: 4.5em;
@@ -315,7 +315,7 @@ ul.mask-header li {
 }
 
 @media (max-width: 900px) {
-    h1.hero-main {
+    .hero-main {
       width: calc(100% - 40px);
       margin: 0;
       font-size: 4em;
@@ -360,6 +360,9 @@ ul.mask-header li {
 }
 
 @media (max-width: 640px) {
+  .hero-main {
+    font-size: 3em;
+  }
   ul.mask-header {
     flex-flow: column nowrap;
   }
