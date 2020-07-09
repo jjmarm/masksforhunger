@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from './header'
+import SEO from './seo'
 
 import '../css/layout.css'
 
@@ -30,6 +31,7 @@ export default ({ children, colors, data }) => {
   })
   return (
     <>
+      <SEO />
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>{pageMetadata.site.siteMetadata.title}</title>

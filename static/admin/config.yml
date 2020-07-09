@@ -1,8 +1,5 @@
 backend:
-  name: github
-  repo: julianmarmier/masksforhunger
-  branch: Multi-City
-  # branch: master
+  name: git-gateway
 
 site_url: https://masksforhunger.com
 display_url: https://masksforhunger.com

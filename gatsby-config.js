@@ -12,11 +12,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Masks for Hunger`,
-    author: {
-      name: `Lyla Chereau`,
-      summary: `Boston, MA`
-    },
-    description: `Supporting food pantries through masks`,
+    author: `Lyla Chereau`,
+    description: `Supporting food pantries through masks.`,
     siteUrl: `https://masksforhunger.com`
   },
   plugins: [
