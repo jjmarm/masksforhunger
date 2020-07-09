@@ -13,7 +13,7 @@ module.exports = {
   siteMetadata: {
     title: `Masks for Hunger`,
     author: `Lyla Chereau`,
-    description: `Supporting food pantries through masks.`,
+    description: `A student-driven organization fighting hunger during the COVID-19 crisis.`,
     siteUrl: `https://masksforhunger.com`
   },
   plugins: [

@@ -59,7 +59,7 @@ const IndexPage = ({props}) => {
   return (
     <Layout>
       <Img className={indexStyles.heroImage} fluid={BackgroundImageStack} alt="Masks for Hunger">
-        <h1 className={indexStyles.heroMain} id="top">A student-driven organization helping people during the COVID-19 crisis</h1>
+        <h1 className={indexStyles.heroMain} id="top">A student-driven organization fighting hunger during the COVID-19 crisis</h1>
       <Link className={indexStyles.arrowDown} to="/#about">
         <DownArrow />
       </Link>
