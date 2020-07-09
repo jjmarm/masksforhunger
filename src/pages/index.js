@@ -1,16 +1,21 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-background-image"
 import DivImg from "gatsby-image"
 
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
+
 import DownArrow from '../assets/Arrow-Down.svg'
 //import ExtLink from '../assets/ext-website.svg'
 
-import Form from "../components/form"
-import "../css/index.css"
+import indexStyles from "../css/index.module.css"
 
 const IndexPage = ({props}) => {
+  useEffect(() => {
+    console.log(indexStyles)
+  })
+
   const data = useStaticQuery(graphql`
     query {
       first: file (relativePath: {eq: "hero.jpeg"}) {
@@ -20,22 +25,28 @@ const IndexPage = ({props}) => {
           }
         }
       }
-      second: file (relativePath: {eq: "lyla.jpeg"}) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      catalog: allMarkdownRemark (sort: {fields: frontmatter___color}) {
-        nodes {
-          frontmatter {
-            quantity
-            title
-            image {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
+      chapters: allMarkdownRemark (sort: {order: ASC, fields: frontmatter___title}) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              leader
+              subtitle
+              profileImage {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              title
+              thumbnail {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
@@ -47,63 +58,54 @@ const IndexPage = ({props}) => {
   const BackgroundImageStack = [`linear-gradient(to bottom, #FF49A188, rgba(255, 0, 0, 0) 50%)`, data.first.childImageSharp.fluid]
   return (
     <Layout>
-      <Img className="hero-image" fluid={BackgroundImageStack} alt="Masks for Hunger">
-        <h1 className="hero-main" id="top">Help people get the food they need during the COVID-19 crisis</h1>
-      <Link className="arrow-down" to="/#about">
+      <Img className={indexStyles.heroImage} fluid={BackgroundImageStack} alt="Masks for Hunger">
+        <h1 className={indexStyles.heroMain} id="top">A student-driven organization helping people during the COVID-19 crisis</h1>
+      <Link className={indexStyles.arrowDown} to="/#about">
         <DownArrow />
       </Link>
       </Img>
-      <div className="grid">
-        <span className="anchor" id="about"></span>
-        <div className="title about" id="about-container"><h4>About</h4></div>
-        <div className="left profile about">
-          <DivImg className="profile-pic" style={{backgroundAttachment: 'fixed'}} fluid={data.second.childImageSharp.fluid}/>
-          <div className="profile-card"><h3>Lyla Chereau</h3><p>Grade 11 • Boston, MA</p></div>
+      <div className={indexStyles.grid}>
+        <span className={indexStyles.anchor} id="about"></span>
+        <div className={`${indexStyles.title} ${indexStyles.about}`} id="about-container"><h4>About</h4></div>
+        <div className={`${indexStyles.left} ${indexStyles.profile} ${indexStyles.about}`}>
+          { data.chapters.edges.map( (edge) => (
+            // edge.node.frontmatter ...
+            <div key={edge.node.frontmatter.leader} className={indexStyles.profileGroup}>
+              <DivImg className={indexStyles.profilePic} style={{backgroundAttachment: 'fixed'}} fluid={edge.node.frontmatter.profileImage.childImageSharp.fluid}/>
+              <div className={indexStyles.profileCard}><h3>{edge.node.frontmatter.leader}</h3><p>{edge.node.frontmatter.subtitle}</p></div>
+            </div>
+          ))}
         </div>
-        <div className="right about">
-          <p>In recent years I have participated in the Walk For Hunger with Project Bread, an organization that works towards ensuring that families and children have food for the weekend, and are helping to combat the global hunger crisis in our local communities.</p>
-          <p>Due to COVID-19, The Walk for Hunger on May 3, 2020 was cancelled but the fundraising must continue; with the being focus primarily on rapid response to food insecurity being caused by the COVID-19 crisis.</p>
-          <p>However, the driving force of this organization is that <b>HUNGER NEVER STOPS</b>! </p>
-          <p>I decided to be a virtual walker partnering with my mother's efforts to help the community navigate through this new environment. I am encouraging you to donate to my fundraiser to help families that are not as fortunate as us in these times. With your generous donations we give you the opportunity to pick a mask from a selection of our beautifully homemade fabric masks.</p>
-        <a href="http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1400">Check out my progress here!</a>
+        <div className={`${indexStyles.right} ${indexStyles.about}`}>
+          <p>Masks for Hunger is a student-led organization pushing to diminish hunger in the Greater Boston area. Our aim is to create an incentive to donate to our Project Bread page to in return receive a mask. This initiative was started in Boston through the Walk For Hunger Project Bread Campaign. Over the course of the Boston fundraiser, founded by Lyla Chereau, Impacts in Isolation facilitated the opening of a new chapter in San Diego led by Sophia Gleeson. Enjoy our home made masks and help give security to those who need it most in these times.</p>
+          <p>COVID-19 does not stop HUNGER! Thank you in advance for your support!</p>
         </div>
-        <span className="anchor" id="instructions"></span>
-      <div className="title instructions" id="instructions-container"><h4>Getting a Mask</h4></div>
-      <div className="instructions full">
-        <ul className="mask-header">
-          <li>Made from 100% cotton</li>
-          <li>Elastic loop around the ears</li>
-          <li>Small pocket to insert a filter if desired</li>
-        </ul>
-        <p>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask. Just <a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239">click here</a> to donate!</p>
-        <p>However, if you do wish to get a mask, just follow these simple steps:</p>
-        <ol>
-          <li><a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239">Make a donation on the Walk for Hunger website</a>. A pledge of at least $25 is recommended to get a mask.</li>
-          <li>Browse the selection of masks <Link to="/#catalog">on the catalog</Link>.</li>
-          <li>Tell me which masks you would like by submitting the <Link to="/#contact">contact form</Link> below, or send me an email with your name, address (if you would like me to deliver to you), and the masks you would like. Submit two separate forms if you would like more than 8.</li>
-          <li>You should receieve a response by mail from me shortly.</li>
-        </ol>
+        <span className={indexStyles.anchor} id="instructions"></span>
+      <div className={`${indexStyles.title} ${indexStyles.instructions}`} id="instructions-container"><h4>Getting a Mask</h4></div>
+      <div className={`${indexStyles.instructions} ${indexStyles.left}`}>
+        <h2>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask.</h2>
+      </div>
+      <div className={`${indexStyles.instructions} ${indexStyles.right}`}>
+        <p>To donate or get a mask, choose the closest chapter near you from the <AnchorLink to="/#chapters" title="available list below" />.</p>
         <p>Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.</p>
       </div>
-        <span className="anchor" id="catalog"></span>
-        <div className="title catalog" id="catalog-container"><h4>Catalog</h4></div>
-        <div className="catalog full">{data.catalog.nodes.map((node) => {
+        <span className={indexStyles.anchor} id="chapters"></span>
+        <div className={`${indexStyles.title} ${indexStyles.catalog}`} id="chapters-container"><h4>Chapters</h4></div>
+        <div className={`${indexStyles.catalog} ${indexStyles.full}`}>{data.chapters.edges.map((edge) => {
           return (
-            <div className={`item${(node.frontmatter.quantity === 0) ? " out" : ""}`} key={node.frontmatter.title}>
-              <Img className="item-image" fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.title}></Img>
-            <div className="item-container">
-                <h3>{node.frontmatter.title}</h3>
-              <p>{(node.frontmatter.quantity === 0) ? `Out of stock` : ((node.frontmatter.quantity === 1) ? "1 mask left" : `${node.frontmatter.quantity} masks left`)}</p>
-              </div>
+            <Link to={edge.node.fields.slug} id="item-link" className={indexStyles.item} key={edge.node.frontmatter.title}>
+              <Img className={indexStyles.itemImage} fluid={edge.node.frontmatter.thumbnail.childImageSharp.fluid} alt={edge.node.frontmatter.title}></Img>
+            <div className={indexStyles.itemContainer}>
+                <h3>{edge.node.frontmatter.title}</h3>
+                <p className={indexStyles.link}>Visit the chapter page →</p>
             </div>
+          </Link>
           )
         })}</div>
-        <div className="title contact" id="contact-container"><h4>Contact</h4></div>
-      <span className="anchor" id="contact"></span>
-      <div className="left contact section"><p>If you wish to get a mask or have any other questions, please fill out this form or email me at <a href="mailto:lylagvideos@gmail.com">lylagvideos@gmail.com</a></p></div>
-    <div className="right contact"><Form maskList={data.catalog.nodes.map((node) => (node.frontmatter.quantity === 0 ? null : node.frontmatter.title))} /></div>
-      </div>
-      <div className="donate-section"><h1>Support the movement!</h1><a href="https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239" className="donate-btn">Donate now on the Walk for Hunger website →</a></div>
+      <div className={`${indexStyles.title} ${indexStyles.contact}`} id="contact-container"><h4>Contact</h4></div>
+      <span className={indexStyles.anchor} id="contact"></span>
+      <div className={indexStyles.contact}><p>If you wish to get a mask or have any other questions, please email me at <a href="mailto:lchereau@isbos.org">lchereau@isbos.org</a>.</p></div>
+    </div>
     </Layout>
   )
 }

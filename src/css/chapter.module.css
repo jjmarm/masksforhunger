@@ -4,7 +4,7 @@
   object-fit: cover;
 }
 
-.hero-image h1 {
+.hero-main {
   position: relative;
   width: 600px;
   font-size: 4.5em;
@@ -35,9 +35,13 @@ p {
 .grid {
   display: grid;
   padding: 60px 20px;
-  grid-template:  [ab-anchor] 0px [about] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
-  column-gap: 10px;
+  grid-template:  [ab-anchor] 0px [about] auto [about-2] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
+  column-gap: 20px;
   row-gap: 40px;
+}
+
+#about-container {
+  grid-row: about / in-anchor;
 }
 
 .title {
@@ -101,10 +105,12 @@ p {
 
 .item {
   flex: 1 1 200px;
-  border: solid var(--orange-main) 3px;
+  border: solid var(--color-one) 3px;
   margin: 0 15px 15px 0;
   border-radius: 8px;
   overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.2s;
 }
 
 .out {
@@ -127,12 +133,17 @@ p {
 }
 
 .about {
-  grid-row: about / in-anchor;
-  color: var(--orange-text);
+  grid-row: about / about-2;
+  color: var(--color-one);
+}
+
+.about2 {
+  grid-row: about-2 / in-anchor;
+  color: var(--color-one);
 }
 
 .about a, .instructions a {
-  border-bottom-color: var(--orange-text);
+  border-bottom-color: var(--color-one);
   background-color: #FF5F0011;
   transition: 0.3s;
 }
@@ -149,19 +160,60 @@ p {
     grid-row: ab-anchor / about;
 }
 
+.two-col {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about2 h4 {
+  margin: 0 0 0.5em 0;
+}
+
+.two-col h2 {
+  font-weight: 300;
+  flex: 0 1 75%;
+  margin: 0 20px 0 0;
+}
+
+#action {
+  flex: 1 20%;
+  background-color: var(--color-one);
+  border: solid 1px var(--color-one);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 5px;
+  height: auto;
+  transition: 0.2s;
+}
+
+#action:hover {
+  background: none;
+  color: var(--color-one);
+}
+
 .catalog {
   grid-row: catalog / co-anchor;
   display: flex;
   flex-flow: row wrap;
-  color: var(--orange-text);
+  color: var(--color-one);
 }
+
+.catalog.full {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 #catalog.anchor {
     grid-row: ca-anchor / catalog;
 }
 
 .contact {
   grid-row-start: contact;
-  color: var(--fuschia-main);
+  color: var(--color-two);
 }
 #contact.anchor {
     grid-row: co-anchor / contact;
@@ -173,13 +225,13 @@ p {
   transition: 0.3s;
 }
 .contact a:hover {
-  border-bottom-color: var(--fuschia-main);
+  border-bottom-color: var(--color-two);
   background-color: #FF49A144;
 }
 
 .instructions {
   grid-row: instructions / ca-anchor;
-  color: var(--orange-text);
+  color: var(--color-one);
 }
 #instructions.anchor {
   grid-row: in-anchor / instructions;
@@ -195,7 +247,7 @@ p {
 }
 
 .donate-section {
-  background-color: var(--orange-main);
+  background-color: var(--color-one);
   color: white;
   display: flex;
   flex-flow: row wrap;
@@ -212,7 +264,7 @@ p {
 .donate-btn svg {
   width: 15px;
   margin-right: 10px;
-  fill: var(--orange-main);
+  fill: var(--color-one);
 }
 
 .donate-btn {
@@ -221,8 +273,8 @@ p {
   padding: 10px;
   background-color: white;
   border: solid white 1px;
-  color: var(--orange-main);
-  fill: var(--orange-main);
+  color: var(--color-one);
+  fill: var(--color-one);
   border-radius: 5px;
   text-decoration: none;
   transition: 0.3s;
@@ -234,7 +286,7 @@ p {
 .donate-btn:hover {
   color: white;
   fill: white;
-  background-color: var(--orange-main);
+  background-color: var(--color-one);
 }
 
 .grid a {
@@ -258,12 +310,12 @@ ul.mask-header li {
     text-align: center;
     margin: 10px;
     border-radius: 5px;
-    border: solid var(--orange-text) 1px;
+    border: solid var(--color-one) 1px;
     padding: 10px;
 }
 
 @media (max-width: 900px) {
-    h1.hero-main {
+    .hero-main {
       width: calc(100% - 40px);
       margin: 0;
       font-size: 4em;
@@ -302,9 +354,15 @@ ul.mask-header li {
         margin-top: -100px;
         padding-bottom: 100px;
     }
+    .about2 {
+      margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 640px) {
+  .hero-main {
+    font-size: 3em;
+  }
   ul.mask-header {
     flex-flow: column nowrap;
   }

@@ -3,6 +3,7 @@
 *
 * See: https://www.gatsbyjs.org/docs/gatsby-config/
 */
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -11,15 +12,17 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Masks for Hunger`,
-    author: {
-      name: `Lyla Chereau`,
-      summary: `Boston, MA`
-    },
-    description: `Supporting food pantries through masks`,
-    siteurl: `https://masksforhunger.com`
+    author: `Lyla Chereau`,
+    description: `Supporting food pantries through masks.`,
+    siteUrl: `https://masksforhunger.com`
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-react-svg",
@@ -29,6 +32,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-anchor-links`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
@@ -42,14 +46,16 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/catalog/`
+        path: `${__dirname}/chapters/`
       }
     },
     {
         resolve: `gatsby-transformer-remark`,
         options: {
           plugins: [
-            `gatsby-remark-relative-images`,
+            {
+                resolve: `gatsby-remark-relative-images`,
+            },
             {
               resolve: `gatsby-remark-images`,
               options: {
@@ -63,6 +69,13 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-164187797-1",
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/admin/*`],
+        createLinkInHead: true
       }
     }
   ],

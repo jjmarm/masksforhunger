@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 * {
   font-family: "Inter", BlinkMacSystemFont, helvetica;
 }
 
 :root {
-  --fuschia-main: #FF49A1;
-  --fuschia-bg: #FFE3F1;
-  --orange-text: #FF5F00;
-  --orange-main: #FF8136;
+  --color-two: #FF49A1;
+  --color-background: #FFE3F1;
+  --color-one: #FF8136;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--fuschia-bg);
+  background-color: var(--color-background);
 }
 
 body {
