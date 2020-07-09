@@ -28,10 +28,6 @@ colorTwo: "#0958a8"
 backgroundColor: "#f0fdec"
 contactEmail: sophia.masks@gmail.com
 masks:
-  - title: Blue Fever
-    image: /assets/p1120867-2.jpeg
-    quantity: 7
-    color: blue
   - image: /assets/sunny-springtime.jpg
     title: Sunny Springtime
     quantity: 1
@@ -52,4 +48,8 @@ masks:
     title: Truffula Puffs
     color: black
     quantity: 7
+  - title: Fall Foliage
+    image: /assets/img_3232.jpg
+    quantity: 2
+    color: brown
 ---
