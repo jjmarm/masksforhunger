@@ -30,6 +30,7 @@
     "gatsby-source-filesystem": "^2.3.18",
     "gatsby-transformer-remark": "^2.8.23",
     "gatsby-transformer-sharp": "^2.5.10",
+    "ink": "^2.7.1",
     "lodash": "^4.17.15",
     "netlify-cms": "^2.10.52",
     "netlify-cms-app": "^2.12.16",
