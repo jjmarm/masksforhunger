@@ -133,8 +133,8 @@ export default function Form(props) {
           <FormItems formState={state} setFormState={setState} maskList={props.maskList} updateFormValues={updateFormValues}/>
         </form>
 
-        <form name="contact-form" data-netlify="true" netlify-honeypot="bot-field" style={{display: "none"}}>
-          <input type="hidden" name="form-name" value="contact-form"/>
+        <form name={`Contact Form - ${props.chapterName}`} data-netlify="true" netlify-honeypot="bot-field" style={{display: "none"}}>
+          <input type="hidden" name="form-name" value={`Contact Form - ${props.chapterName}`}/>
           <input name="bot-field"/>
           <input type="text" placeholder="Address" name="address" />
           <input type="radio" name="question-choice" value="wants-mask" id="yesMask"/>
