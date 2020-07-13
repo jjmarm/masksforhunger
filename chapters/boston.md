@@ -1,6 +1,6 @@
 ---
 title: Boston
-thumbnail: /assets/pink-brush-strokes-beauty-cosmetics-facebook-cover-4.png
+thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover.png
 header: Help people get the food they need during the COVID-19 Crisis
 mainImage: /assets/hero.jpeg
 profileImage: /assets/lyla.jpeg
