@@ -61,10 +61,10 @@ const ChapterPage = (props) => {
             ))
           }
         </ul>
-        <p>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask. Just <a href={chapter.donateURL}>click here</a> to donate!</p>
+        <p>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask. Just <a target="_blank" href={chapter.donateURL}>click here</a> to donate!</p>
         <p>However, if you do wish to get a mask, just follow these simple steps:</p>
         <ol>
-          <li><a href={chapter.donateURL}>Make a donation on the Walk for Hunger website</a>. A pledge of at least $25 is recommended to get a mask.</li>
+          <li><a target="_blank" href={chapter.donateURL}>Make a donation on the Walk for Hunger website</a>. A pledge of at least $25 is recommended to get a mask.</li>
           <li>Browse the selection of masks <AnchorLink to={`${props.data.markdownRemark.fields.slug}/#catalog`} title="on the catalog" />.</li>
           <li>Tell me which masks you would like by submitting the <AnchorLink to="#contact" title="contact form" /> below, or send me an email with your name, address (if you would like me to deliver to you), and the masks you would like. Submit two separate forms if you would like more than 8.</li>
           <li>You should receieve a response by mail from me shortly.</li>

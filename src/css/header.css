@@ -173,6 +173,12 @@ li a:hover {
   cursor: pointer;
 }
 
+.active-to.index-header {
+  fill: var(--color-one);
+  color: var(--color-one);
+  border-color: var(--color-one)
+}
+
 @media (max-width: 1000px) {
     .header-nav {
       position: fixed;

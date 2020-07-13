@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useState, useLayoutEffect } from "react"
 import Layout from "../components/layout"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-background-image"
@@ -11,14 +11,30 @@ import DownArrow from '../assets/Arrow-Down.svg'
 
 import indexStyles from "../css/index.module.css"
 
-const IndexPage = ({props}) => {
-  useEffect(() => {
-    console.log(indexStyles)
-  })
+function useWindowWidth() {
+    const [width, setWidth] = useState(0);
+    useLayoutEffect(() => {
+      function updateSize() {
+          setWidth(window.innerWidth)
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.addEventListener('resize', updateSize);
+    })
+    return width;
+}
 
+const IndexPage = ({props}) => {
   const data = useStaticQuery(graphql`
     query {
-      first: file (relativePath: {eq: "hero.jpeg"}) {
+      first: file (relativePath: {eq: "banner-home.png"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      second: file (relativePath: {eq: "banner-mobile.png"}) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -55,11 +71,12 @@ const IndexPage = ({props}) => {
       }
     }
   `)
-  const BackgroundImageStack = [`linear-gradient(to bottom, #FF49A188, rgba(255, 0, 0, 0) 50%)`, data.first.childImageSharp.fluid]
+  // BackgroundImageStack – return a portrait mode at a specific breakpoint (i.e. max-width 600px)
+  const windowWidth = useWindowWidth()
   return (
     <Layout>
-      <Img className={indexStyles.heroImage} fluid={BackgroundImageStack} alt="Masks for Hunger">
-        <h1 className={indexStyles.heroMain} id="top">A student-driven organization fighting hunger during the COVID-19 crisis</h1>
+      <Img className={indexStyles.heroImage} id="top" fluid={windowWidth < 600 ? data.second.childImageSharp.fluid : data.first.childImageSharp.fluid} alt="Masks for Hunger">
+        <h1 className={indexStyles.heroMain}></h1>
       <Link className={indexStyles.arrowDown} to="/#about">
         <DownArrow />
       </Link>
@@ -77,15 +94,12 @@ const IndexPage = ({props}) => {
           ))}
         </div>
         <div className={`${indexStyles.right} ${indexStyles.about}`}>
-          <p>Masks for Hunger is a student-led organization pushing to diminish hunger in the Greater Boston area. Our aim is to create an incentive to donate to our Project Bread page to in return receive a mask. This initiative was started in Boston through the Walk For Hunger Project Bread Campaign. Over the course of the Boston fundraiser, founded by Lyla Chereau, Impacts in Isolation facilitated the opening of a new chapter in San Diego led by Sophia Gleeson. Enjoy our home made masks and help give security to those who need it most in these times.</p>
+          <p>Masks for Hunger is a student-led organization pushing to diminish hunger coast-to-coast. This initiative was initially founded in Boston through Project Bread’s Walk For Hunger Campaign. Over the course of the Boston fundraiser, founded by Lyla Chereau, <a href="http://impactsinisolation.com">Impacts in Isolation</a> facilitated the opening of a new chapter in San Diego founded by Sophia Gleeson. Our aim is to create an incentive to donate towards our respective fundraisers and in return be able to receive a mask. Enjoy our home made masks and help give security to those who need it most in these times. </p>
           <p>COVID-19 does not stop HUNGER! Thank you in advance for your support!</p>
         </div>
         <span className={indexStyles.anchor} id="instructions"></span>
       <div className={`${indexStyles.title} ${indexStyles.instructions}`} id="instructions-container"><h4>Getting a Mask</h4></div>
-      <div className={`${indexStyles.instructions} ${indexStyles.left}`}>
-        <h2>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask.</h2>
-      </div>
-      <div className={`${indexStyles.instructions} ${indexStyles.right}`}>
+      <div className={`${indexStyles.instructions} ${indexStyles.full}`}>
         <p>To donate or get a mask, choose the closest chapter near you from the <AnchorLink to="/#chapters" title="available list below" />.</p>
         <p>Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.</p>
       </div>
@@ -102,9 +116,6 @@ const IndexPage = ({props}) => {
           </Link>
           )
         })}</div>
-      <div className={`${indexStyles.title} ${indexStyles.contact}`} id="contact-container"><h4>Contact</h4></div>
-      <span className={indexStyles.anchor} id="contact"></span>
-      <div className={indexStyles.contact}><p>If you wish to get a mask or have any other questions, please email me at <a href="mailto:lchereau@isbos.org">lchereau@isbos.org</a>.</p></div>
     </div>
     </Layout>
   )

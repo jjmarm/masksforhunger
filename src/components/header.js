@@ -89,7 +89,7 @@ export default class Header extends React.Component {
               <li className="link"><AnchorLink stripHash to={`${slug}#instructions`}>Getting a Mask</AnchorLink></li>
               <li className="link"><AnchorLink stripHash to={`${slug}#catalog`}>Catalog</AnchorLink></li>
               <li className="link"><AnchorLink stripHash to={`${slug}#contact`}>Contact</AnchorLink></li>
-              <li className="link donate-wrapper"><a className="link-donate" href={chapter.donateURL}>Donate</a></li>
+              <li className="link donate-wrapper"><a className="link-donate" target="_blank" href={chapter.donateURL}>Donate</a></li>
             </Scrollspy>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default class Header extends React.Component {
     } else {
       // Main Page & 404 Header
       return (
-        <div className={`outerHeader active-${this.state.currentAnchor}`}>
+        <div className={`outerHeader active-${this.state.currentAnchor} index-header`}>
           <div className="header">
             <div className="header-logo">
               <Link to="/"><Logo /></Link>
@@ -105,12 +105,11 @@ export default class Header extends React.Component {
             <div className="header-menubtn" onClick={() => {this.toggleNav(this.state.navOpen)}}>
               <OpenCloseBtn navOpen={this.state.navOpen}/>
             </div>
-            <Scrollspy className={`header-nav${this.state.navOpen ? " open" : ""}`} items={ ['top', 'about-container', 'instructions-container', 'chapters-container', 'contact-container'] } offset={-200} onUpdate={(e) => {this.updateAnchor(e)}} currentClassName="link-active">
+            <Scrollspy className={`header-nav${this.state.navOpen ? " open" : ""}`} items={ ['top', 'about-container', 'instructions-container', 'chapters-container'] } offset={-200} onUpdate={(e) => {this.updateAnchor(e)}} currentClassName="link-active">
               <li></li>
               <li className="link"><AnchorLink to="/#about">About</AnchorLink></li>
               <li className="link"><AnchorLink stripHash to="/#instructions">Getting a Mask</AnchorLink></li>
               <li className="link"><AnchorLink stripHash to="/#chapters">Chapters</AnchorLink></li>
-              <li className="link"><AnchorLink stripHash to="/#contact">Contact</AnchorLink></li>
               <li className="link donate-wrapper"><AnchorLink stripHash className="link-donate" to="/#chapters">Find your chapter</AnchorLink></li>
             </Scrollspy>
           </div>

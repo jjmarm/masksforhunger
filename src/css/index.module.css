@@ -227,6 +227,7 @@ a.item:hover p.link {
 .instructions {
   grid-row: instructions / ca-anchor;
   color: var(--color-one);
+  font-size: 1.5rem;
 }
 #instructions.anchor {
   grid-row: in-anchor / instructions;
