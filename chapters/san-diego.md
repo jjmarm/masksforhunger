@@ -1,6 +1,6 @@
 ---
 title: San Diego
-thumbnail: /assets/pink-brush-strokes-beauty-cosmetics-facebook-cover-2.png
+thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover-2.png
 header: Help people get the food they need during the COVID-19 crisis
 mainImage: /assets/san-diego-79567_1920.jpg
 profileImage: /assets/sophiag.jpg
