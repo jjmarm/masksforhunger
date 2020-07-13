@@ -93,4 +93,36 @@ masks:
     image: /assets/cea084a8-bebf-44b1-9f04-35afa1dc23ae.jpeg
     quantity: 3
     color: blue
+  - title: Blue Cactus Collage
+    image: /assets/p1120860.jpeg
+    quantity: 3
+    color: blue
+  - title: Mini Ivy Slate
+    image: /assets/p1130105.jpeg
+    quantity: 2
+    color: black
+  - title: Blue Terrace
+    image: /assets/p1130210.jpeg
+    quantity: 3
+    color: blue
+  - title: Navy Stitches
+    image: /assets/p1130209.jpeg
+    quantity: 0
+    color: blue
+  - title: Orange Fest
+    image: /assets/p1130192.jpeg
+    quantity: 0
+    color: red
+  - title: Blue Metallic Spray
+    image: /assets/p1130300.jpeg
+    quantity: 6
+    color: blue
+  - title: Blue Draw Stripes
+    image: /assets/p1130297.jpeg
+    quantity: 6
+    color: blue
+  - title: Grey Alphabet- Kid Size
+    image: /assets/p1130303.jpeg
+    quantity: 10
+    color: gray
 ---
