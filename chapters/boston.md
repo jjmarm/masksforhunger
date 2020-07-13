@@ -41,4 +41,56 @@ masks:
     title: Blue Chicken Wire
     quantity: 0
     color: blue
+  - title: Starry Black On White
+    image: /assets/img_0559.jpeg
+    quantity: 0
+    color: black
+  - title: Black Graphiti
+    image: /assets/p1130189.jpeg
+    quantity: 3
+    color: black
+  - title: Blue Road Blocks
+    image: /assets/846cdbcc-0a89-4912-92d6-8c0da024734c.jpeg
+    quantity: 4
+    color: blue
+  - title: Solid Royal Blue
+    quantity: 4
+    image: /assets/p1120870.jpeg
+    color: blue
+  - title: Grey Firefly
+    image: /assets/p1120867-2.jpeg
+    quantity: 4
+    color: gray
+  - title: Starry Gold On Peach
+    image: /assets/p1120861.jpeg
+    quantity: 0
+    color: orange
+  - title: Pink Orange Terrace
+    image: /assets/p1120865.jpeg
+    quantity: 3
+    color: red
+  - title: Red Clovers
+    image: /assets/p1120864.jpeg
+    quantity: 4
+    color: red
+  - title: Orange Tie-Dye
+    image: /assets/p1120863.jpeg
+    quantity: 4
+    color: orange
+  - title: Moshi Spring Dots
+    image: /assets/p1120859.jpeg
+    quantity: 3
+    color: beige
+  - title: Green Kaleidoscope
+    image: /assets/p1120862.jpeg
+    quantity: 5
+    color: green
+  - title: Blueberries
+    image: /assets/p1130104.jpeg
+    quantity: 0
+    color: blue
+  - title: Blue Sparkles
+    image: /assets/cea084a8-bebf-44b1-9f04-35afa1dc23ae.jpeg
+    quantity: 3
+    color: blue
 ---
