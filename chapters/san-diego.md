@@ -29,7 +29,7 @@ backgroundColor: "#f0fdec"
 contactEmail: sophia.masks@gmail.com
 masks:
   - image: /assets/sunny-springtime.jpg
-    title: Sunny Springtime
+    title: Springtime Buds
     quantity: 1
     color: orange
   - image: /assets/speckeled-night.jpg
@@ -52,4 +52,8 @@ masks:
     image: /assets/img_3232.jpg
     quantity: 2
     color: brown
+  - image: /assets/kj.jpg
+    quantity: 3
+    color: blue
+    title: Sunday Sailing
 ---
