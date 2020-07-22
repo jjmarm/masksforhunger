@@ -30,7 +30,7 @@ collections:
         widget: list
         fields:
           - {name: "feature", label: "Feature"}
-      - { name: "maskInstructions", label: "Mask Instructions", hint: "Instructions that go under Getting a Mask", widget: "markdown", default: "However, if you do wish to get a mask, just follow these simple steps:\n1.[Make a donation on the -- website](website-link-here). A pledge of at least $25 is recommended to get a mask\n2.Browse the selection of masks below\n3.You should receive a response by mail shortly.\nAgain, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline."}
+      - { name: "maskInstructions", label: "Mask Instructions", hint: "Instructions that go under Getting a Mask", widget: "markdown"}
       - { name: "donateURL", label: "Donate URL", hint: "The link to your donation portal. Make sure it begins with http:// or https://",  widget: "string"}
       - { name: "colorOne", label: "Main Color 1", hint: "The first main color of your page, used for the about, getting a mask, and catalog sections.", widget: "color"}
       - { name: "colorTwo", label: "Main Color 2", hint: "The second main color of your page, used for the contact section and form.", widget: "color" }

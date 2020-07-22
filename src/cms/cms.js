@@ -16,6 +16,7 @@ class PreviewComponent extends React.Component {
     var aboutText = entry.getIn(['data', 'about']);
     var leader = entry.getIn(['data', 'leader']);
     var subtitle = entry.getIn(['data', 'subtitle']);
+    var instructionsText = entry.getIn(['data', 'maskInstructions'])
     var donateURL = entry.getIn(['data', 'donateURL']);
     var mainColorA = entry.getIn(['data', 'colorOne']);
     var mainColorB = entry.getIn(['data', 'colorTwo']);
@@ -45,6 +46,7 @@ class PreviewComponent extends React.Component {
       ),
       createElement('h2', {}, "Getting a mask"),
       createElement('ul', {className: "mask-list"},  listItems ),
+      createElement('p', {}, instructionsText),
       createElement('a', {href: donateURL, style: {backgroundColor: mainColorA}}, "Donate"),
       createElement('h2', {style: {color: mainColorB}}, "Contact (Second main color)"),
       createElement('a', {style: {color: mainColorB, borderBottomColor: mainColorB, backgroundColor: mainColorB + "33"}, className: "email-link", href: `mailto: ${email}`}, "Reach me at " + email)

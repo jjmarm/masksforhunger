@@ -61,15 +61,15 @@ const ChapterPage = (props) => {
             ))
           }
         </ul>
-        <p>Masks for Hunger is an initiative to raise awareness about food for all during this crisis. You're welcome to donate without getting a mask. Just <a target="_blank" href={chapter.donateURL}>click here</a> to donate!</p>
-        <p>However, if you do wish to get a mask, just follow these simple steps:</p>
-        <ol>
-          <li><a target="_blank" href={chapter.donateURL}>Make a donation on the Walk for Hunger website</a>. A pledge of at least $25 is recommended to get a mask.</li>
-          <li>Browse the selection of masks <AnchorLink to={`${props.data.markdownRemark.fields.slug}/#catalog`} title="on the catalog" />.</li>
-          <li>Tell me which masks you would like by submitting the <AnchorLink to="#contact" title="contact form" /> below, or send me an email with your name, address (if you would like me to deliver to you), and the masks you would like. Submit two separate forms if you would like more than 8.</li>
-          <li>You should receieve a response by mail from me shortly.</li>
-        </ol>
-        <p>Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.</p>
+
+        <div>
+          {
+            unified()
+              .use(parse)
+              .use(remark2react)
+              .processSync(chapter.maskInstructions).result
+          }
+        </div>
       </div>
         <span className={chapterStyles.anchor} id="catalog"></span>
         <div className={`${chapterStyles.title} ${chapterStyles.catalog}`} id="catalog-container"><h4>Catalog</h4></div>
@@ -128,6 +128,7 @@ export const pageQuery = graphql`
         header
         leader
         subtitle
+        maskInstructions
         profileImage {
           childImageSharp {
             fluid {
