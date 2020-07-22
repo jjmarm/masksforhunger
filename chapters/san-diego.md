@@ -25,18 +25,18 @@ features:
 maskInstructions: >-
   Masks for Hunger is an initiative to raise awareness about food for all during
   this crisis. You're welcome to donate without getting a mask. Just [click
-  here](https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239)
-  to donate!
+  here](https://www.fooddriveonline.org/sandiegofoodbank/MasksforHunger) to
+  donate to my virtual food drive!
 
 
   However, if you do wish to get a mask, just follow these simple steps:
 
 
-  1. [Make a donation on the Walk for Hunger website](https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239). A pledge of at least $25 is recommended to get a mask.
+  1. [Click here](https://www.fooddriveonline.org/sandiegofoodbank/MasksforHunger) to be directed to my virtual food drive and press "start". Select the items you would like to donate by moving them off the shelf and "scanning" each one at the cash register. As you scan, each item will show up on the reciept to the right of the cash register. A pledge of at least $25 is recommended to get a mask. 
 
-  2. Browse the selection of masks below.
+  2. Once you have scanned all the items you would like to donate, press "checkout". You will then be asked to fill out a donation form.
 
-  3. You should receive a response by mail shortly.
+  3. Once you have completed your donation, browse the selection of masks below and fill out the form called "I want a mask". You should receive a response by mail shortly.
 
 
   Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
