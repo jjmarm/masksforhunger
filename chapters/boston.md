@@ -27,6 +27,24 @@ features:
   - feature: Made from 100% cotton
   - feature: Elastic loop around the years
   - feature: Small pocket to insert a filter if desired
+maskInstructions: >-
+  Masks for Hunger is an initiative to raise awareness about food for all during
+  this crisis. You're welcome to donate without getting a mask. Just [click
+  here](https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239)
+  to donate!
+
+
+  However, if you do wish to get a mask, just follow these simple steps:
+
+
+  1. [Make a donation on the Walk for Hunger website](https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239). A pledge of at least $25 is recommended to get a mask.
+
+  2. Browse the selection of masks below.
+
+  3. You should receive a response by mail shortly.
+
+
+  Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
 donateURL: https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239
 colorOne: "#ff8136"
 colorTwo: "#ff49a1"
