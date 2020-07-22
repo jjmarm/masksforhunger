@@ -34,7 +34,7 @@ maskInstructions: >-
 
   1. [Click here](https://www.fooddriveonline.org/sandiegofoodbank/MasksforHunger) to be directed to my virtual food drive and press "start". Select the items you would like to donate by moving them off the shelf and "scanning" each one at the cash register. As you scan, each item will show up on the reciept to the right of the cash register. A pledge of at least $25 is recommended to get a mask. 
 
-  2. Once you have scanned all the items you would like to donate, press "checkout". You will then be asked to fill out a donation form.
+  2. Once you have scanned all the items you would like to donate, press "checkout". You will then be asked to fill out a donation form with payment information.
 
   3. Once you have completed your donation, browse the selection of masks below and fill out the form called "I want a mask". You should receive a response by mail shortly.
 
