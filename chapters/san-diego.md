@@ -56,7 +56,7 @@ masks:
     color: blue
   - image: /assets/afternoon-tea.jpg
     title: Afternoon Tea
-    quantity: 6
+    quantity: 5
     color: beige
   - image: /assets/nude-picnic.jpg
     title: Beige Picnic
