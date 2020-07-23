@@ -5,12 +5,11 @@ header: Help people get the food they need during the COVID-19 crisis
 mainImage: /assets/san-diego-79567_1920.jpg
 profileImage: /assets/sophiag.jpg
 about: >-
-  For some people, COVID-19 is a large inconvenience. Events and activities have
-  been canceled, but nothing too serious has happened. However, many people have
-  lost their jobs, gotten their salary cut, or have been affected in other very
-  extreme ways. Instead of worrying about whether or not their sport season was
-  canceled, these people are worried about whether or not they have enough food
-  for themselves. Even worse, if they have enough food for their children.
+  Because of COVID-19, many people have lost their jobs, gotten their salary
+  cut, or have been affected in other very extreme ways. Instead of worrying
+  about whether or not their sport season was canceled, these people are worried
+  about whether or not they have enough food for themselves. Even worse, if they
+  have enough food for their children.
 
 
   I decided I did not just want to stand by while the whole world was struggling through the effects, big or small, of the outbreak. I wanted to help, and joining Masks for Hunger was the perfect opportunity.
@@ -36,7 +35,7 @@ maskInstructions: >-
 
   2. Once you have scanned all the items you would like to donate, press "checkout". You will then be asked to fill out a donation form with payment information.
 
-  3. Once you have completed your donation, browse the selection of masks below and fill out the form called "I want a mask". You should receive a response by mail shortly.
+  3. Once you have completed your donation, browse the selection of masks and click on the link called "I want a mask" in the "Contact" section below. You should receive a response by mail shortly.
 
 
   Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
