@@ -19,6 +19,7 @@ about: >-
 leader: Sophia Gleeson
 subtitle: Grade 9 • San Diego, CA
 features:
+  - feature: Home-made on my sewing machine
   - feature: Adjustable elastic loop around the ears
   - feature: Small pocket to insert a filter if desired
 maskInstructions: >-
@@ -58,7 +59,7 @@ masks:
     quantity: 6
     color: beige
   - image: /assets/nude-picnic.jpg
-    title: Nude Picnic
+    title: Beige Picnic
     quantity: 2
     color: beige
   - image: /assets/truffula-puffs.jpg
