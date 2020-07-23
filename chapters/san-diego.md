@@ -52,7 +52,7 @@ masks:
     color: orange
   - image: /assets/speckeled-night.jpg
     title: Speckled Night
-    quantity: 5
+    quantity: 4
     color: blue
   - image: /assets/afternoon-tea.jpg
     title: Afternoon Tea
