@@ -46,32 +46,36 @@ colorTwo: "#0958a8"
 backgroundColor: "#f0fdec"
 contactEmail: sophia.masks@gmail.com
 masks:
-  - image: /assets/sunny-springtime.jpg
+  - image: /assets/img_3294.jpg
     title: Springtime Buds
     quantity: 1
     color: orange
-  - image: /assets/speckeled-night.jpg
+  - image: /assets/img_3292.jpg
     title: Speckled Night
     quantity: 4
     color: blue
-  - image: /assets/afternoon-tea.jpg
+  - image: /assets/img_3293.jpg
     title: Afternoon Tea
     quantity: 5
     color: beige
-  - image: /assets/nude-picnic.jpg
+  - image: /assets/img_3296.jpg
     title: Beige Picnic
     quantity: 2
     color: beige
-  - image: /assets/truffula-puffs.jpg
+  - image: /assets/img_3297.jpg
     title: Truffula Puffs
     color: black
     quantity: 7
   - title: Fall Foliage
-    image: /assets/img_3232.jpg
+    image: /assets/img_3298.jpg
     quantity: 2
     color: brown
-  - image: /assets/kj.jpg
+  - image: /assets/img_3295.jpg
     quantity: 3
     color: blue
     title: Sunday Sailing
+  - image: /assets/img_3291.jpg
+    quantity: 6
+    color: green
+    title: Green Thumb
 ---
