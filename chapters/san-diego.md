@@ -78,4 +78,8 @@ masks:
     quantity: 6
     color: green
     title: Green Thumb
+  - title: Don't Worry, Bee Happy
+    image: /assets/img_3300.jpg
+    quantity: 3
+    color: orange
 ---
