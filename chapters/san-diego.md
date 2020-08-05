@@ -48,15 +48,15 @@ contactEmail: sophia.masks@gmail.com
 masks:
   - image: /assets/img_3294.jpg
     title: Springtime Buds
-    quantity: 1
+    quantity: 0
     color: orange
   - image: /assets/img_3292.jpg
     title: Speckled Night
-    quantity: 4
+    quantity: 3
     color: blue
   - image: /assets/img_3293.jpg
     title: Afternoon Tea
-    quantity: 5
+    quantity: 4
     color: beige
   - image: /assets/img_3296.jpg
     title: Beige Picnic
@@ -65,10 +65,10 @@ masks:
   - image: /assets/img_3297.jpg
     title: Truffula Puffs
     color: black
-    quantity: 7
+    quantity: 6
   - title: Fall Foliage
     image: /assets/img_3298.jpg
-    quantity: 2
+    quantity: 1
     color: brown
   - image: /assets/img_3295.jpg
     quantity: 3
