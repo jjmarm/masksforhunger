@@ -1,55 +1,7 @@
 ---
-title: Boston
-thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover.png
-header: Help people get the food they need during the COVID-19 Crisis
-mainImage: /assets/hero.jpeg
-profileImage: /assets/lyla.jpeg
-about: >-
-  In recent years I have participated in the Walk For Hunger with Project Bread,
-  an organization that works towards ensuring that families and children have
-  food for the weekend, and are helping to combat the global hunger crisis in
-  our local communities.
-
-
-  Due to COVID-19, The Walk for Hunger on May 3, 2020 was cancelled but the fundraising must continue; with the being focus primarily on rapid response to food insecurity being caused by the COVID-19 crisis.
-
-
-  However, the driving force of this organization is that **HUNGER NEVER STOPS**!
-
-
-  I decided to be a virtual walker partnering with my mother's efforts to help the community navigate through this new environment. I am encouraging you to donate to my fundraiser to help families that are not as fortunate as us in these times. With your generous donations we give you the opportunity to pick a mask from a selection of our beautifully homemade fabric masks.
-
-
-  [Check out my progress here!](http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1400)
-leader: Lyla Chereau
-subtitle: Grade 12 • Boston, MA
-features:
-  - feature: Made from 100% cotton
-  - feature: Elastic loop around the years
-  - feature: Small pocket to insert a filter if desired
-maskInstructions: >-
-  Masks for Hunger is an initiative to raise awareness about food for all during
-  this crisis. You're welcome to donate without getting a mask. Just [click
-  here](https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239)
-  to donate!
-
-
-  However, if you do wish to get a mask, just follow these simple steps:
-
-
-  1. [Make a donation on the Walk for Hunger website](https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239). A pledge of at least $25 is recommended to get a mask.
-
-  2. Browse the selection of masks below.
-
-  3. You should receive a response by mail shortly.
-
-
-  Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
 donateURL: https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239
+mainImage: /assets/hero.jpeg
 colorOne: "#ff8136"
-colorTwo: "#ff49a1"
-backgroundColor: "#ffe3f1"
-contactEmail: lchereau@isbos.org
 masks:
   - title: Anise
     image: /assets/p1120869-2.jpeg
@@ -143,4 +95,52 @@ masks:
     image: /assets/p1130303.jpeg
     quantity: 10
     color: gray
+leader: Lyla Chereau
+colorTwo: "#ff49a1"
+thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover.png
+header: Help people get the food they need during the COVID-19 Crisis
+about: >-
+  In recent years I have participated in the Walk For Hunger with Project Bread,
+  an organization that works towards ensuring that families and children have
+  food for the weekend, and are helping to combat the global hunger crisis in
+  our local communities.
+
+
+  Due to COVID-19, The Walk for Hunger on May 3, 2020 was cancelled but the fundraising must continue; with the being focus primarily on rapid response to food insecurity being caused by the COVID-19 crisis.
+
+
+  However, the driving force of this organization is that **HUNGER NEVER STOPS**!
+
+
+  I decided to be a virtual walker partnering with my mother's efforts to help the community navigate through this new environment. I am encouraging you to donate to my fundraiser to help families that are not as fortunate as us in these times. With your generous donations we give you the opportunity to pick a mask from a selection of our beautifully homemade fabric masks.
+
+
+  [Check out my progress here!](http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1400)
+maskInstructions: >-
+  Masks for Hunger is an initiative to raise awareness about food for all during
+  this crisis. You're welcome to donate without getting a mask. Just [click
+  here](https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239)
+  to donate!
+
+
+  However, if you do wish to get a mask, just follow these simple steps:
+
+
+  1. [Make a donation on the Walk for Hunger website](https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239). A pledge of at least $25 is recommended to get a mask.
+
+  2. Browse the selection of masks below.
+
+  3. You should receive a response by mail shortly.
+
+
+  Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
+profileImage: /assets/lyla.jpeg
+backgroundColor: "#ffe3f1"
+subtitle: Grade 12 • Boston, MA
+title: BostonOLD
+contactEmail: lchereau@isbos.org
+features:
+  - feature: Made from 100% cotton
+  - feature: Elastic loop around the years
+  - feature: Small pocket to insert a filter if desired
 ---
