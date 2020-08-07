@@ -1,5 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: julianmarmier/masksforhunger
+  branch: Subchapters
 
 site_url: https://masksforhunger.com
 display_url: https://masksforhunger.com
@@ -17,35 +19,40 @@ collections:
     fields:
       - { name: "title", label: "Chapter Name", hint: "The name of the city where the chapter is led."}
       - { name: "thumbnail", label: "Thumbnail", hint: "The image used in the list of chapters on the Masks For Hunger main page. A good idea for this is an image of the city of your chapter. Pixabay might have some good ones.", widget: image}
-      - { name: "header", label: "Header Text", hint: "The big message you see when you first load the page."}
-      - { name: "mainImage", label: "Header Image", widget: "image", hint: "The first image you see when the page is loaded" }
-      - { name: "profileImage", label: "Profile Picture", widget: "image", hint: "Picture of the chapter leaders." }
-      - { name: "about", label: "About", hint: "About the chapter, e.g. why did you start it? If you add links and styles (bold, underline, etc.) the text will look weird in the window to the right, but don't worry, when you publish this page it will be normal on the website.", widget: "markdown"}
-      - { name: "leader",  label: "Chapter Leader(s)" }
-      - { name: "subtitle", label: "Leader Subtitle", hint: "The text below the name, usually grade and city. E.g. 11th Grade • Boston, MA" }
-      - name: features
-        label: Mask features
-        label_singular: Feature
-        hint: Add a few big features to describe your masks. E.g. "100% cotton", or "elastic included"
+      - name: subchapters
+        label: subchapters
+        label_singular: subchapter
         widget: list
         fields:
-          - {name: "feature", label: "Feature"}
-      - { name: "maskInstructions", label: "Mask Instructions", hint: "Instructions that go under Getting a Mask", widget: "markdown"}
-      - { name: "donateURL", label: "Donate URL", hint: "The link to your donation portal. Make sure it begins with http:// or https://",  widget: "string"}
-      - { name: "colorOne", label: "Main Color 1", hint: "The first main color of your page, used for the about, getting a mask, and catalog sections.", widget: "color"}
-      - { name: "colorTwo", label: "Main Color 2", hint: "The second main color of your page, used for the contact section and form.", widget: "color" }
-      - { name: "backgroundColor", label: "Background Color", hint: "The color of the background of your page. Make sure to choose something light.", widget: "color" }
-      - { name: "contactEmail", label: "Contact Email", hint: "Your contact email address"}
-      - name: masks
-        label: Masks
-        label_singular: Mask
-        widget: list
-        fields:
-          - { name: "title", label: "Title" }
-          - { name: "image", label: "Image", widget: "image" }
-          - { name: "quantity", label: "Quantity Remaining", widget: "number" }
-          - name: "color"
-            label: "Color"
-            hint: "The color of your mask, for sorting purposes"
-            widget: "select"
-            options: ["gray", "blue", "brown", "beige", "black", "red", "orange", "green"]
+          - { name: "header", label: "Header Text", hint: "The big message you see when you first load the page."}
+          - { name: "mainImage", label: "Header Image", widget: "image", hint: "The first image you see when the page is loaded" }
+          - { name: "profileImage", label: "Profile Picture", widget: "image", hint: "Picture of the chapter leaders." }
+          - { name: "about", label: "About", hint: "About the chapter, e.g. why did you start it? If you add links and styles (bold, underline, etc.) the text will look weird in the window to the right, but don't worry, when you publish this page it will be normal on the website.", widget: "markdown"}
+          - { name: "leader",  label: "Chapter Leader(s)" }
+          - { name: "subtitle", label: "Leader Subtitle", hint: "The text below the name, usually grade and city. E.g. 11th Grade • Boston, MA" }
+          - name: features
+            label: Mask features
+            label_singular: Feature
+            hint: Add a few big features to describe your masks. E.g. "100% cotton", or "elastic included"
+            widget: list
+            fields:
+              - {name: "feature", label: "Feature"}
+          - { name: "maskInstructions", label: "Mask Instructions", hint: "Instructions that go under Getting a Mask", widget: "markdown"}
+          - { name: "donateURL", label: "Donate URL", hint: "The link to your donation portal. Make sure it begins with http:// or https://",  widget: "string"}
+          - { name: "colorOne", label: "Main Color 1", hint: "The first main color of your page, used for the about, getting a mask, and catalog sections.", widget: "color"}
+          - { name: "colorTwo", label: "Main Color 2", hint: "The second main color of your page, used for the contact section and form.", widget: "color" }
+          - { name: "backgroundColor", label: "Background Color", hint: "The color of the background of your page. Make sure to choose something light.", widget: "color" }
+          - { name: "contactEmail", label: "Contact Email", hint: "Your contact email address"}
+          - name: masks
+            label: Masks
+            label_singular: Mask
+            widget: list
+            fields:
+              - { name: "title", label: "Title" }
+              - { name: "image", label: "Image", widget: "image" }
+              - { name: "quantity", label: "Quantity Remaining", widget: "number" }
+              - name: "color"
+                label: "Color"
+                hint: "The color of your mask, for sorting purposes"
+                widget: "select"
+                options: ["gray", "blue", "brown", "beige", "black", "red", "orange", "green"]
