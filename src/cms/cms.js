@@ -28,20 +28,24 @@ class PreviewComponent extends React.Component {
       const backgroundColor = subchapter.getIn(['data', 'backgroundColor']);
       const email = subchapter.getIn(['data', 'contactEmail']);
 
-      const maskList = subchapter.getIn(['data', 'masks']).map((mask, index) => {
-        const maskImage = this.props.getAsset(mask.get('image')), maskTitle = mask.get('title'), maskQuantity = mask.get('quantity');
-        var finalMaskQuanity = "";
-        if (maskQuantity === 0) {
-          finalMaskQuanity = "Out of stock"
-        } else {
-          finalMaskQuanity = `${maskQuantity} masks left`;
-        }
-        return createElement('li', {key: index, className: 'mask-item'},
-          createElement('img', {src: maskImage}),
-          createElement('h3', {}, maskTitle),
-          createElement('p', finalMaskQuanity)
-        )
-      });
+      if (subchapter.getIn(['data', 'masks'])) {
+        var maskList = subchapter.getIn(['data', 'masks']).map((mask, index) => {
+          const maskImage = this.props.getAsset(mask.get('image')), maskTitle = mask.get('title'), maskQuantity = mask.get('quantity');
+          var finalMaskQuanity = "";
+          if (maskQuantity === 0) {
+            finalMaskQuanity = "Out of stock"
+          } else {
+            finalMaskQuanity = `${maskQuantity} masks left`;
+          }
+          return createElement('li', {key: index, className: 'mask-item'},
+            createElement('img', {src: maskImage}),
+            createElement('h3', {}, maskTitle),
+            createElement('p', finalMaskQuanity)
+          )
+        });
+      } else {
+        var maskList = null;
+      }
 
       const listItems = subchapter.getIn(['data', 'features']).map((feature, index) => {
           return createElement('li', {key: index}, feature.get('feature'))
