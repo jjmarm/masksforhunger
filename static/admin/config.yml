@@ -20,8 +20,9 @@ collections:
       - { name: "title", label: "Chapter Name", hint: "The name of the city where the chapter is led."}
       - { name: "thumbnail", label: "Thumbnail", hint: "The image used in the list of chapters on the Masks For Hunger main page. A good idea for this is an image of the city of your chapter. Pixabay might have some good ones.", widget: image}
       - name: subchapters
-        label: subchapters
-        label_singular: subchapter
+        label: Subchapters
+        label_singular: Subchapter
+        slug: "{{slug}}"
         widget: list
         fields:
           - { name: "leader",  label: "Chapter/Subchapter Leader(s)" }
