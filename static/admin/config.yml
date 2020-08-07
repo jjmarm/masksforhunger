@@ -24,11 +24,11 @@ collections:
         label_singular: subchapter
         widget: list
         fields:
+          - { name: "leader",  label: "Chapter/Subchapter Leader(s)" }
           - { name: "header", label: "Header Text", hint: "The big message you see when you first load the page."}
           - { name: "mainImage", label: "Header Image", widget: "image", hint: "The first image you see when the page is loaded" }
           - { name: "profileImage", label: "Profile Picture", widget: "image", hint: "Picture of the chapter leaders." }
           - { name: "about", label: "About", hint: "About the chapter, e.g. why did you start it? If you add links and styles (bold, underline, etc.) the text will look weird in the window to the right, but don't worry, when you publish this page it will be normal on the website.", widget: "markdown"}
-          - { name: "leader",  label: "Chapter Leader(s)" }
           - { name: "subtitle", label: "Leader Subtitle", hint: "The text below the name, usually grade and city. E.g. 11th Grade • Boston, MA" }
           - name: features
             label: Mask features
