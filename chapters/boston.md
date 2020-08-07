@@ -150,14 +150,14 @@ subchapters:
       - feature: Small pocket to insert a filter if desired
   - donateURL: https://julianm.tk
     mainImage: /assets/boston-1099418_1920.jpg
-    colorOne: "#a53131"
+    colorOne: "#af0a0a"
     masks:
       - title: Julian's Mask
         image: /assets/afternoon-tea.jpg
         quantity: 9
         color: orange
     leader: Julian Marmier
-    colorTwo: "#57ffc8"
+    colorTwo: "#bd10e0"
     header: Hello
     about: I'm a kid.
     maskInstructions: Go to my website
