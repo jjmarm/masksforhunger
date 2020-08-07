@@ -148,4 +148,23 @@ subchapters:
       - feature: Made from 100% cotton
       - feature: Elastic loop around the ears
       - feature: Small pocket to insert a filter if desired
+  - donateURL: https://julianm.tk
+    mainImage: /assets/boston-1099418_1920.jpg
+    colorOne: "#a53131"
+    masks:
+      - title: Julian's Mask
+        image: /assets/afternoon-tea.jpg
+        quantity: 9
+        color: orange
+    leader: Julian Marmier
+    colorTwo: "#57ffc8"
+    header: Hello
+    about: I'm a kid.
+    maskInstructions: Go to my website
+    profileImage: /assets/p1130104.jpeg
+    backgroundColor: "#fbffed"
+    subtitle: A person
+    contactEmail: julianmarmier@gmail.com
+    features:
+      - feature: SO great
 ---
