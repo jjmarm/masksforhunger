@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import Logo from '../assets/logo.svg'
 import Icon from '../assets/icon.svg'
@@ -52,8 +52,8 @@ export default class Header extends React.Component {
   render () {
     // if props.data.markdownRemark is present, return page-specific data
     if (this.props["data"] !== undefined ) {
-      const chapter = this.props.data.markdownRemark.frontmatter;
-      const slug = this.props.data.markdownRemark.fields.slug;
+      // subchapter handling
+      const {leader, slug, title, donateURL} = this.props.data
       // Page-specific header
       return (
         <div className={`outerHeader active-${this.state.currentAnchor}`}>
@@ -63,21 +63,41 @@ export default class Header extends React.Component {
                 <Icon className="icon"/>
                 <div className="logo-title">
                   <h3>Masks For Hunger</h3>
-                  <p>{chapter.title}</p>
+                  <p>{`${title} – ${leader}`}</p>
                 </div>
               </div>
-                <ul className="chapter-links">{this.props.data.allMarkdownRemark.edges.map((edge) => (
-                    <li key={edge.node.frontmatter.title}><AnchorLink to={edge.node.fields.slug} title={edge.node.frontmatter.title} /></li>
-                  ))}
-                  <li className="main-page-link"><Link to="/">Masks For Hunger</Link></li>
-                </ul>
+                <StaticQuery
+                  query={graphql`
+                      query {
+                        allMarkdownRemark {
+                          edges {
+                            node {
+                              fields {
+                                slug
+                              }
+                              frontmatter {
+                                title
+                              }
+                            }
+                          }
+                        }
+                      }
+                    `}
+                    render={data => (
+                      <ul className="chapter-links">{data.allMarkdownRemark.edges.map((edge) => (
+                          <li key={edge.node.frontmatter.title}><AnchorLink to={edge.node.fields.slug} title={edge.node.frontmatter.title} /></li>
+                        ))}
+                        <li className="main-page-link"><Link to="/">Masks For Hunger</Link></li>
+                      </ul>
+                    )}
+                  />
             </div>
 
             <div className="header-logo" onMouseOver={() => {this.toggleChapters(this.state.chaptersOpen)}}>
               <Icon className="icon"/>
               <div className="logo-title">
                 <h3>Masks For Hunger</h3>
-                <p>{chapter.title}</p>
+                <p>{`${title} – ${leader}`}</p>
               </div>
             </div>
             <div className="header-menubtn" onClick={() => {this.toggleNav(this.state.navOpen)}}>
@@ -89,7 +109,7 @@ export default class Header extends React.Component {
               <li className="link"><AnchorLink stripHash to={`${slug}#instructions`}>Getting a Mask</AnchorLink></li>
               <li className="link"><AnchorLink stripHash to={`${slug}#catalog`}>Catalog</AnchorLink></li>
               <li className="link"><AnchorLink stripHash to={`${slug}#contact`}>Contact</AnchorLink></li>
-              <li className="link donate-wrapper"><a className="link-donate" target="_blank" href={chapter.donateURL}>Donate</a></li>
+              <li className="link donate-wrapper"><a className="link-donate" target="_blank" href={donateURL}>Donate</a></li>
             </Scrollspy>
           </div>
         </div>
@@ -107,7 +127,7 @@ export default class Header extends React.Component {
             </div>
             <Scrollspy className={`header-nav${this.state.navOpen ? " open" : ""}`} items={ ['top', 'about-container', 'instructions-container', 'chapters-container'] } offset={-200} onUpdate={(e) => {this.updateAnchor(e)}} currentClassName="link-active">
               <li></li>
-              <li className="link"><AnchorLink to="/#about">About</AnchorLink></li>
+              <li className="link"><AnchorLink stripHash to="/#about">About</AnchorLink></li>
               <li className="link"><AnchorLink stripHash to="/#instructions">Getting a Mask</AnchorLink></li>
               <li className="link"><AnchorLink stripHash to="/#chapters">Chapters</AnchorLink></li>
               <li className="link donate-wrapper"><AnchorLink stripHash className="link-donate" to="/#chapters">Find your chapter</AnchorLink></li>

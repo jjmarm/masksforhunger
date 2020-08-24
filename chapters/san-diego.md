@@ -3,6 +3,7 @@ donateURL: https://www.fooddriveonline.org/sandiegofoodbank/MasksforHunger
 mainImage: /assets/san-diego-79567_1920.jpg
 title: San Diego
 thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover-2.png
+thumbnailHasText: true
 subchapters:
   - donateURL: https://www.fooddriveonline.org/sandiegofoodbank/MasksforHunger
     mainImage: /assets/san-diego-79567_1920.jpg
