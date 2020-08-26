@@ -89,4 +89,23 @@ subchapters:
       - feature: Home-made on my sewing machine
       - feature: Adjustable elastic loop around the ears
       - feature: Small pocket to insert a filter if desired
+  - donateURL: https://google.com
+    mainImage: /assets/img_3291.jpg
+    colorOne: "#6743fd"
+    masks:
+      - title: Charming Sunset
+        image: /assets/846cdbcc-0a89-4912-92d6-8c0da024734c.jpeg
+        quantity: 8
+        color: orange
+    leader: Yezy Suh
+    colorTwo: "#ff4a4a"
+    header: Fighting against Hunger during COVID-19
+    about: I'm doing this because…
+    maskInstructions: "* This is a bullet point"
+    profileImage: /assets/lyla.jpeg
+    backgroundColor: "#ffcbcb"
+    subtitle: 12th Grade • San Diego, CA
+    contactEmail: juianmarmier@gmail.com
+    features:
+      - feature: 100% cotton
 ---
