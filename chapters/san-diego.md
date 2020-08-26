@@ -45,7 +45,7 @@ maskInstructions: >-
 
   Please contact me if you have any questions! My email is at the bottom of this page under the "Contact" section.
 donateURL: https://www.fooddriveonline.org/sandiegofoodbank/MasksforHunger
-colorOne: "#65a585"
+colorOne: "#3c7558"
 colorTwo: "#3a61ac"
 backgroundColor: "#d4f0df"
 contactEmail: sophia.masks@gmail.com
