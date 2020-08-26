@@ -45,9 +45,9 @@ maskInstructions: >-
 
   Please contact me if you have any questions! My email is at the bottom of this page under the "Contact" section.
 donateURL: https://www.fooddriveonline.org/sandiegofoodbank/MasksforHunger
-colorOne: "#2547b3"
-colorTwo: "#5e8f77"
-backgroundColor: "#aedfbe"
+colorOne: "#65a585"
+colorTwo: "#3a61ac"
+backgroundColor: "#d4f0df"
 contactEmail: sophia.masks@gmail.com
 masks:
   - title: Don't Worry, Bee Happy
