@@ -10,37 +10,37 @@ subchapters:
     colorOne: "#30a292"
     masks:
       - title: Don't Worry, Bee Happy
-       image: /assets/img_3300.jpg
-       quantity: 3
-       color: orange
+        image: /assets/img_3300.jpg
+        quantity: 3
+        color: orange
       - image: /assets/img_3293.jpg
-       title: Afternoon Tea
-       quantity: 4
-       color: beige
+        title: Afternoon Tea
+        quantity: 4
+        color: beige
       - image: /assets/img_3232.jpg
-       title: Fall Foliage
-       quantity: 1
-       color: brown
+        title: Fall Foliage
+        quantity: 1
+        color: brown
       - title: Speckled Night
-       image: /assets/img_3292.jpg
-       quantity: 3
-       color: blue
+        image: /assets/img_3292.jpg
+        quantity: 3
+        color: blue
       - image: /assets/img_3291.jpg
-       title: Green Thumb
-       quantity: 6
-       color: green
+        title: Green Thumb
+        quantity: 6
+        color: green
       - image: /assets/img_3295.jpg
-       title: Sunday Sailing
-       quantity: 5
-       color: blue
+        title: Sunday Sailing
+        quantity: 5
+        color: blue
       - image: /assets/img_3297.jpg
-       title: Truffula Puffs
-       quantity: 4
-       color: black
+        title: Truffula Puffs
+        quantity: 4
+        color: black
       - image: /assets/img_3296.jpg
-       title: Beige Picnic
-       quantity: 2
-       color: beige
+        title: Beige Picnic
+        quantity: 2
+        color: beige
     leader: Sophia Gleeson
     colorTwo: "#0958a8"
     thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover-2.png
