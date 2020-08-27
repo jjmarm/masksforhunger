@@ -7,7 +7,7 @@ thumbnailHasText: true
 subchapters:
   - donateURL: https://www.fooddriveonline.org/sandiegofoodbank/MasksforHunger
     mainImage: /assets/san-diego-79567_1920.jpg
-    colorOne: "#613b1b"
+    colorOne: "#30a292"
     masks:
       - title: Don't Worry, Bee Happy
         image: /assets/img_3300.jpg
@@ -42,7 +42,7 @@ subchapters:
         quantity: 2
         color: beige
     leader: Sophia Gleeson
-    colorTwo: "#b9a272"
+    colorTwo: "#0958a8"
     thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover-2.png
     header: Help people get the food they need during the COVID-19 crisis
     about: >-
@@ -77,7 +77,7 @@ subchapters:
 
       Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
     profileImage: /assets/sophiag.jpg
-    backgroundColor: "#f2eaf4"
+    backgroundColor: "#f0fdec"
     subtitle: Grade 9 • San Diego, CA
     title: San Diego
     contactEmail: sophia.masks@gmail.com
@@ -85,4 +85,70 @@ subchapters:
       - feature: Home-made on my sewing machine
       - feature: Adjustable elastic loop around the ears
       - feature: Small pocket to insert a filter if desired
+  - donateURL: https://give.feedingsandiego.org/fundraiser/2844694
+    mainImage: /assets/san-diego-79567_1920.jpg
+    colorOne: "#a04f7f"
+    masks:
+      - image: /assets/img_5261.jpg
+        title: Sunday Morning
+        quantity: 6
+        color: beige
+      - title: Snow in the City
+        image: /assets/img_5263.jpg
+        quantity: 6
+        color: gray
+      - image: /assets/img_5271.jpg
+        title: Honey Lemonade
+        quantity: 9
+        color: beige
+      - title: Starry Pomegranate
+        image: /assets/screen-shot-2020-08-27-at-3.11.53-pm.png
+        quantity: 5
+        color: red
+      - title: The Very Hungry Caterpillar
+        image: /assets/img_5277.jpg
+        quantity: 3
+        color: black
+    leader: Yezy Suh
+    colorTwo: "#a04f7f"
+    header: Help people get the food they need during the COVID-19 crisis
+    about: >-
+      The unprecedented COVID-19 Pandemic has affected everyone globally in
+      different ways. Some of us have to start distance learning, some are
+      juggling taking care of their children and working from home, and many
+      have lost jobs and their flow of income has become disrupted. In some
+      cases, people are not able to put food on the table for themselves or
+      their loved ones.
+
+
+      I am very lucky and grateful to not be heavily affected by the virus, but I know that watching the struggling world through rose colored glasses is not an option. By joining Masks for Hunger, I want to make a difference directly to those who are struggling.
+
+
+      By donating towards the fundraiser, you can make a difference and help others. Remember, we are all in this together!
+    maskInstructions: >-
+      Masks for Hunger is an initiative to raise awareness about food for all
+      during this crisis. You're welcome to donate without getting a mask. 
+
+
+      However, if you do wish to get a mask, just follow these simple steps
+
+
+      1) Click [here](https://give.feedingsandiego.org/fundraiser/2844694) to donate to Feeding San Diego. A pledge of at least $25 is recommended to get a mask.
+
+
+      2) Click "donate" and then you will then be asked to fill out a donation form with payment information.
+
+
+      3) Once you have completed your donation, browse the selection of masks and click on the link called "I want a mask" in the "Contact" section below. You should receive a response by mail shortly.
+
+
+      Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
+    profileImage: /assets/kalm.png
+    backgroundColor: "#f0e4ea"
+    subtitle: 9th grade • San Diego, CA
+    contactEmail: wintersage06@gmail.com
+    features:
+      - feature: Adjustable Elastic Loop
+      - feature: 100% Cotton
+      - feature: Pocket to Add Filter
 ---
