@@ -15,12 +15,14 @@ import remark2react from 'remark-react'
 import Form from "../components/form"
 import chapterStyles from "../css/chapter.module.css"
 
-const ChapterPage = (props) => {
-  const chapter = props.data.markdownRemark.frontmatter;
+const ChapterPage = ( props ) => {
+  const {leader} = props.pageContext;
+
+  const chapter = props.data.markdownRemark.frontmatter.subchapters.find(subchapter => subchapter.leader === leader);
   const BackgroundImageStack = [`linear-gradient(to bottom, ${chapter.colorTwo}88, rgba(255, 0, 0, 0) 50%)`, chapter.mainImage.childImageSharp.fluid]
 
   return (
-    <Layout colors={{one: chapter.colorOne, two: chapter.colorTwo, background: chapter.backgroundColor}} data={props.data}>
+    <Layout colors={{one: chapter.colorOne, two: chapter.colorTwo, background: chapter.backgroundColor}} data={{...props.pageContext, "donateURL": chapter.donateURL}}>
       <Img className={chapterStyles.heroImage} fluid={BackgroundImageStack} alt="Masks for Hunger">
         <h1 className={chapterStyles.heroMain} id="top">{`${chapter.header}`}</h1>
         <AnchorLink stripHash className={chapterStyles.arrowDown} to={`${props.data.markdownRemark.fields.slug}#about`}>
@@ -97,7 +99,7 @@ const ChapterPage = (props) => {
 export default ChapterPage;
 
 export const pageQuery = graphql`
-  query chapterQuery ($title: String) {
+  query chapterQuery ($leader: String) {
     allMarkdownRemark {
       edges {
         node {
@@ -110,47 +112,49 @@ export const pageQuery = graphql`
         }
       }
     }
-    markdownRemark(frontmatter: {title: {eq: $title}}) {
+    markdownRemark(frontmatter: {subchapters: {elemMatch: {leader: {eq: $leader}}}}) {
       fields {
         slug
       }
       frontmatter {
         title
-        about
-        backgroundColor
-        colorOne
-        colorTwo
-        contactEmail
-        features {
-          feature
-        }
-        donateURL
-        header
-        leader
-        subtitle
-        maskInstructions
-        profileImage {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+        subchapters {
+          about
+          backgroundColor
+          colorOne
+          colorTwo
+          contactEmail
+          features {
+            feature
           }
-        }
-        mainImage {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        masks {
-          color
-          quantity
-          title
-          image {
+          donateURL
+          header
+          leader
+          subtitle
+          maskInstructions
+          profileImage {
             childImageSharp {
               fluid {
                 ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          mainImage {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          masks {
+            color
+            quantity
+            title
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }

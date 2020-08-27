@@ -10,6 +10,15 @@
   transition: color 0.2s fill 0.2s background-color 0.2s border-color 0.2s;
 }
 
+.header-sub * {
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.header-sub svg {
+  -webkit-filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
+}
+
 .header {
   display: flex;
   color: inherit;

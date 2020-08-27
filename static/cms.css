@@ -112,3 +112,15 @@ ul.mask-list li {
     border: solid 1px;
     padding: 10px;
 }
+
+ul.mask-catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+li.mask-item img {
+  height: 150px;
+  object-fit: cover;
+  max-width: 100%;
+  border-radius: 5px;
+}

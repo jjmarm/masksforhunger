@@ -37,7 +37,7 @@ export default ({ children, colors, data }) => {
         <title>{pageMetadata.site.siteMetadata.title}</title>
       </Helmet>
       <Header data={data} />
-      <main>{children}</main>
+      <main className="main-body">{children}</main>
       <footer>
         © {new Date().getFullYear()}, Masks for Hunger. Website by <a href="http://julianm.tk">Julian Marmier.</a>
       </footer>

@@ -34,7 +34,7 @@
 .grid {
   display: grid;
   padding: 60px 20px;
-  grid-template:  [ab-anchor] 0px [about] auto [about-2] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
+  grid-template:  [ab-anchor] 0px [about] auto [about-2] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 45% [middle] 45% [end];
   column-gap: 20px;
   row-gap: 40px;
 }
@@ -83,7 +83,7 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  margin: 15px;
+  margin: 5px;
 }
 
 .profile-card {
@@ -126,6 +126,9 @@
 
 .grid .item {
   flex: 1 1 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
   border: solid var(--color-one) 3px;
   margin: 0 15px 15px 0;
   border-radius: 8px;
@@ -171,6 +174,26 @@ a.item:hover p.link {
 
 .item-container * {
   margin: 0;
+}
+
+ul.leader-list {
+  display: flex;
+}
+
+ul.leader-list li {
+  padding: 5px 5px 5px 0;
+  border-radius: 5px;
+  font-size: 0.7em;
+  margin-right: 5px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s, padding 0.3s;
+}
+
+ul.leader-list li:hover {
+  color: white;
+  background-color: var(--color-one);
+  padding-left: 5px;
 }
 
 .about {
