@@ -20,7 +20,7 @@ about: >-
 leader: Sophia Gleeson
 subtitle: Grade 9 • San Diego, CA
 features:
-  - feature: Home-made
+  - feature: Homemade
   - feature: Elastic loop around the ears
   - feature: Small pocket to insert a filter if desired
 maskInstructions: >-
