@@ -9,42 +9,38 @@ subchapters:
     mainImage: /assets/san-diego-79567_1920.jpg
     colorOne: "#30a292"
     masks:
-      - image: /assets/img_3294.jpg
-        title: Springtime Buds
-        quantity: 0
-        color: orange
-      - image: /assets/img_3292.jpg
-        title: Speckled Night
-        quantity: 3
-        color: blue
-      - image: /assets/img_3293.jpg
-        title: Afternoon Tea
-        quantity: 4
-        color: beige
-      - image: /assets/img_3296.jpg
-        title: Beige Picnic
-        quantity: 2
-        color: beige
-      - image: /assets/img_3297.jpg
-        title: Truffula Puffs
-        color: black
-        quantity: 6
-      - title: Fall Foliage
-        image: /assets/img_3298.jpg
-        quantity: 1
-        color: brown
-      - image: /assets/img_3295.jpg
-        quantity: 3
-        color: blue
-        title: Sunday Sailing
-      - image: /assets/img_3291.jpg
-        quantity: 6
-        color: green
-        title: Green Thumb
       - title: Don't Worry, Bee Happy
-        image: /assets/img_3300.jpg
-        quantity: 3
-        color: orange
+       image: /assets/img_3300.jpg
+       quantity: 3
+       color: orange
+      - image: /assets/img_3293.jpg
+       title: Afternoon Tea
+       quantity: 4
+       color: beige
+      - image: /assets/img_3232.jpg
+       title: Fall Foliage
+       quantity: 1
+       color: brown
+      - title: Speckled Night
+       image: /assets/img_3292.jpg
+       quantity: 3
+       color: blue
+      - image: /assets/img_3291.jpg
+       title: Green Thumb
+       quantity: 6
+       color: green
+      - image: /assets/img_3295.jpg
+       title: Sunday Sailing
+       quantity: 5
+       color: blue
+      - image: /assets/img_3297.jpg
+       title: Truffula Puffs
+       quantity: 4
+       color: black
+      - image: /assets/img_3296.jpg
+       title: Beige Picnic
+       quantity: 2
+       color: beige
     leader: Sophia Gleeson
     colorTwo: "#0958a8"
     thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover-2.png
@@ -89,23 +85,4 @@ subchapters:
       - feature: Home-made on my sewing machine
       - feature: Adjustable elastic loop around the ears
       - feature: Small pocket to insert a filter if desired
-  - donateURL: https://google.com
-    mainImage: /assets/img_3291.jpg
-    colorOne: "#6743fd"
-    masks:
-      - title: Charming Sunset
-        image: /assets/846cdbcc-0a89-4912-92d6-8c0da024734c.jpeg
-        quantity: 8
-        color: orange
-    leader: Yezy Suh
-    colorTwo: "#ff4a4a"
-    header: Fighting against Hunger during COVID-19
-    about: I'm doing this because…
-    maskInstructions: "* This is a bullet point"
-    profileImage: /assets/lyla.jpeg
-    backgroundColor: "#ffcbcb"
-    subtitle: 12th Grade • San Diego, CA
-    contactEmail: juianmarmier@gmail.com
-    features:
-      - feature: 100% cotton
 ---
