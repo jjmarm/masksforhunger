@@ -127,19 +127,18 @@ subchapters:
       By donating towards the fundraiser, you can make a difference and help others. Remember, we are all in this together!
     maskInstructions: >-
       Masks for Hunger is an initiative to raise awareness about food for all
-      during this crisis. You're welcome to donate without getting a mask. 
+      during this crisis. You're welcome to donate without getting a mask. Click
+      [here](https://give.feedingsandiego.org/fundraiser/2844694) to donate!
 
 
       However, if you do wish to get a mask, just follow these simple steps
 
 
-      1) Click [here](https://give.feedingsandiego.org/fundraiser/2844694) to donate to Feeding San Diego. A pledge of at least $25 is recommended to get a mask.
+      1. Click [here](https://give.feedingsandiego.org/fundraiser/2844694) to donate to Feeding San Diego. A pledge of at least $25 is recommended to get a mask.
 
+      2. Click "donate" and then you will then be asked to fill out a donation form with payment information.
 
-      2) Click "donate" and then you will then be asked to fill out a donation form with payment information.
-
-
-      3) Once you have completed your donation, browse the selection of masks and click on the link called "I want a mask" in the "Contact" section below. You should receive a response by mail shortly.
+      3. Once you have completed your donation, browse the selection of masks and click on the link called "I want a mask" in the "Contact" section below. You should receive a response by mail shortly.
 
 
       Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
