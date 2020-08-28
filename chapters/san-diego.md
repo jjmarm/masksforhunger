@@ -116,9 +116,9 @@ subchapters:
       The unprecedented COVID-19 Pandemic has affected everyone globally in
       different ways. Some of us have to start distance learning, some are
       juggling taking care of their children and working from home, and many
-      have lost jobs and their flow of income has become disrupted. In some
-      cases, people are not able to put food on the table for themselves or
-      their loved ones.
+      have lost jobs and their flow of income has been disrupted. In some cases,
+      people are not able to put food on the table for themselves or their loved
+      ones.
 
 
       I am very lucky and grateful to not be heavily affected by the virus, but I know that watching the struggling world through rose colored glasses is not an option. By joining Masks for Hunger, I want to make a difference directly to those who are struggling.
@@ -142,7 +142,7 @@ subchapters:
 
 
       Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
-    profileImage: /assets/kalm.png
+    profileImage: /assets/b22a8ff3-bc13-4b0d-800b-5e2ff752f6c1.jpg
     backgroundColor: "#f0e4ea"
     subtitle: 9th grade • San Diego, CA
     contactEmail: wintersage06@gmail.com
