@@ -7,7 +7,7 @@ thumbnailHasText: true
 subchapters:
   - donateURL: https://www.fooddriveonline.org/sandiegofoodbank/MasksforHunger
     mainImage: /assets/san-diego-79567_1920.jpg
-    colorOne: "#30a292"
+    colorOne: "#8b572a"
     masks:
       - title: Don't Worry, Bee Happy
         image: /assets/img_3300.jpg
@@ -42,7 +42,7 @@ subchapters:
         quantity: 2
         color: beige
     leader: Sophia Gleeson
-    colorTwo: "#0958a8"
+    colorTwo: "#ff6c6c"
     thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover-2.png
     header: Help people get the food they need during the COVID-19 crisis
     about: >-
@@ -77,7 +77,7 @@ subchapters:
 
       Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
     profileImage: /assets/sophiag.jpg
-    backgroundColor: "#f0fdec"
+    backgroundColor: "#f5ecf7"
     subtitle: Grade 9 • San Diego, CA
     title: San Diego
     contactEmail: sophia.masks@gmail.com
