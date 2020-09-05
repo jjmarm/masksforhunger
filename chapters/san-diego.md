@@ -109,6 +109,10 @@ subchapters:
         image: /assets/img_5277.jpg
         quantity: 3
         color: black
+      - title: Winter Sky
+        image: /assets/img_5710.jpg
+        quantity: 4
+        color: blue
     leader: Yezy Suh
     colorTwo: "#a04f7f"
     header: Help people get the food they need during the COVID-19 crisis
