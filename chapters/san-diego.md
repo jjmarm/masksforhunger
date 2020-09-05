@@ -149,7 +149,7 @@ subchapters:
     profileImage: /assets/b22a8ff3-bc13-4b0d-800b-5e2ff752f6c1.jpg
     backgroundColor: "#f0e4ea"
     subtitle: Grade 9 • San Diego, CA
-    contactEmail: wintersage06@gmail.com
+    contactEmail: yezy.masksforhunger@gmail.com
     features:
       - feature: Adjustable Elastic Loop
       - feature: 100% Cotton
