@@ -107,7 +107,7 @@ export default function Form(props) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": `Contact Form - ${props.chapterName}`, "mask-quantity": state.maskCount, ...state.values })
+        body: encode({ "form-name": `Contact Form - ${props.chapterName} - ${props.leader}`, "mask-quantity": state.maskCount, ...state.values })
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
@@ -133,8 +133,8 @@ export default function Form(props) {
           <FormItems formState={state} setFormState={setState} maskList={props.maskList} updateFormValues={updateFormValues}/>
         </form>
 
-        <form name={`Contact Form - ${props.chapterName}`} data-netlify="true" netlify-honeypot="bot-field" style={{display: "none"}}>
-          <input type="hidden" name="form-name" value={`Contact Form - ${props.chapterName}`}/>
+        <form name={`Contact Form - ${props.chapterName} - ${props.leader}`} data-netlify="true" netlify-honeypot="bot-field" style={{display: "none"}}>
+          <input type="hidden" name="form-name" value={`Contact Form - ${props.chapterName} - ${props.leader}`}/>
           <input name="bot-field"/>
           <input type="text" placeholder="Address" name="address" />
           <input type="radio" name="question-choice" value="wants-mask" id="yesMask"/>

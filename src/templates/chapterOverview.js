@@ -22,8 +22,8 @@ const OverviewPage = (props) => {
       </Img>
       <div className={overviewStyles.container}>
         { props.data.markdownRemark.frontmatter.subchapters.map(subchapter => (
-          <Link to={path.join(props.data.markdownRemark.fields.slug, makeUrlSafe(subchapter.leader))}>
-            <Img key={subchapter.leader} className={overviewStyles.item} fluid={subchapter.profileImage.childImageSharp.fluid}>
+          <Link key={subchapter.leader} to={path.join(props.data.markdownRemark.fields.slug, makeUrlSafe(subchapter.leader))}>
+            <Img className={overviewStyles.item} fluid={subchapter.profileImage.childImageSharp.fluid}>
               <h1>{subchapter.leader}</h1>
               <p className={overviewStyles.itemLink}>Visit the subchapter page →</p>
             </Img>

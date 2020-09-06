@@ -1,20 +1,50 @@
 .hero-image {
   height: 100vh;
-  background-attachment: fixed;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vmax auto;
   object-fit: cover;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-image: url("/banner.svg");
+  justify-content: center;
 }
 
-.hero-image h1 {
-  position: relative;
-  width: 600px;
+.project-images {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.project-images p {
   color: white;
-  top: 120px;
+  font-size: 3em;
+  padding: 0 10px;
+}
+
+.project-image {
+  width: 10vw;
+  max-height: 10vmax;
+}
+
+.hero-main h1 {
+  color: white;
+  max-width: 80%;
   margin: 0 0 0 20px;
+  font-size: 2.5em;
+  font-family: "Knewave", cursive;
+  font-weight: normal;
+  text-align: center;
+  line-height: 95%;
 }
 
 .hero-main {
-  font-size: 4em;
-  font-weight: 600;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 .arrow-down {
@@ -52,7 +82,7 @@
 }
 
 #catalog.anchor {
-    grid-row: ca-anchor / catalog;
+  grid-row: ca-anchor / catalog;
 }
 
 
@@ -96,6 +126,7 @@
   padding: 10px 20px;
   margin-top: -10px;
   z-index: 100;
+  text-align: center;
 }
 
 .profile-card * {
@@ -115,7 +146,7 @@
 }
 
 .left {
-    grid-column: header-end / middle;
+  grid-column: header-end / middle;
 }
 .right {
   grid-column: middle / end;
@@ -216,7 +247,7 @@ ul.leader-list li:hover {
   display: block;
 }
 #about.anchor {
-    grid-row: ab-anchor / about;
+  grid-row: ab-anchor / about;
 }
 
 .chapters {
@@ -226,7 +257,7 @@ ul.leader-list li:hover {
   color: var(--color-one);
 }
 #chapters.anchor {
-    grid-row: ca-anchor / chapters;
+  grid-row: ca-anchor / chapters;
 }
 
 .contact {
@@ -234,7 +265,7 @@ ul.leader-list li:hover {
   color: var(--color-two);
 }
 #contact.anchor {
-    grid-row: co-anchor / contact;
+  grid-row: co-anchor / contact;
 }
 
 .contact a {
@@ -324,52 +355,53 @@ ul.mask-header {
 }
 
 ul.mask-header li {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px;
-    border-radius: 5px;
-    border: solid var(--color-one) 1px;
-    padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5px;
+  border: solid var(--color-one) 1px;
+  padding: 10px;
 }
 
 @media (max-width: 1000px) {
-    h1.hero-main {
-      width: calc(100% - 40px);
-      margin: 0;
-      font-size: 3em;
-      padding-left: 20px;
-    }
-    .grid {
-      display: flex;
-      flex-flow: column nowrap;
-    }
-    .title {
-      border-right: 0;
-      border-bottom: solid 1px;
-      border-bottom-color: inherit;
-      padding-bottom: 5px;
-      margin-bottom: 5px;
-    }
-    .title h4{
-      writing-mode: initial;
-    }
-    .right {
-      margin-bottom: 30px;
-    }
-    .profile {
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: center;
-      margin: 20px 0;
-    }
-    .item {
-      flex: 1 1 150px;
-    }
-    .anchor {
-        margin-top: -100px;
-        padding-bottom: 100px;
-    }
+  h1.hero-main {
+    width: calc(100% - 40px);
+    margin: 0;
+    font-size: 3em;
+    padding-left: 20px;
+  }
+  .grid {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-row-gap: 10px;
+  }
+  .title {
+    border-right: 0;
+    border-bottom: solid 1px;
+    border-bottom-color: inherit;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+  .title h4{
+    writing-mode: initial;
+  }
+  .right {
+    margin-bottom: 30px;
+  }
+  .profile {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .item {
+    flex: 1 1 150px;
+  }
+  .anchor {
+    margin-top: -100px;
+    padding-bottom: 100px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -378,5 +410,23 @@ ul.mask-header li {
   }
   ul.mask-header li {
     margin: 10px 0 0 0;
+  }
+  .hero-main h1 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .profile-group {
+    flex-flow: row nowrap;
+  }
+  .profile-card {
+    margin-left: -20px;
+  }
+}
+
+@media (orienation: portrait) {
+  .hero-image {
+    background-size: auto 100vmax;
   }
 }

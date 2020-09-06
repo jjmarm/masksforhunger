@@ -18,19 +18,6 @@ function makeUrlSafe(string) {
   return temp;
 }
 
-function useWindowWidth() {
-    const [width, setWidth] = useState(0);
-    useLayoutEffect(() => {
-      function updateSize() {
-          setWidth(window.innerWidth)
-      }
-      window.addEventListener('resize', updateSize);
-      updateSize();
-      return () => window.addEventListener('resize', updateSize);
-    })
-    return width;
-}
-
 function toggleSubHover(subchapterHover, setSubchapterHover) {
     if (subchapterHover) {
       setSubchapterHover(false);
@@ -43,14 +30,14 @@ const IndexPage = ({props}) => {
   const [subchapterHover, setSubchapterHover] = useState(false)
   const data = useStaticQuery(graphql`
     query {
-      first: file (relativePath: {eq: "banner-home.png"}) {
+      projectBread: file (relativePath: {eq: "project-bread.png"}) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      second: file (relativePath: {eq: "banner-mobile.png"}) {
+      sanDiegoFoodBank: file (relativePath: {eq: "san-diego-food-bank.png"}) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -90,15 +77,21 @@ const IndexPage = ({props}) => {
     }
   `)
   // BackgroundImageStack – return a portrait mode at a specific breakpoint (i.e. max-width 600px)
-  const windowWidth = useWindowWidth()
   return (
     <Layout>
-      <Img className={indexStyles.heroImage} id="top" fluid={windowWidth < 600 ? data.second.childImageSharp.fluid : data.first.childImageSharp.fluid} alt="Masks for Hunger">
-        <h1 className={indexStyles.heroMain}></h1>
+      <div className={indexStyles.heroImage} id="top">
+        <div className={indexStyles.heroMain}>
+          <h1>HELPING PEOPLE GET THE FOOD THEY NEED DURING THE COVID-19 CRISIS</h1>
+          <div className={indexStyles.projectImages}>
+            <DivImg className={indexStyles.projectImage} fluid={data.projectBread.childImageSharp.fluid} />
+            <p>×</p>
+            <DivImg className={indexStyles.projectImage} fluid={data.sanDiegoFoodBank.childImageSharp.fluid} />
+          </div>
+        </div>
       <Link className={indexStyles.arrowDown} to="/#about">
         <DownArrow />
       </Link>
-      </Img>
+      </div>
       <div className={indexStyles.grid}>
         <span className={indexStyles.anchor} id="about"></span>
         <div className={`${indexStyles.title} ${indexStyles.about}`} id="about-container"><h4>About</h4></div>

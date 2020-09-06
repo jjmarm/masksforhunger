@@ -16,6 +16,45 @@ const OpenCloseBtn = (props) => {
   }
 }
 
+const LogoSelect = (props) => {
+  return (
+    <div className={`logo-select ${props.chaptersOpen ? 'show' : ''}`} onBlur={props.toggleChapters} onMouseLeave={props.toggleChapters}>
+      <div className="header-logo">
+        <Icon className="icon"/>
+        <div className="logo-title">
+          <h3>Masks For Hunger</h3>
+          <p>{`${props.title} – ${props.leader}`}</p>
+        </div>
+      </div>
+        <StaticQuery
+          query={graphql`
+              query {
+                allMarkdownRemark {
+                  edges {
+                    node {
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                      }
+                    }
+                  }
+                }
+              }
+            `}
+            render={data => (
+              <ul className="chapter-links">{data.allMarkdownRemark.edges.map((edge) => (
+                  <li key={edge.node.frontmatter.title}><AnchorLink to={edge.node.fields.slug} title={edge.node.frontmatter.title} /></li>
+                ))}
+                <li className="main-page-link"><Link to="/">Masks For Hunger</Link></li>
+              </ul>
+            )}
+          />
+    </div>
+  )
+}
+
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +66,12 @@ export default class Header extends React.Component {
 
     this.updateAnchor.bind(this);
     this.toggleNav.bind(this);
-    this.toggleChapters.bind(this);
+    this.openChapters.bind(this);
+    this.closeChapters.bind(this);
+  }
+
+  getChaptersOpen() {
+    return this.state.chaptersOpen;
   }
 
   toggleNav(navOpen) {
@@ -38,8 +82,12 @@ export default class Header extends React.Component {
     }
   }
 
-  toggleChapters(chaptersOpen) {
-    chaptersOpen ? this.setState({chaptersOpen: false}) : this.setState({chaptersOpen: true});
+  openChapters = () => {
+    this.setState({chaptersOpen: true})
+  }
+
+  closeChapters = () => {
+    this.setState({chaptersOpen: false})
   }
 
   updateAnchor(newState) {
@@ -58,42 +106,8 @@ export default class Header extends React.Component {
       return (
         <div className={`outerHeader active-${this.state.currentAnchor}`}>
           <div className="header">
-            <div className={`logo-select ${this.state.chaptersOpen ? ' show' : ''}`} onMouseOut={() => {console.log("mouseout"); this.toggleChapters(this.state.chaptersOpen)}}>
-              <div className="header-logo">
-                <Icon className="icon"/>
-                <div className="logo-title">
-                  <h3>Masks For Hunger</h3>
-                  <p>{`${title} – ${leader}`}</p>
-                </div>
-              </div>
-                <StaticQuery
-                  query={graphql`
-                      query {
-                        allMarkdownRemark {
-                          edges {
-                            node {
-                              fields {
-                                slug
-                              }
-                              frontmatter {
-                                title
-                              }
-                            }
-                          }
-                        }
-                      }
-                    `}
-                    render={data => (
-                      <ul className="chapter-links">{data.allMarkdownRemark.edges.map((edge) => (
-                          <li key={edge.node.frontmatter.title}><AnchorLink to={edge.node.fields.slug} title={edge.node.frontmatter.title} /></li>
-                        ))}
-                        <li className="main-page-link"><Link to="/">Masks For Hunger</Link></li>
-                      </ul>
-                    )}
-                  />
-            </div>
-
-            <div className="header-logo" onMouseOver={() => {this.toggleChapters(this.state.chaptersOpen)}}>
+            <LogoSelect title={title} leader={leader} toggleChapters={this.closeChapters} chaptersOpen={this.state.chaptersOpen}/>
+            <div className="header-logo" onFocus={this.openChapters} onMouseEnter={this.openChapters}>
               <Icon className="icon"/>
               <div className="logo-title">
                 <h3>Masks For Hunger</h3>

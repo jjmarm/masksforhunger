@@ -16,7 +16,7 @@ import Form from "../components/form"
 import chapterStyles from "../css/chapter.module.css"
 
 const ChapterPage = ( props ) => {
-  const {leader} = props.pageContext;
+  const {leader, slug} = props.pageContext;
 
   const chapter = props.data.markdownRemark.frontmatter.subchapters.find(subchapter => subchapter.leader === leader);
   const BackgroundImageStack = [`linear-gradient(to bottom, ${chapter.colorTwo}88, rgba(255, 0, 0, 0) 50%)`, chapter.mainImage.childImageSharp.fluid]
@@ -25,7 +25,7 @@ const ChapterPage = ( props ) => {
     <Layout colors={{one: chapter.colorOne, two: chapter.colorTwo, background: chapter.backgroundColor}} data={{...props.pageContext, "donateURL": chapter.donateURL}}>
       <Img className={chapterStyles.heroImage} fluid={BackgroundImageStack} alt="Masks for Hunger">
         <h1 className={chapterStyles.heroMain} id="top">{`${chapter.header}`}</h1>
-        <AnchorLink stripHash className={chapterStyles.arrowDown} to={`${props.data.markdownRemark.fields.slug}#about`}>
+        <AnchorLink stripHash className={chapterStyles.arrowDown} to={`${slug}#about`}>
           <DownArrow />
         </AnchorLink>
       </Img>
@@ -89,9 +89,9 @@ const ChapterPage = ( props ) => {
       <div className={`${chapterStyles.title} ${chapterStyles.contact}`} id="contact-container"><h4>Contact</h4></div>
       <span className={chapterStyles.anchor} id="contact"></span>
       <div className={`${chapterStyles.left} ${chapterStyles.contact} ${chapterStyles.section}`}><p>If you wish to get a mask or have any other questions, please fill out this form or email me at <a href={`mailto:${chapter.contactEmail}`}>{chapter.contactEmail}</a></p></div>
-    <div className={`${chapterStyles.right} ${chapterStyles.contact}`}><Form chapterName={chapter.title} maskList={chapter.masks.map((mask) => (mask.quantity === 0 ? null : mask.title))} /></div>
+    <div className={`${chapterStyles.right} ${chapterStyles.contact}`}><Form chapterName={props.data.markdownRemark.frontmatter.title} leader={leader} maskList={chapter.masks.map((mask) => (mask.quantity === 0 ? null : mask.title))} /></div>
       </div>
-      <div className={chapterStyles.donateSection}><h1>Support the movement!</h1><a href={chapter.donateURL} className={chapterStyles.donateBtn}>Donate now on the Walk for Hunger website →</a></div>
+      <div className={chapterStyles.donateSection}><h1>Support the movement!</h1><a href={chapter.donateURL} className={chapterStyles.donateBtn}>Donate now →</a></div>
     </Layout>
   )
 }
