@@ -142,7 +142,7 @@ subchapters:
 
       2. Click "donate" and then you will then be asked to fill out a donation form with payment information.
 
-      3. Once you have completed your donation, browse the selection of masks and click on the link called "I want a mask" in the "Contact" section below. You should receive a response by mail shortly.
+      3. Once you have completed your donation, browse the selection of masks and ***please directly email me about which mask you want.***
 
 
       Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
