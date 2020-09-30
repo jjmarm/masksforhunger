@@ -91,7 +91,7 @@ subchapters:
     masks:
       - image: /assets/img_5261.jpg
         title: Sunday Morning
-        quantity: 6
+        quantity: 5
         color: beige
       - title: Snow in the City
         image: /assets/img_5263.jpg
