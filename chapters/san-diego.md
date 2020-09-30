@@ -87,7 +87,7 @@ subchapters:
       - feature: Small pocket to insert a filter if desired
   - donateURL: https://give.feedingsandiego.org/fundraiser/2844694
     mainImage: /assets/san-diego-79567_1920.jpg
-    colorOne: "#a04f7f"
+    colorOne: "#af4320"
     masks:
       - image: /assets/img_5261.jpg
         title: Sunday Morning
@@ -114,7 +114,7 @@ subchapters:
         quantity: 4
         color: blue
     leader: Yezy Suh
-    colorTwo: "#a04f7f"
+    colorTwo: "#af4320"
     header: Help people get the food they need during the COVID-19 crisis
     about: >-
       The unprecedented COVID-19 Pandemic has affected everyone globally in
@@ -142,12 +142,12 @@ subchapters:
 
       2. Click "donate" and then you will then be asked to fill out a donation form with payment information.
 
-      3. Once you have completed your donation, browse the selection of masks and ***please directly email me about which mask you want. The "I want a mask" button may not work.*** 
+      3. Once you have completed your donation, **browse the selection of masks and click on the link called "I want a mask"** in the "Contact" section below. You should receive a response by mail shortly.
 
 
       Again, you aren't required to get a mask to contribute! All remaining masks will be given to local hospitals or non-profits on the frontline.
     profileImage: /assets/b22a8ff3-bc13-4b0d-800b-5e2ff752f6c1.jpg
-    backgroundColor: "#f0e4ea"
+    backgroundColor: "#f7d190"
     subtitle: Grade 9 • San Diego, CA
     contactEmail: yezy.masksforhunger@gmail.com
     features:
