@@ -6,8 +6,8 @@ title: Boston
 thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover.png
 thumbnailHasText: true
 subchapters:
-  - donateURL: https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239
-    mainImage: /assets/hero.jpeg
+  - donateURL: https://secure.projectbread.org/site/Donation2;jsessionid=00000000.app20119b?idb=0&6041.donation=form1&df_id=6041&mfc_pref=T&s_src=pb-website-utility-nav&s_subsrc=pb-website-top-nav&NONCE_TOKEN=07AF64941DBB3AFC2D7BF3C02C744A68
+    mainImage: /assets/masks-for-hunger-fundraiser.svg
     colorOne: "#ff8136"
     masks:
       - title: Anise
@@ -133,9 +133,9 @@ subchapters:
       However, if you do wish to get a mask, just follow these simple steps:
 
 
-      1. [Make a donation on the Walk for Hunger website](https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239). A pledge of at least $25 is recommended to get a mask.
+      1. [Make a donation on the Walk for Hunger website](https://secure.projectbread.org/site/Donation2;jsessionid=00000000.app20119b?idb=0&6041.donation=form1&df_id=6041&mfc_pref=T&s_src=pb-website-utility-nav&s_subsrc=pb-website-top-nav&NONCE_TOKEN=07AF64941DBB3AFC2D7BF3C02C744A68). A pledge of at least $25 is recommended to get a mask.
 
-      2. Browse the selection of masks below.
+      2. Browse the selection of masks below. And fill out the form with your desired mask in mind! 
 
       3. You should receive a response by mail shortly.
 
