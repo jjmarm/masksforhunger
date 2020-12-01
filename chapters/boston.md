@@ -6,7 +6,7 @@ title: Boston
 thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover.png
 thumbnailHasText: true
 subchapters:
-  - donateURL: https://secure.projectbread.org/site/Donation2;jsessionid=00000000.app20119b?idb=0&6041.donation=form1&df_id=6041&mfc_pref=T&s_src=pb-website-utility-nav&s_subsrc=pb-website-top-nav&NONCE_TOKEN=07AF64941DBB3AFC2D7BF3C02C744A68
+  - donateURL: https://secure.projectbread.org/site/Donation2?idb=1609214369&df_id=6521&6521.donation=form1&FR_ID=1420&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&amp;df_id=6521&idb=188067223&amp;FR_ID=1420&amp;PROXY_ID=2304152&amp;6521.donation=root&amp;PROXY_TYPE=20&amp;mfc_pref=T
     mainImage: /assets/masks-for-hunger-fundraiser.svg
     colorOne: "#ff8136"
     masks:
@@ -121,19 +121,22 @@ subchapters:
       I decided to be a virtual walker partnering with my mother's efforts to help the community navigate through this new environment. I am encouraging you to donate to my fundraiser to help families that are not as fortunate as us in these times. With your generous donations we give you the opportunity to pick a mask from a selection of our beautifully homemade fabric masks.
 
 
-      [Check out my progress here!](http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1400)
+      Following this incredible April-October fundraiser where we raised over $5,300! I will now be continuing for the holidays! 
+
+
+      [Check it out!](http://support.projectbread.org/goto/masksforhunger-Lyla)
     maskInstructions: >-
       Masks for Hunger is an initiative to raise awareness about food for all
       during this crisis. You're welcome to donate without getting a mask. Just
       [click
-      here](https://secure.projectbread.org/site/Donation2?idb=1934012782&df_id=6233&FR_ID=1400&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&6233.donation=form1&pw_id=3761&s_AffiliateSecCatId=2341&NONCE_TOKEN=0D63D32F6732BC089ED848A192544239)
+      here](https://secure.projectbread.org/site/Donation2?idb=1609214369&df_id=6521&6521.donation=form1&FR_ID=1420&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&amp;df_id=6521&idb=188067223&amp;FR_ID=1420&amp;PROXY_ID=2304152&amp;6521.donation=root&amp;PROXY_TYPE=20&amp;mfc_pref=T)
       to donate!
 
 
       However, if you do wish to get a mask, just follow these simple steps:
 
 
-      1. [Make a donation on the Walk for Hunger website](https://secure.projectbread.org/site/Donation2;jsessionid=00000000.app20119b?idb=0&6041.donation=form1&df_id=6041&mfc_pref=T&s_src=pb-website-utility-nav&s_subsrc=pb-website-top-nav&NONCE_TOKEN=07AF64941DBB3AFC2D7BF3C02C744A68). A pledge of at least $25 is recommended to get a mask.
+      1. [Make a donation on the Walk for Hunger website.](https://secure.projectbread.org/site/Donation2?idb=1609214369&df_id=6521&6521.donation=form1&FR_ID=1420&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&amp;df_id=6521&idb=188067223&amp;FR_ID=1420&amp;PROXY_ID=2304152&amp;6521.donation=root&amp;PROXY_TYPE=20&amp;mfc_pref=T) A pledge of at least $25 is recommended to get a mask.
 
       2. Browse the selection of masks below. And fill out the form with your desired mask in mind! 
 
