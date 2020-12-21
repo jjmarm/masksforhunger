@@ -99,11 +99,11 @@ subchapters:
         color: gray
       - image: /assets/img_5271.jpg
         title: Honey Lemonade
-        quantity: 9
+        quantity: 8
         color: beige
       - title: Starry Pomegranate
         image: /assets/screen-shot-2020-08-27-at-3.11.53-pm.png
-        quantity: 5
+        quantity: 4
         color: red
       - title: The Very Hungry Caterpillar
         image: /assets/img_5277.jpg
