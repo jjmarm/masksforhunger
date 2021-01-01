@@ -28,6 +28,15 @@ collections:
           - { name: "mainImage", label: "Header Image", widget: "image", hint: "The first image you see when the page is loaded" }
           - { name: "profileImage", label: "Profile Picture", widget: "image", hint: "Picture of the chapter leaders." }
           - { name: "about", label: "About", hint: "About the chapter, e.g. why did you start it? If you add links and styles (bold, underline, etc.) the text will look weird in the window to the right, but don't worry, when you publish this page it will be normal on the website.", widget: "markdown"}
+          - name: fundraisers
+            label: Fundraisers
+            label_singular: Fundraiser
+            hint: (Optional) A list of your fundraisers to date. Comes with a cute little progress bar. You'll need to update this regularly though, it's not automatic.
+            widget: list
+            fields:
+              - {name: "title", label: "Title", hint: "e.g. '2020 Fundraiser'"}
+              - {name: "raised", label: "Amount Raised so Far (dollars)", widget: "number"}
+              - {name: "goal", label: "Fundraising Goal (dollars)", widget: "number"}
           - { name: "subtitle", label: "Leader Subtitle", hint: "The text below the name, usually grade and city. E.g. 11th Grade • Boston, MA" }
           - name: features
             label: Mask features
