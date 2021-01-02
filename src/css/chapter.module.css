@@ -314,6 +314,63 @@ ul.mask-header li {
     padding: 10px;
 }
 
+/* Fundraising : Progress Bar */
+.fundraising {
+  color: var(--color-one)
+}
+
+.fundraiser {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.fundraiser h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.fundraiser .progress {
+  width: 100%;
+  border-radius: 10px;
+  height: 15px;
+  background-color: var(--color-two);
+  margin-bottom: 80px;
+}
+
+.fundraiser .inner {
+  height: 100%;
+  border-radius: inherit;
+  background-color: var(--color-one);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.fundraiser .value {
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 5px 10px;
+  width: fit-content;
+  font-size: 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.fundraiser .value::after {
+  content: attr(data-goal);
+  position: absolute;
+  top: 60px;
+  font-size: 15px;
+  width: 130%;
+  text-align: center;
+}
+
 @media (max-width: 900px) {
     .hero-main {
       width: calc(100% - 40px);
