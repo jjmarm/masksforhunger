@@ -106,7 +106,7 @@ subchapters:
       - title: Holiday Fundraiser
         raised: 0
         goal: 500
-      - title: Masks for Hunger 2020
+      - title: Walk for Hunger 2020
         raised: 5300
         goal: 6000
     leader: Lyla Chereau
