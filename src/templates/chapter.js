@@ -13,7 +13,7 @@ import parse from 'remark-parse'
 import remark2react from 'remark-react'
 
 import Form from "../components/form"
-import chapterStyles from "../css/chapter.module.css"
+import chapterStyles from "../css/chapter.module.scss"
 
 const ChapterPage = ( props ) => {
   const {leader, slug} = props.pageContext;
@@ -46,6 +46,7 @@ const ChapterPage = ( props ) => {
             }
           </div>
         </div>
+
         <div className={`${chapterStyles.full} ${chapterStyles.about2}`}>
           <h4>THE PROGRAM</h4>
           <div className={chapterStyles.twoCol}>
@@ -53,6 +54,39 @@ const ChapterPage = ( props ) => {
             <Link to="/" id="action">Learn More →</Link>
           </div>
         </div>
+        <span className={chapterStyles.anchor} id="fundraising"></span>
+        {
+          chapter.fundraisers &&
+          <>
+            <div className={`${chapterStyles.title} ${chapterStyles.fundraising}`}><h4>Fundraising</h4></div>
+            <div className={`${chapterStyles.fundraising} ${chapterStyles.full}`}>
+              {
+                chapter.fundraisers.map((fundraiser, i) => {
+                  var widthVal;
+                  var ratio = fundraiser.raised / fundraiser.goal;
+                  if (ratio > 1) {
+                    widthVal = '100%'
+                  } else {
+                    widthVal = `${ratio * 100}%`
+                  }
+                  
+                  return (
+                  <div className={chapterStyles.fundraiser} key={`fundraiser-${i}`}>
+                      <h3>{fundraiser.title}</h3>
+                      { // other values: fundraiser.goal and fundraiser.raised
+                        }
+                      <div className={chapterStyles.progress}>
+                        <div data-color={chapter.colorTwo} className={chapterStyles.inner} style={{'width': widthVal}}>
+                          <div style={{left: `${0.6 / (ratio + 0.01)}px`}} data-goal={`raised of $${fundraiser.goal} goal`} className={chapterStyles.value} >{`$${fundraiser.raised}`}</div>
+                        </div>
+                      </div>
+                  </div>
+                  )
+                })
+              }
+            </div>
+          </>
+        }
         <span className={chapterStyles.anchor} id="instructions"></span>
       <div className={`${chapterStyles.title} ${chapterStyles.instructions}`} id="instructions-container"><h4>Getting a Mask</h4></div>
       <div className={`${chapterStyles.instructions} ${chapterStyles.full}`}>
@@ -131,6 +165,11 @@ export const pageQuery = graphql`
           header
           leader
           subtitle
+          fundraisers {
+            title
+            raised
+            goal
+          }
           maskInstructions
           profileImage {
             childImageSharp {

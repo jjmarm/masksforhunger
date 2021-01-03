@@ -1,3 +1,5 @@
+@use 'sass:color' as color;
+
 .hero-image {
   height: 100vh;
   background-attachment: fixed;
@@ -35,7 +37,7 @@ p {
 .grid {
   display: grid;
   padding: 60px 20px;
-  grid-template:  [ab-anchor] 0px [about] auto [about-2] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
+  grid-template:  [ab-anchor] 0px [about] auto [about-2] auto [f-anchor] 0px [fundraising]  auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
   column-gap: 20px;
   row-gap: 40px;
 }
@@ -138,7 +140,7 @@ p {
 }
 
 .about2 {
-  grid-row: about-2 / in-anchor;
+  grid-row: about-2 / f-anchor;
   color: var(--color-one);
 }
 
@@ -165,6 +167,15 @@ p {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+
+  a {
+    transition: background-color 0.2s;
+    background-color: #FF5F0011;
+  }
+
+  a:hover {
+    background-color: #FF5F0044;
+  }
 }
 
 .about2 h4 {
@@ -314,6 +325,70 @@ ul.mask-header li {
     padding: 10px;
 }
 
+/* Fundraising : Progress Bar */
+.fundraising {
+  color: var(--color-one);
+  grid-row: fundraising / in-anchor;
+}
+
+#fundraising.anchor {
+  grid-row: f-anchor / fundraising;
+}
+
+.fundraiser {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 60px;
+}
+
+.fundraiser h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.fundraiser .progress {
+
+  width: 100%;
+  border-radius: 10px;
+  height: 15px;
+  background-color: color.scale(#ffb0d6, $lightness: 10%);
+  margin-bottom: 40px;
+}
+
+.fundraiser .inner {
+  height: 100%;
+  border-radius: inherit;
+  background-color: var(--color-one);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.fundraiser .value {
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 5px 10px;
+  width: fit-content;
+  font-size: 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.fundraiser .value::after {
+  content: attr(data-goal);
+  position: absolute;
+  top: 60px;
+  font-size: 15px;
+  width: 130%;
+  text-align: center;
+}
+
 @media (max-width: 900px) {
     .hero-main {
       width: calc(100% - 40px);
@@ -361,6 +436,14 @@ ul.mask-header li {
 }
 
 @media (max-width: 640px) {
+  .two-col {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+
+    a {
+      margin-top: 15px;
+    }
+  }
   .hero-main {
     font-size: 3em;
   }
