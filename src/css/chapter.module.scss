@@ -1,3 +1,5 @@
+@use 'sass:color' as color;
+
 .hero-image {
   height: 100vh;
   background-attachment: fixed;
@@ -35,7 +37,7 @@ p {
 .grid {
   display: grid;
   padding: 60px 20px;
-  grid-template:  [ab-anchor] 0px [about] auto [about-2] auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
+  grid-template:  [ab-anchor] 0px [about] auto [about-2] auto [f-anchor] 0px [fundraising]  auto [in-anchor] 0px [instructions] auto [ca-anchor] 0px [catalog] auto [co-anchor] 0px [contact] auto / [header] 50px [header-end] 30% [middle] 60% [end];
   column-gap: 20px;
   row-gap: 40px;
 }
@@ -138,7 +140,7 @@ p {
 }
 
 .about2 {
-  grid-row: about-2 / in-anchor;
+  grid-row: about-2 / f-anchor;
   color: var(--color-one);
 }
 
@@ -316,7 +318,12 @@ ul.mask-header li {
 
 /* Fundraising : Progress Bar */
 .fundraising {
-  color: var(--color-one)
+  color: var(--color-one);
+  grid-row: fundraising / in-anchor;
+}
+
+#fundraising.anchor {
+  grid-row: f-anchor / fundraising;
 }
 
 .fundraiser {
@@ -331,10 +338,11 @@ ul.mask-header li {
 }
 
 .fundraiser .progress {
+
   width: 100%;
   border-radius: 10px;
   height: 15px;
-  background-color: var(--color-two);
+  background-color: color.scale(#ffb0d6, $lightness: 10%);
   margin-bottom: 80px;
 }
 

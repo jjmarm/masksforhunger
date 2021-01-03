@@ -78,6 +78,12 @@ module.exports = {
         exclude: [`/admin/*`],
         createLinkInHead: true
       }
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+          implementation: require("sass"),
+      }
     }
   ],
 

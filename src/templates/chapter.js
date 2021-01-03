@@ -13,7 +13,7 @@ import parse from 'remark-parse'
 import remark2react from 'remark-react'
 
 import Form from "../components/form"
-import chapterStyles from "../css/chapter.module.css"
+import chapterStyles from "../css/chapter.module.scss"
 
 const ChapterPage = ( props ) => {
   const {leader, slug} = props.pageContext;
@@ -46,16 +46,15 @@ const ChapterPage = ( props ) => {
             }
           </div>
         </div>
-        { /*
-          <div className={`${chapterStyles.full} ${chapterStyles.about2}`}>
+
+        <div className={`${chapterStyles.full} ${chapterStyles.about2}`}>
           <h4>THE PROGRAM</h4>
           <div className={chapterStyles.twoCol}>
             <h2><b>Masks for Hunger</b> is a student-led organization that helps people get the food they need during the COVID-19 crisis.</h2>
             <Link to="/" id="action">Learn More →</Link>
           </div>
-        </div> */
-        }
-        
+        </div>
+        <span className={chapterStyles.anchor} id="fundraising"></span>
         {
           chapter.fundraisers &&
           <>
@@ -76,8 +75,8 @@ const ChapterPage = ( props ) => {
                       { // other values: fundraiser.goal and fundraiser.raised
                         }
                       <div className={chapterStyles.progress}>
-                        <div className={chapterStyles.inner} style={{'width': widthVal}}>
-                          <div data-value={fundraiser.raised / fundraiser.goal} data-goal={`raised of $${fundraiser.goal} goal`} className={chapterStyles.value} >{`$${fundraiser.raised}`}</div>
+                        <div data-color={chapter.colorTwo} className={chapterStyles.inner} style={{'width': widthVal}}>
+                          <div data-goal={`raised of $${fundraiser.goal} goal`} className={chapterStyles.value} >{`$${fundraiser.raised}`}</div>
                         </div>
                       </div>
                   </div>
