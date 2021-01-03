@@ -104,11 +104,11 @@ subchapters:
         color: gray
     fundraisers:
       - title: Holiday Fundraiser
-        raised: 100
-        goal: 200
+        raised: 0
+        goal: 500
       - title: Masks for Hunger 2020
         raised: 5300
-        goal: 5000
+        goal: 6000
     leader: Lyla Chereau
     colorTwo: "#ff49a1"
     header: Help people get the food they need during the COVID-19 Crisis
