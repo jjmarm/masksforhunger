@@ -63,10 +63,11 @@ const ChapterPage = ( props ) => {
               {
                 chapter.fundraisers.map((fundraiser, i) => {
                   var widthVal;
-                  if (fundraiser.raised / fundraiser.goal > 1) {
+                  var ratio = fundraiser.raised / fundraiser.goal;
+                  if (ratio > 1) {
                     widthVal = '100%'
                   } else {
-                    widthVal = `${fundraiser.raised / fundraiser.goal * 100}%`
+                    widthVal = `${ratio * 100}%`
                   }
                   
                   return (
@@ -76,7 +77,7 @@ const ChapterPage = ( props ) => {
                         }
                       <div className={chapterStyles.progress}>
                         <div data-color={chapter.colorTwo} className={chapterStyles.inner} style={{'width': widthVal}}>
-                          <div data-goal={`raised of $${fundraiser.goal} goal`} className={chapterStyles.value} >{`$${fundraiser.raised}`}</div>
+                          <div style={{left: `${0.6 / (ratio + 0.01)}px`}} data-goal={`raised of $${fundraiser.goal} goal`} className={chapterStyles.value} >{`$${fundraiser.raised}`}</div>
                         </div>
                       </div>
                   </div>

@@ -167,6 +167,15 @@ p {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+
+  a {
+    transition: background-color 0.2s;
+    background-color: #FF5F0011;
+  }
+
+  a:hover {
+    background-color: #FF5F0044;
+  }
 }
 
 .about2 h4 {
@@ -330,11 +339,12 @@ ul.mask-header li {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
+  margin-bottom: 60px;
 }
 
 .fundraiser h3 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .fundraiser .progress {
@@ -343,7 +353,7 @@ ul.mask-header li {
   border-radius: 10px;
   height: 15px;
   background-color: color.scale(#ffb0d6, $lightness: 10%);
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .fundraiser .inner {
@@ -426,6 +436,14 @@ ul.mask-header li {
 }
 
 @media (max-width: 640px) {
+  .two-col {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+
+    a {
+      margin-top: 15px;
+    }
+  }
   .hero-main {
     font-size: 3em;
   }
