@@ -1,9 +1,11 @@
 import React, { createElement } from "react";
 
 import CMS from "netlify-cms-app";
-import * as ColorWidget from "netlify-cms-widget-color";
+// import * as ColorWidget from "netlify-cms-widget-color";
 
-CMS.registerWidget("color", ColorWidget.Control);
+const WidgetColor = require('netlify-cms-widget-color/dist/es/color');
+
+CMS.registerWidget("color", WidgetColor.default.Control);
 
 class PreviewComponent extends React.Component {
   render() {
