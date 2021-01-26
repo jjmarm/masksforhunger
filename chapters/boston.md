@@ -104,7 +104,7 @@ subchapters:
         color: gray
     fundraisers:
       - title: Holiday Fundraiser
-        raised: 0
+        raised: 200
         goal: 500
       - title: Walk for Hunger 2020
         raised: 5300
