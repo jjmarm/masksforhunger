@@ -136,14 +136,14 @@ subchapters:
       Masks for Hunger is an initiative to raise awareness about food for all
       during this crisis. You're welcome to donate without getting a mask. Just
       [click
-      here](https://secure.projectbread.org/site/Donation2?idb=1609214369&df_id=6521&6521.donation=form1&FR_ID=1420&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&amp;df_id=6521&idb=188067223&amp;FR_ID=1420&amp;PROXY_ID=2304152&amp;6521.donation=root&amp;PROXY_TYPE=20&amp;mfc_pref=T)
+      here](https://secure.projectbread.org/site/Donation2?idb=1609214369&df_id=6521&6521.donation=form1&FR_ID=1420&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&df_id=6521&=188067223&FR_ID=1420&PROXY_ID=2304152&6521.donation=root&PROXY_TYPE=20&mfc_pref=T)
       to donate!
 
 
       However, if you do wish to get a mask, just follow these simple steps:
 
 
-      1. [Make a donation on the Walk for Hunger website.](https://secure.projectbread.org/site/Donation2?idb=1609214369&df_id=6521&6521.donation=form1&FR_ID=1420&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&amp;df_id=6521&idb=188067223&amp;FR_ID=1420&amp;PROXY_ID=2304152&amp;6521.donation=root&amp;PROXY_TYPE=20&amp;mfc_pref=T) A pledge of at least $25 is recommended to get a mask.
+      1. [Make a donation on the Walk for Hunger website.](http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1431) A pledge of at least $25 is recommended to get a mask.
 
       2. Browse the selection of masks below. And fill out the form with your desired mask in mind! 
 
