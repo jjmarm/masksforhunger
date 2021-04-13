@@ -6,7 +6,7 @@ title: Boston
 thumbnail: /assets/copy-of-pink-brush-strokes-beauty-cosmetics-facebook-cover.png
 thumbnailHasText: true
 subchapters:
-  - donateURL: http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1431
+  - donateURL: https://secure.projectbread.org/site/Donation2?6632.donation=form1&idb=376083834&df_id=6632&FR_ID=1431&mfc_pref=T&PROXY_ID=2304152&PROXY_TYPE=20&pw_id=3761&s_AffiliateSecCatId=2341
     mainImage: /assets/hero.jpeg
     colorOne: "#ff8136"
     masks:
