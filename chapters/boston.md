@@ -128,10 +128,10 @@ subchapters:
       I decided to be a virtual walker partnering with my mother's efforts to help the community navigate through this new environment. I am encouraging you to donate to my fundraiser to help families that are not as fortunate as us in these times. With your generous donations we give you the opportunity to pick a mask from a selection of our beautifully homemade fabric masks.
 
 
-      Following this incredible April-October fundraiser where we raised over $5,300! I will now be continuing for the holidays! 
+      Following this incredible April-October fundraiser where we raised over $5,300! I will now be continuing for the Walk For Hunger! 
 
 
-      [Check it out!](http://support.projectbread.org/goto/masksforhunger-Lyla)
+      [Check it out!](http://support.projectbread.org/site/TR/Walk/WalkforHunger?px=2304152&pg=personal&fr_id=1431)
     maskInstructions: >-
       Masks for Hunger is an initiative to raise awareness about food for all
       during this crisis. You're welcome to donate without getting a mask. Just
