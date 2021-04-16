@@ -107,7 +107,7 @@ const IndexPage = ({props}) => {
           })}
         </div>
         <div className={`${indexStyles.right} ${indexStyles.about}`}>
-          <p>Masks for Hunger is a student-led organization pushing to diminish hunger coast-to-coast. This initiative was initially founded in Boston through Project Bread’s Walk For Hunger Campaign. Over the course of the Boston fundraiser, founded by Lyla Chereau, <a href="http://impactsinisolation.com">Impacts in Isolation</a> facilitated the opening of a new chapter in San Diego founded by Sophia Gleeson. Our aim is to create an incentive to donate towards our respective fundraisers and in return be able to receive a mask. Enjoy our home made masks and help give security to those who need it most in these times. </p>
+          <p>Masks for Hunger is a student-led organization pushing to diminish hunger coast-to-coast. This initiative was initially founded in Boston through Project Bread’s Walk For Hunger Campaign. Over the course of the Boston fundraiser, founded by Lyla Chereau, <a target="_blank" href="http://impactsinisolation.com">Impacts in Isolation</a> facilitated the opening of a new chapter in San Diego founded by Sophia Gleeson. Our aim is to create an incentive to donate towards our respective fundraisers and in return be able to receive a mask. Enjoy our home made masks and help give security to those who need it most in these times. </p>
           <p>COVID-19 does not stop HUNGER! Thank you in advance for your support!</p>
         </div>
         <span className={indexStyles.anchor} id="instructions"></span>

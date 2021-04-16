@@ -12,6 +12,8 @@ import unified from 'unified'
 import parse from 'remark-parse'
 import remark2react from 'remark-react'
 
+import externalLinks from 'remark-external-links'
+
 import Form from "../components/form"
 import chapterStyles from "../css/chapter.module.scss"
 
@@ -40,6 +42,7 @@ const ChapterPage = ( props ) => {
           <div>
             {
               unified()
+                .use(externalLinks, {target: "_blank"})
                 .use(parse)
                 .use(remark2react)
                 .processSync(chapter.about).result
@@ -101,6 +104,7 @@ const ChapterPage = ( props ) => {
         <div>
           {
             unified()
+              .use(externalLinks, {target: "_blank"})
               .use(parse)
               .use(remark2react)
               .processSync(chapter.maskInstructions).result
@@ -122,7 +126,7 @@ const ChapterPage = ( props ) => {
         })}</div>
       <div className={`${chapterStyles.title} ${chapterStyles.contact}`} id="contact-container"><h4>Contact</h4></div>
       <span className={chapterStyles.anchor} id="contact"></span>
-      <div className={`${chapterStyles.left} ${chapterStyles.contact} ${chapterStyles.section}`}><p>If you wish to get a mask or have any other questions, please fill out this form or email me at <a href={`mailto:${chapter.contactEmail}`}>{chapter.contactEmail}</a></p></div>
+      <div className={`${chapterStyles.left} ${chapterStyles.contact} ${chapterStyles.section}`}><p>If you wish to get a mask or have any other questions, please fill out this form or email me at <a target="_blank" href={`mailto:${chapter.contactEmail}`}>{chapter.contactEmail}</a></p></div>
     <div className={`${chapterStyles.right} ${chapterStyles.contact}`}><Form chapterName={props.data.markdownRemark.frontmatter.title} leader={leader} maskList={chapter.masks.map((mask) => (mask.quantity === 0 ? null : mask.title))} /></div>
       </div>
       <div className={chapterStyles.donateSection}><h1>Support the movement!</h1><a href={chapter.donateURL} className={chapterStyles.donateBtn}>Donate now →</a></div>
