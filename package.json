@@ -46,7 +46,7 @@
     "remark-html": "^11.0.2",
     "remark-react": "^7.0.1",
     "sass": "^1.32.0",
-    "sharp": "^0.27.0",
+    "sharp": "^0.30.5",
     "unified": "^9.2.0"
   },
   "devDependencies": {
