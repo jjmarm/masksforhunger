@@ -3,9 +3,23 @@
   display: flex; flex-flow: row nowrap;
   justify-content: flex-start; align-items: stretch;
 }
+
+.question-choice label {
+  cursor: pointer;
+}
+
+.contactform button {
+  cursor: pointer;
+}
+
+.contactform select {
+  cursor: pointer;
+}
+
 .question-choice input {
   width: 0; height: 0; position: absolute; left: -9999px;
 }
+
 input + label {
 	margin: 0; padding: .75rem 2rem; box-sizing: border-box;
 	position: relative; display: inline-block;
@@ -15,8 +29,8 @@ input + label {
   flex: 0 0 50%; display: flex; justify-content: center; align-items: center;
 }
 
-.question-choice &:first-of-type {border-radius: 6px 0 0 6px; border-right: none;}
-.question-choice &:last-of-type {border-radius: 0 6px 6px 0; border-left: none;}
+.question-choice:first-of-type {border-radius: 6px 0 0 6px; border-right: none;}
+.question-choice:last-of-type {border-radius: 0 6px 6px 0; border-left: none;}
 
 .question-choice input:hover + label {border-color: var(--color-two)}
 .question-choice input:checked + label {
@@ -89,7 +103,7 @@ input, textarea, select {
 }
 
 input:focus, textarea:focus {
-  box-shadow: 0px 0px 20px -8px var(--color-two));
+  box-shadow: 0px 0px 20px -8px var(--color-two);
   border: solid 1px var(--color-two);
   outline: none;
 }

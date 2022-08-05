@@ -6,6 +6,7 @@
   top: 0;
   position: fixed;
   display: flex;
+  flex-flow: column nowrap;
   width: 100%;
   transition: color 0.2s fill 0.2s background-color 0.2s border-color 0.2s;
 }
@@ -19,10 +20,26 @@
   filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
 }
 
+.header-note {
+  padding: 10px 20px;
+  background-color: #ff5e94;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-note.invisible {
+  display: none;
+}
+
+.header-note .cross {
+  cursor: pointer;
+}
+
 .header {
   display: flex;
   color: inherit;
-  width: 100%;
+  /* width: 100%; */
   margin: 20px;
   flex-flow: row nowrap;
   justify-content: space-between;

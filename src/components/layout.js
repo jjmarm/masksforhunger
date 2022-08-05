@@ -39,7 +39,7 @@ export default ({ children, colors, data }) => {
       <Header data={data} />
       <main className="main-body">{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Masks for Hunger. Website by <a href="http://julianm.tk">Julian Marmier.</a>
+        © 2022, Masks for Hunger. Website by <a href="https://julianmarmier.com">Julian Marmier.</a>
       </footer>
     </>
   )
